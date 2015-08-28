@@ -4,16 +4,21 @@ namespace SampleRealTimeEmulation
 	using System.Collections.Generic;
 	using System.ComponentModel;
 	using System.Linq;
+	using System.Net;
+	using System.Security;
 	using System.Windows;
 
 	using Ecng.Common;
 	using Ecng.Collections;
 	using Ecng.Xaml;
 
+	using MoreLinq;
+
 	using StockSharp.Algo;
 	using StockSharp.Algo.Candles;
 	using StockSharp.Algo.Testing;
 	using StockSharp.BusinessEntities;
+	using StockSharp.IQFeed;
 	using StockSharp.Logging;
 	using StockSharp.Messages;
 	using StockSharp.SmartCom;
@@ -25,7 +30,7 @@ namespace SampleRealTimeEmulation
 	{
 		private bool _isConnected;
 		private CandleManager _candleManager;
-		private RealTimeEmulationTrader<Connector> _connector;
+		private RealTimeEmulationTrader<IMessageAdapter> _connector;
 		private readonly ChartCandleElement _candlesElem;
 		private readonly LogManager _logManager;
 		private Security _security;
@@ -45,6 +50,10 @@ namespace SampleRealTimeEmulation
 			area.Elements.Add(_candlesElem);
 
 			GuiDispatcher.GlobalDispatcher.AddPeriodicalAction(ProcessCandles);
+
+			Level1AddressCtrl.Text = IQFeedAddresses.DefaultLevel1Address.To<string>();
+			Level2AddressCtrl.Text = IQFeedAddresses.DefaultLevel2Address.To<string>();
+			LookupAddressCtrl.Text = IQFeedAddresses.DefaultLookupAddress.To<string>();
 		}
 
 		protected override void OnClosing(CancelEventArgs e)
@@ -61,31 +70,41 @@ namespace SampleRealTimeEmulation
 			{
 				if (_connector == null)
 				{
-					if (Login.Text.IsEmpty())
+					if (SmartCom.IsChecked == true)
 					{
-						MessageBox.Show(this, LocalizedStrings.Str2974);
-						return;
-					}
-					else if (Password.Password.IsEmpty())
-					{
-						MessageBox.Show(this, LocalizedStrings.Str2975);
-						return;
-					}
-					
-					// create real-time emu connector
-					_connector = new RealTimeEmulationTrader<Connector>(new SmartTrader
-					{
-						Login = Login.Text,
-						Password = Password.Password,
-						Address = Address.SelectedAddress
-					});
+						if (Login.Text.IsEmpty())
+						{
+							MessageBox.Show(this, LocalizedStrings.Str2974);
+							return;
+						}
+						else if (Password.Password.IsEmpty())
+						{
+							MessageBox.Show(this, LocalizedStrings.Str2975);
+							return;
+						}
 
-					//_connector = new RealTimeEmulationTrader<Connector>(new PlazaTrader
-					//{
-					//	IsCGate = true,
-					//}, portfolio);
+						// create real-time emu connector
+						_connector = new RealTimeEmulationTrader<IMessageAdapter>(new SmartComMessageAdapter(new MillisecondIncrementalIdGenerator())
+						{
+							Login = Login.Text,
+							Password = Password.Password.To<SecureString>(),
+							Address = Address.SelectedAddress
+						});
+					}
+					else
+					{
+						// create real-time emu connector
+						_connector = new RealTimeEmulationTrader<IMessageAdapter>(new IQFeedMarketDataMessageAdapter(new MillisecondIncrementalIdGenerator())
+						{
+							Level1Address = Level1AddressCtrl.Text.To<EndPoint>(),
+							Level2Address = Level2AddressCtrl.Text.To<EndPoint>(),
+							LookupAddress = LookupAddressCtrl.Text.To<EndPoint>(),
+						});
+					}
 
 					SecurityEditor.SecurityProvider = new FilterableSecurityProvider(_connector);
+
+					_candleManager = new CandleManager(_connector);
 
 					_logManager.Sources.Add(_connector);
 					
@@ -99,27 +118,9 @@ namespace SampleRealTimeEmulation
 						_isConnected = true;
 
 						// update gui labels
-						this.GuiAsync(() => ChangeConnectStatus(true));
-
-						_candleManager = new CandleManager(_connector);
-
-						_connector.NewMarketDepths += OnDepths;
-						_connector.MarketDepthsChanged += OnDepths;
-
-						_connector.NewOrders += orders => Orders.Orders.AddRange(orders);
-						_connector.NewMyTrades += trades => Trades.Trades.AddRange(trades);
-
-						// подписываемся на событие о неудачной регистрации заявок
-						_connector.OrdersRegisterFailed += OrdersFailed;
-
-						_candleManager.Processing += (s, candle) =>
-						{
-							if (candle.State == CandleStates.Finished)
-								_buffer.Add(candle);
-						};
-
 						this.GuiAsync(() =>
 						{
+							ChangeConnectStatus(true);
 							ConnectBtn.IsEnabled = false;
 						});
 					};
@@ -132,6 +133,24 @@ namespace SampleRealTimeEmulation
 
 						MessageBox.Show(this, error.ToString(), LocalizedStrings.Str2959);
 					});
+
+					_connector.NewMarketDepths += OnDepths;
+					_connector.MarketDepthsChanged += OnDepths;
+
+					_connector.NewPortfolios += PortfolioGrid.Portfolios.AddRange;
+					_connector.NewPositions += PortfolioGrid.Positions.AddRange;
+
+					_connector.NewOrders += OrderGrid.Orders.AddRange;
+					_connector.NewMyTrades += TradeGrid.Trades.AddRange;
+
+					// subscribe on error of order registration event
+					_connector.OrdersRegisterFailed += OrdersFailed;
+
+					_candleManager.Processing += (s, candle) =>
+					{
+						if (candle.State == CandleStates.Finished)
+							_buffer.Add(candle);
+					};
 
 					// subscribe on error event
 					_connector.Error += error =>
@@ -176,6 +195,7 @@ namespace SampleRealTimeEmulation
 		{
 			_isConnected = isConnected;
 			ConnectBtn.Content = isConnected ? LocalizedStrings.Disconnect : LocalizedStrings.Connect;
+			Find.IsEnabled = _isConnected;
 		}
 
 		private void ProcessCandles()
@@ -198,6 +218,11 @@ namespace SampleRealTimeEmulation
 
 		private void NewOrder_OnClick(object sender, RoutedEventArgs e)
 		{
+			OrderGrid_OrderRegistering();
+		}
+
+		private void OrderGrid_OrderRegistering()
+		{
 			var newOrder = new OrderWindow
 			{
 				Order = new Order { Security = _security },
@@ -206,6 +231,36 @@ namespace SampleRealTimeEmulation
 
 			if (newOrder.ShowModal(this))
 				_connector.RegisterOrder(newOrder.Order);
+		}
+
+		private void OrderGrid_OnOrderCanceling(IEnumerable<Order> orders)
+		{
+			orders.ForEach(_connector.CancelOrder);
+		}
+
+		private void OrderGrid_OnOrderReRegistering(Order order)
+		{
+			var window = new OrderWindow
+			{
+				Title = LocalizedStrings.Str2976Params.Put(order.TransactionId),
+				Connector = _connector,
+				Order = order.ReRegisterClone(newVolume: order.Balance),
+			};
+
+			if (window.ShowModal(this))
+			{
+				_connector.ReRegisterOrder(order, window.Order);
+			}
+		}
+
+		private void FindClick(object sender, RoutedEventArgs e)
+		{
+			var wnd = new FindSecurityWindow();
+
+			if (!wnd.ShowModal(this))
+				return;
+
+			_connector.LookupSecurities(wnd.Criteria);
 		}
 	}
 }

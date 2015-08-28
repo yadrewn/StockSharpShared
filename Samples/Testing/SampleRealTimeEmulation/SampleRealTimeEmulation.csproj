@@ -48,10 +48,15 @@
     <Reference Include="Ecng.Localization">
       <HintPath>..\..\..\References\Ecng\Ecng.Localization.dll</HintPath>
     </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\..\..\References\Ecng\MoreLinq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -79,6 +84,10 @@
     <Compile Include="..\..\..\StockSharpAssemblyInfo.cs">
       <Link>Properties\StockSharpAssemblyInfo.cs</Link>
     </Compile>
+    <Page Include="FindSecurityWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FindSecurityWindow.xaml.cs">
+      <DependentUpon>FindSecurityWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -135,9 +147,9 @@
       <Project>{dce69db8-53ca-4b7f-9368-02f175a31074}</Project>
       <Name>BusinessEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\StockSharp %28GitLab%29\Connectors\Plaza\Plaza.csproj">
-      <Project>{7EABA894-FC98-4F5E-A212-C40550260886}</Project>
-      <Name>Plaza</Name>
+    <ProjectReference Include="..\..\..\Connectors\IQFeed\IQFeed.csproj">
+      <Project>{f3068408-9764-432e-8fb4-596b308edb4f}</Project>
+      <Name>IQFeed</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Connectors\SmartCom\SmartCom.csproj">
       <Project>{3EBEC334-3476-4F65-81C4-BC9D217550C1}</Project>
