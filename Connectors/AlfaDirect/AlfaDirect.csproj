@@ -24,7 +24,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\References\</OutputPath>
+    <OutputPath>..\..\References\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,7 +44,7 @@
     <StartupObject />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <DocumentationFile>..\References\StockSharp.AlfaDirect.XML</DocumentationFile>
+    <DocumentationFile>..\..\References\StockSharp.AlfaDirect.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ecng.Localization">
