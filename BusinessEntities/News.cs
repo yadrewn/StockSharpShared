@@ -5,22 +5,23 @@ namespace StockSharp.BusinessEntities
 	using System.Runtime.Serialization;
 	using System.Xml.Serialization;
 
+	using Ecng.ComponentModel;
 	using Ecng.Serialization;
 
 	using StockSharp.Messages;
 	using StockSharp.Localization;
 
 	/// <summary>
-	/// Новость.
+	/// News.
 	/// </summary>
 	[Serializable]
 	[System.Runtime.Serialization.DataContract]
 	[DisplayNameLoc(LocalizedStrings.Str395Key)]
 	[DescriptionLoc(LocalizedStrings.Str510Key)]
-	public class News : IExtendableEntity
+	public class News : NotifiableObject, IExtendableEntity
 	{
 		/// <summary>
-		/// Идентификатор новости.
+		/// News ID.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.IdKey)]
@@ -30,7 +31,7 @@ namespace StockSharp.BusinessEntities
 		public string Id { get; set; }
 
 		/// <summary>
-		/// Биржевая площадка, для которой опубликована новость.
+		/// Exchange board for which the news is published.
 		/// </summary>
 		[RelationSingle(IdentityType = typeof(string))]
 		[DataMember]
@@ -40,7 +41,7 @@ namespace StockSharp.BusinessEntities
 		public ExchangeBoard Board { get; set; }
 
 		/// <summary>
-		/// Инструмент, для которого опубликована новость.
+		/// Security, for which news have been published.
 		/// </summary>
 		[RelationSingle(IdentityType = typeof(string))]
 		[DataMember]
@@ -50,7 +51,7 @@ namespace StockSharp.BusinessEntities
 		public Security Security { get; set; }
 
 		/// <summary>
-		/// Источник новости.
+		/// News source.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.Str213Key)]
@@ -59,7 +60,7 @@ namespace StockSharp.BusinessEntities
 		public string Source { get; set; }
 
 		/// <summary>
-		/// Заголовок.
+		/// Header.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.Str215Key)]
@@ -68,16 +69,24 @@ namespace StockSharp.BusinessEntities
 		public string Headline { get; set; }
 
 		/// <summary>
-		/// Текст новости.
+		/// News text.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.Str217Key)]
 		[DescriptionLoc(LocalizedStrings.Str218Key)]
 		[MainCategory]
-		public string Story { get; set; }
+		public string Story
+		{
+			get { return _story; }
+			set
+			{
+				_story = value;
+				NotifyChanged("Story");
+			}
+		}
 
 		/// <summary>
-		/// Время появления новости.
+		/// Time of news arrival.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.TimeKey)]
@@ -86,7 +95,7 @@ namespace StockSharp.BusinessEntities
 		public DateTimeOffset ServerTime { get; set; }
 
 		/// <summary>
-		/// Локальное время получения новости.
+		/// News received local time.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.Str514Key)]
@@ -95,7 +104,7 @@ namespace StockSharp.BusinessEntities
 		public DateTime LocalTime { get; set; }
 
 		/// <summary>
-		/// Ссылка на новость в интернете.
+		/// News link in the internet.
 		/// </summary>
 		[DataMember]
 		[DisplayNameLoc(LocalizedStrings.Str221Key)]
@@ -107,11 +116,13 @@ namespace StockSharp.BusinessEntities
 		[field: NonSerialized]
 		private IDictionary<object, object> _extensionInfo;
 
+		private string _story;
+
 		/// <summary>
-		/// Расширенная информация.
+		/// Extended information.
 		/// </summary>
 		/// <remarks>
-		/// Необходима в случае хранения в программе дополнительной информации.
+		/// Required when extra information is stored in the program.
 		/// </remarks>
 		[Ignore]
 		[XmlIgnore]

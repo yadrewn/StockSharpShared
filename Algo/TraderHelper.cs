@@ -2493,7 +2493,7 @@ namespace StockSharp.Algo
 		/// </summary>
 		/// <param name="receiver">Получатель логов.</param>
 		/// <param name="order">Заявка.</param>
-		/// <param name="operation">Операция, которая проводится в заявокй.</param>
+		/// <param name="operation">Операция, которая проводится с заявкой.</param>
 		/// <param name="getAdditionalInfo">Дополнительная информация о заявке.</param>
 		public static void AddOrderInfoLog(this ILogReceiver receiver, Order order, string operation, Func<string> getAdditionalInfo = null)
 		{
@@ -2505,7 +2505,7 @@ namespace StockSharp.Algo
 		/// </summary>
 		/// <param name="receiver">Получатель логов.</param>
 		/// <param name="order">Заявка.</param>
-		/// <param name="operation">Операция, которая проводится в заявокй.</param>
+		/// <param name="operation">Операция, которая проводится с заявкой.</param>
 		/// <param name="getAdditionalInfo">Дополнительная информация о заявке.</param>
 		public static void AddOrderErrorLog(this ILogReceiver receiver, Order order, string operation, Func<string> getAdditionalInfo = null)
 		{
@@ -3189,7 +3189,7 @@ namespace StockSharp.Algo
 		/// Получить шаг цены на основе точности.
 		/// </summary>
 		/// <param name="decimals">Точность.</param>
-		/// <returns>Шан цены.</returns>
+		/// <returns>Шаг цены.</returns>
 		public static decimal GetPriceStep(this int decimals)
 		{
 			return 1m / 10.Pow(decimals);

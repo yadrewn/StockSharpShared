@@ -125,14 +125,14 @@ M:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.IsSuspended/returns;DocSt
 M:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.CreateQuoting(StockSharp.BusinessEntities.Order)/summary;DocStr360
 M:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.CreateQuoting(StockSharp.BusinessEntities.Order)/param/order;DocStr306
 M:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.CreateQuoting(StockSharp.BusinessEntities.Order)/returns;DocStr361
-P:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.BlackScholes/summary;DocStr362
+P:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.BlackScholes/summary;DocStr951
 P:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.UseQuoting/summary;DocStr363
 P:StockSharp.Algo.Strategies.Derivatives.HedgeStrategy.PriceOffset/summary;DocStr364
 M:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.#ctor/summary;DocStr1
 M:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.GetReHedgeOrders/summary;DocStr351
 M:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.GetReHedgeOrders/returns;DocStr352
 P:StockSharp.Algo.Strategies.Derivatives.DeltaHedgeStrategy.PositionOffset/summary;Str1246
-T:StockSharp.Algo.Strategies.Extensions/summary;DocStr365
+T:StockSharp.Algo.Strategies.Extensions/summary;DocStr722
 M:StockSharp.Algo.Strategies.Extensions.OpenPositionByQuoting(StockSharp.Algo.Strategies.Strategy,System.Decimal)/summary;DocStr366
 M:StockSharp.Algo.Strategies.Extensions.OpenPositionByQuoting(StockSharp.Algo.Strategies.Strategy,System.Decimal)/param/strategy;Strategy
 M:StockSharp.Algo.Strategies.Extensions.OpenPositionByQuoting(StockSharp.Algo.Strategies.Strategy,System.Decimal)/param/finishPosition;DocStr367

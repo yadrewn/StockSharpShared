@@ -285,7 +285,7 @@
         </member>
         <member name="P:StockSharp.Algo.Strategies.Quoting.QuotingStrategy.RegisterInterval">
             <summary>
-            Интервал частоты ререгистрации заявки, при превышении которого новая заявка выставляться не будет.
+            Интервал частоты перерегистрации заявки, при превышении которого новая заявка выставляться не будет.
             </summary>
             <remarks>
             По-умолчанию интервал выключен, и равен <see cref="F:System.TimeSpan.Zero"/>.
@@ -457,7 +457,7 @@
         </member>
         <member name="T:StockSharp.Algo.Strategies.Extensions">
             <summary>
-            Вспомогательный класс для работы со стратегиями.
+            Вспомогательный класс для работы с <see cref="T:StockSharp.Algo.Strategies.Strategy"/>.
             </summary>
         </member>
         <member name="M:StockSharp.Algo.Strategies.Extensions.OpenPositionByQuoting(StockSharp.Algo.Strategies.Strategy,System.Decimal)">

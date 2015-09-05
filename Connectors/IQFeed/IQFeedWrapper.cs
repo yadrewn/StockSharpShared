@@ -85,6 +85,7 @@ namespace StockSharp.IQFeed
 					{
 						var buf = new StringBuilder();
 						var buffer = new byte[1024];
+						var isError = false;
 
 						try
 						{
@@ -143,11 +144,19 @@ namespace StockSharp.IQFeed
 						}
 						catch (ObjectDisposedException ex)
 						{
+							isError = true;
 							ConnectionError.SafeInvoke(new InvalidOperationException(LocalizedStrings.Str2155, ex));
 						}
 						catch (Exception ex)
 						{
+							isError = true;
 							ConnectionError.SafeInvoke(ex);
+						}
+
+						if (isError)
+						{
+							lock (_syncDisconnect)
+								IsExportStarted = false;	
 						}
 
 						try
@@ -296,8 +305,8 @@ namespace StockSharp.IQFeed
 		/// </summary>
 		/// <param name="requestId">Идентификатор запроса.</param>
 		/// <param name="symbol">Код инструмента.</param>
-		/// <param name="from">Начало периода.</param>
-		/// <param name="to">Конец периода.</param>
+		/// <param name="from">Дата начала периода.</param>
+		/// <param name="to">Дата окончания периода.</param>
 		public void RequestTicks(long requestId, string symbol, DateTime from, DateTime to)
 		{
 			//HTT,[Symbol],[BeginDate BeginTime],[EndDate EndTime],[MaxDatapoints],[BeginFilterTime],[EndFilterTime],[DataDirection],[RequestID],[DatapointsPerSend]<CR><LF> 
@@ -342,8 +351,8 @@ namespace StockSharp.IQFeed
 		/// <param name="symbol">Код инструмента.</param>
 		/// <param name="intervalType">Тип свечек.</param>
 		/// <param name="arg">Параметр свечи.</param>
-		/// <param name="from">Начало периода.</param>
-		/// <param name="to">Конец периода.</param>
+		/// <param name="from">Дата начала периода.</param>
+		/// <param name="to">Дата окончания периода.</param>
 		public void RequestCandles(long requestId, string symbol, string intervalType, string arg, DateTime from, DateTime to)
 		{
 			//HIT,[Symbol],[Interval],[BeginDate BeginTime],[EndDate EndTime],[MaxDatapoints],[BeginFilterTime],[EndFilterTime],[DataDirection],[RequestID],[DatapointsPerSend],[IntervalType]<CR><LF> 
@@ -371,8 +380,8 @@ namespace StockSharp.IQFeed
 		/// </summary>
 		/// <param name="requestId">Идентификатор запроса.</param>
 		/// <param name="symbol">Код инструмента.</param>
-		/// <param name="from">Начало периода.</param>
-		/// <param name="to">Конец периода.</param>
+		/// <param name="from">Дата начала периода.</param>
+		/// <param name="to">Дата окончания периода.</param>
 		public void RequestDailyCandles(long requestId, string symbol, DateTime from, DateTime to)
 		{
 			//HDT,[Symbol],[BeginDate],[EndDate],[MaxDatapoints],[DataDirection],[RequestID],[DatapointsPerSend]<CR><LF> 
