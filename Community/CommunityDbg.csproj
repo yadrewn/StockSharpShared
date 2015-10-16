@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8E18F8F-97BD-41AE-8888-F54F2411D575}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockSharp.Community</RootNamespace>
+    <AssemblyName>StockSharp.Community</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\ReferencesDbg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\References\StockSharp.Community.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\StockSharp.Community.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ecng.ComponentModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Ecng\Ecng.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Net">
+      <HintPath>..\References\Ecng\Ecng.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\References\Ecng\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\StockSharpAssemblyInfo.cs">
+      <Link>Properties\StockSharpAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="AuthenticationClient.cs" />
+    <Compile Include="BaseCommunityClient.cs" />
+    <Compile Include="BaseServiceClient.cs" />
+    <Compile Include="CommunityNews.cs" />
+    <Compile Include="DocClient.cs" />
+    <Compile Include="DocPage.cs" />
+    <Compile Include="CommunityAuthorization.cs" />
+    <Compile Include="ErrorCodes.cs" />
+    <Compile Include="FileClient.cs" />
+    <Compile Include="IAuthenticationService.cs" />
+    <Compile Include="IDocService.cs" />
+    <Compile Include="IFileService.cs" />
+    <Compile Include="INotificationService.cs" />
+    <Compile Include="IProfileService.cs" />
+    <Compile Include="IStrategyService.cs" />
+    <Compile Include="IStrategyServiceCallback.cs" />
+    <Compile Include="NotificationClient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProfileClient.cs" />
+    <Compile Include="ServerCredentials.cs" />
+    <Compile Include="StrategyClient.cs" />
+    <Compile Include="StrategyData.cs" />
+    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Localization\LocalizationDbg.csproj">
+      <Project>{a98a81ce-75a1-4fab-9c02-e6eef4b51f4f}</Project>
+      <Name>LocalizationDbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\LoggingDbg.csproj">
+      <Project>{c4476add-a3d5-41bb-9d43-55d865863b78}</Project>
+      <Name>LoggingDbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Ecng\Ecng.Collections\Ecng.Collections.csproj">
+      <Project>{3bbb7feb-8f1b-4368-8913-807cf14f0586}</Project>
+      <Name>Ecng.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Ecng\Ecng.Common\Ecng.Common.csproj">
+      <Project>{3a9e6a09-3887-4612-b127-9b95bd2c3eed}</Project>
+      <Name>Ecng.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Ecng\Ecng.Localization\Ecng.Localization.csproj">
+      <Project>{875289b3-8845-4402-a9cc-c6d7bd53e530}</Project>
+      <Name>Ecng.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Ecng\Ecng.Security\Ecng.Security.csproj">
+      <Project>{152d4c89-8470-44d9-90a1-541bcf5f6b1e}</Project>
+      <Name>Ecng.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\References\Ecng\Ecng.Serialization\Ecng.Serialization.csproj">
+      <Project>{b7275381-fecd-4fdf-ad81-4a66d809bd8d}</Project>
+      <Name>Ecng.Serialization</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

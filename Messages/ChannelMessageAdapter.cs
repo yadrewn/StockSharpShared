@@ -109,6 +109,8 @@ namespace StockSharp.Messages
 		void IMessageChannel.Close()
 		{
 			Adapter.Close();
+			if (InputChannel.IsOpened)	//yaa_04.10.2015_02:06 close service threads
+				InputChannel.Close();
 		}
 
 		void IMessageChannel.SendInMessage(Message message)

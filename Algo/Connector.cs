@@ -1,3 +1,5 @@
+using System.Windows;
+
 namespace StockSharp.Algo
 {
 	using System;
@@ -1569,7 +1571,7 @@ namespace StockSharp.Algo
 		}
 
 		/// <summary>
-		/// Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="Disconnect"/>.
+		/// Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="Disconnect"/>, а также закрыть поток Connector Out
 		/// </summary>
 		protected override void DisposeManaged()
 		{
@@ -1585,7 +1587,18 @@ namespace StockSharp.Algo
 				{
 					RaiseConnectionError(ex);
 				}
+				int nWaitCycle = 50;	//yaa_b_11.10.2015_17:03
+				int nWaitPeriod = 5000;
+				for (int nSecs = 0; nSecs < nWaitPeriod; nSecs += nWaitCycle)
+				{
+					if (ConnectionState == ConnectionStates.Disconnected)
+						break;
+					Thread.Sleep(nWaitCycle);
+				}	//yaa_e
 			}
+
+			if (ConnectionState == ConnectionStates.Disconnecting)	//yaa_11.10.2015_17:03
+				MessageBox.Show("Отключение соединения не было корректно произведено! Необходимо перезапустить программу и сервер Quik.");
 
 			base.DisposeManaged();
 
@@ -1597,7 +1610,12 @@ namespace StockSharp.Algo
 			//if (ExportState == ConnectionStates.Disconnected || ExportState == ConnectionStates.Failed)
 			//	MarketDataAdapter = null;
 
-			Adapter = null;
+			StopMarketTimer();	//yaa_b_01.10.2015_22:36
+			if (!_outMessageChannel.IsNull() && _outMessageChannel.IsOpened)
+				_outMessageChannel.Close();
+			Adapter.Dispose();
+
+			//Adapter = null;	//yaa_e_01.10.2015_23:01
 		}
 
 		/// <summary>

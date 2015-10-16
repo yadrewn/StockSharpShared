@@ -11,7 +11,7 @@
         </member>
         <member name="T:StockSharp.Community.BaseServiceClient`1">
             <summary>
-            Базовый клиент для доступа к WCFсервисам.
+            Базовый клиент для доступа к WCF сервисам.
             </summary>
             <typeparam name="TService">Тип WCF сервиса.</typeparam>
         </member>

@@ -4,7 +4,7 @@ using Ecng.Common;
 using Ecng.Reflection;
 
 using StockSharp.BusinessEntities;
-
+using StockSharp.Messages;
 using TEClientLib;
 
 namespace StockSharp.Alor.Metadata

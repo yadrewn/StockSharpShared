@@ -449,7 +449,7 @@ namespace StockSharp.Messages
 		protected abstract void OnSendInMessage(Message message);
 
 		/// <summary>
-		/// Send outgoing message and raise <see cref="MessageAdapter.NewOutMessage"/> event.
+		/// Send outgoing message and raise <see cref="NewOutMessage"/> event.
 		/// </summary>
 		/// <param name="message">Message.</param>
 		public virtual void SendOutMessage(Message message)

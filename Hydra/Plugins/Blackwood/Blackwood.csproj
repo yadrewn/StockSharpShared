@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\References\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -111,14 +111,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>call ..\..\..\plugins.bat $(ProjectName) $(ConfigurationName)
+    <PostBuildEvent>call plugins.bat $(ProjectName) $(ConfigurationName)
 
-copy StockSharp.Blackwood.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\StockSharp.Blackwood.dll
-copy CBWMessages.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\CBWMessages.dll
-copy zlib.net.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\zlib.net.dll
-copy Types.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Types.dll
-copy Messages.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Messages.dll
-copy Blackwood.Framework.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Blackwood.Framework.dll</PostBuildEvent>
+copy StockSharp.Blackwood.dll Plugins\StockSharp.Blackwood.dll
+copy CBWMessages.dll Plugins\CBWMessages.dll
+copy zlib.net.dll Plugins\zlib.net.dll
+copy Types.dll Plugins\Types.dll
+copy Messages.dll Plugins\Messages.dll
+copy Blackwood.Framework.dll Plugins\Blackwood.Framework.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -22,7 +22,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\References\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -122,11 +122,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>call ..\..\..\plugins.bat $(ProjectName) $(ConfigurationName)
+    <PostBuildEvent>call plugins.bat $(ProjectName) $(ConfigurationName)
 
-copy StockSharp.Plaza.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\StockSharp.Plaza.dll
-copy Interop.P2ClientGateMTA32.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.P2ClientGateMTA32.dll
-copy Interop.P2ClientGateMTA64.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.P2ClientGateMTA64.dll</PostBuildEvent>
+copy StockSharp.Plaza.dll Plugins\StockSharp.Plaza.dll
+copy Interop.P2ClientGateMTA32.dll Plugins\Interop.P2ClientGateMTA32.dll
+copy Interop.P2ClientGateMTA64.dll Plugins\Interop.P2ClientGateMTA64.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

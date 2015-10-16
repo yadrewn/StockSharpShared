@@ -27,21 +27,21 @@
 		/// </summary>
 		public static void InitMetadata()
 		{
-			typeof(AlorTradeColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorTimeColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorHoldingColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorPortfolioColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorMoneyPositionsColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorStopOrderColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorSecurityColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorQuotesColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorOrderColumns).GetFields().ForEach(column => column.GetValue(null));
-			typeof(AlorMyTradeColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorTradeColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorTimeColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorHoldingColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorPortfolioColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorMoneyPositionsColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorStopOrderColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorSecurityColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorQuotesColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorOrderColumns).GetFields().ForEach(column => column.GetValue(null));
+            //typeof(AlorMyTradeColumns).GetFields().ForEach(column => column.GetValue(null));
 		}
 
 		internal AlorManagerColumns()
 		{
-			AllAlorColumn.Where(alorColumn => alorColumn.IsMandatory).ForEach(Add);
+			//AllAlorColumn.Where(alorColumn => alorColumn.IsMandatory).ForEach(Add);
 		}
 
 		/// <summary>
@@ -70,7 +70,7 @@
 		/// <param name="table"></param>
 		public void RemoveAllBy(AlorTable table)
 		{
-			AllAlorColumn.Where(column => column.TableType == table.Type).ForEach(Remove);
+			//AllAlorColumn.Where(column => column.TableType == table.Type).ForEach(Remove);
 		}
 
 		/// <summary>
@@ -78,7 +78,7 @@
 		/// </summary>
 		public void RemoveAll()
 		{
-			AllAlorColumn.ForEach(Remove);
+			//AllAlorColumn.ForEach(Remove);
 		}
 
 		/// <summary>
@@ -87,7 +87,7 @@
 		/// <param name="table"></param>
 		public void AddAllBy(AlorTable table)
 		{
-			AllAlorColumn.Where(column => column.TableType == table.Type).ForEach(Add);
+			//AllAlorColumn.Where(column => column.TableType == table.Type).ForEach(Add);
 		}
 
 		/// <summary>
@@ -95,7 +95,7 @@
 		/// </summary>
 		public void AddAll()
 		{
-			AllAlorColumn.ForEach(Add);
+			//AllAlorColumn.ForEach(Add);
 		}
 
 		internal IEnumerable<AlorColumn> GetColumnsBy(AlorTableTypes table)

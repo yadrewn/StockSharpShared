@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\References\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -108,10 +108,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>call ..\..\..\plugins.bat $(ProjectName) $(ConfigurationName)
+    <PostBuildEvent>call plugins.bat $(ProjectName) $(ConfigurationName)
 
-copy StockSharp.Sterling.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\StockSharp.Sterling.dll
-copy Interop.SterlingLib.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.SterlingLib.dll</PostBuildEvent>
+copy StockSharp.Sterling.dll Plugins\StockSharp.Sterling.dll
+copy Interop.SterlingLib.dll Plugins\Interop.SterlingLib.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

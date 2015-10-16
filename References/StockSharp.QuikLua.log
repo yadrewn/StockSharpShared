@@ -1,0 +1,120 @@
+﻿2015/10/16 00:27:31.363|       |LuaServer |OnInit
+2015/10/16 00:27:31.378|       |FixServer |Server 0.0.0.0:5001 started.
+2015/10/16 00:27:31.379|       |FixServer |FixServer started.
+2015/10/16 00:27:31.380|       |LuaServer |OnInit done
+2015/10/16 00:27:31.386|       |LuaServer |Main
+2015/10/16 00:31:02.015|       |FixServer |Connected '127.0.0.1:7477' to '0.0.0.0:5001'.
+2015/10/16 00:31:02.023|       |FixServer |Connected '127.0.0.1:7478' to '0.0.0.0:5001'.
+2015/10/16 00:31:02.031|       |FixServer |Received first byte from '127.0.0.1:7477'.
+2015/10/16 00:31:02.031|       |FixServer |Received first byte from '127.0.0.1:7478'.
+2015/10/16 00:31:02.035|       |FixServer |From : Logon
+2015/10/16 00:31:02.035|       |FixServer |From : Logon
+2015/10/16 00:31:02.044|       |FixServer |Клиент quik (127.0.0.1:7478) авторизован.
+2015/10/16 00:31:02.044|       |FixServer |Клиент quik (127.0.0.1:7477) авторизован.
+2015/10/16 00:31:02.123|       |FixServer |Отправка Logon клиенту.
+2015/10/16 00:31:02.123|       |FixServer |Отправка Logon клиенту.
+2015/10/16 00:31:02.125|       |FixServer |Сессия запущена.
+2015/10/16 00:31:02.125|       |FixServer |Сессия запущена.
+2015/10/16 00:31:02.149|       |FixServer |From quik 127.0.0.1:7477: SecurityListRequest
+2015/10/16 00:31:02.149|       |FixServer |From quik 127.0.0.1:7478: RequestForPositions
+2015/10/16 00:31:02.167|       |FixServer |From quik 127.0.0.1:7478: OrderMassStatusRequest
+2015/10/16 00:31:02.167|       |FixServer |From quik 127.0.0.1:7477: Logout
+2015/10/16 00:31:02.167|       |LuaServer |Request: Type = PortfolioLookup TrId = 1832407 Value =  SecId =  OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.167|       |FixServer |From quik 127.0.0.1:7478: Logout
+2015/10/16 00:31:02.168|       |FixServer |Disconnect quik (127.0.0.1:7477)
+2015/10/16 00:31:02.168|       |FixServer |Disconnect quik (127.0.0.1:7478)
+2015/10/16 00:31:02.168|       |LuaServer |LookupPortfolios
+2015/10/16 00:31:02.198|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.ReadString() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 257
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 331
+2015/10/16 00:31:02.198|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.ReadString() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 257
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 331
+2015/10/16 00:31:02.199|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.ReadTag() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 278
+   в Extensions.ReadSpecificTag(IFixReader ifixReader, FixTags fixTag) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 23
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 292
+2015/10/16 00:31:02.199|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.SkipValue() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 309
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 350
+2015/10/16 00:31:02.199|       |FixServer |Disconnect quik (127.0.0.1:7478)
+2015/10/16 00:31:02.199|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.ReadTag() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 278
+   в Extensions.ReadSpecificTag(IFixReader ifixReader, FixTags fixTag) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 23
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 292
+2015/10/16 00:31:02.199|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.NetworkStream".
+   в System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   в System.IO.Stream.ReadByte()
+   в StockSharp.Fix.Native.BaseFixReader.ReadByte() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\BaseFixReader.cs:строка 17
+   в StockSharp.Fix.Native.TextFixReader.SkipValue() в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\Native\TextFixReader.cs:строка 309
+   в Extensions.ProcessStream(IFixReader ifixReader, Boolean bFullMsg, String fixVersionLabel, ILogReceiver ilogReceiver, String sSessionId, Func`3 MsgHandler, Action`1 exceptionHandler) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\Extensions.cs:строка 350
+2015/10/16 00:31:02.199|       |FixServer |Disconnect quik (127.0.0.1:7477)
+2015/10/16 00:31:02.213|       |LuaServer |LookupPortfolios done
+2015/10/16 00:31:02.214|       |LuaServer |LookupPositions
+2015/10/16 00:31:02.219|       |LuaServer |LookupPositions done
+2015/10/16 00:31:02.219|       |LuaServer |Request: Type = PortfolioLookup TrId = 1832407 Value =  SecId =  OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.219|       |LuaServer |LookupPortfolios
+2015/10/16 00:31:02.220|       |LuaServer |LookupPortfolios done
+2015/10/16 00:31:02.220|       |LuaServer |LookupPositions
+2015/10/16 00:31:02.220|       |LuaServer |LookupPositions done
+2015/10/16 00:31:02.220|       |LuaServer |Request: Type = SecurityLookup TrId = 1832406 Value =  SecId = S#:@, Native:,Type: OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.226|       |LuaServer |LookupSecurities
+2015/10/16 00:31:02.314|Error  |LuaServer |Пустой код инструмента для класса USDRUB.
+2015/10/16 00:31:02.383|Error  |LuaServer |Пустой код инструмента для класса EQRP_INFO.
+2015/10/16 00:31:02.417|       |LuaServer |LookupSecurities done
+2015/10/16 00:31:02.417|       |LuaServer |Request: Type = SecurityLookup TrId = 1832406 Value =  SecId = S#:@, Native:,Type: OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.417|       |LuaServer |LookupSecurities
+2015/10/16 00:31:02.471|Error  |LuaServer |Пустой код инструмента для класса USDRUB.
+2015/10/16 00:31:02.540|Error  |LuaServer |Пустой код инструмента для класса EQRP_INFO.
+2015/10/16 00:31:02.564|       |LuaServer |LookupSecurities done
+2015/10/16 00:31:02.564|       |LuaServer |Request: Type = OrderStatus TrId = 1832408 Value =  SecId =  OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.564|       |LuaServer |LookupStopOrders
+2015/10/16 00:31:02.564|       |LuaServer |Stop orders count: 0
+2015/10/16 00:31:02.564|       |LuaServer |LookupStopOrders done
+2015/10/16 00:31:02.565|       |LuaServer |LookupOrders
+2015/10/16 00:31:02.565|       |LuaServer |Orders count: 0
+2015/10/16 00:31:02.565|       |LuaServer |LookupOrders done
+2015/10/16 00:31:02.566|       |LuaServer |LookupTrades
+2015/10/16 00:31:02.566|       |LuaServer |Own trades count: 0
+2015/10/16 00:31:02.566|       |LuaServer |LookupTrades done
+2015/10/16 00:31:02.566|       |LuaServer |Request: Type = OrderStatus TrId = 1832408 Value =  SecId =  OrdType =  IsSubscribe = False DataType = Level1
+2015/10/16 00:31:02.566|       |LuaServer |LookupStopOrders
+2015/10/16 00:31:02.566|       |LuaServer |Stop orders count: 0
+2015/10/16 00:31:02.566|       |LuaServer |LookupStopOrders done
+2015/10/16 00:31:02.566|       |LuaServer |LookupOrders
+2015/10/16 00:31:02.566|       |LuaServer |Orders count: 0
+2015/10/16 00:31:02.566|       |LuaServer |LookupOrders done
+2015/10/16 00:31:02.566|       |LuaServer |LookupTrades
+2015/10/16 00:31:02.566|       |LuaServer |Own trades count: 0
+2015/10/16 00:31:02.566|       |LuaServer |LookupTrades done
+2015/10/16 00:33:48.305|       |LuaServer |OnStop
+2015/10/16 00:33:48.305|       |LuaServer |Main done
+2015/10/16 00:33:48.306|       |FixServer |FixServer (outgoing) stopped.
+2015/10/16 00:33:48.306|Error  |FixServer |System.ObjectDisposedException: Доступ к ликвидированному объекту невозможен.
+Имя объекта: "System.Net.Sockets.Socket".
+   в System.Net.Sockets.Socket.EndAccept(IAsyncResult asyncResult)
+   в System.Net.Sockets.TcpListener.EndAcceptTcpClient(IAsyncResult asyncResult)
+   в StockSharp.Fix.FixServer.CheckAsyncState(IAsyncResult iasyncResult) в e:\Disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\StockSharp\Fix\FixServer.cs:строка 745
+2015/10/16 00:33:48.308|       |FixServer |FixServer stopped.
+2015/10/16 00:33:48.308|       |LuaServer |OnStop done

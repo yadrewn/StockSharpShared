@@ -384,9 +384,9 @@
         </member>
         <member name="M:StockSharp.Logging.BaseLogSource.ToString">
             <summary>
-            Получить строковое представление источника.
+            Получить строковое представление.
             </summary>
-            <returns>Строковое представление источника.</returns>
+            <returns>Строковое представление.</returns>
         </member>
         <member name="M:StockSharp.Logging.BaseLogSource.Load(Ecng.Serialization.SettingsStorage)">
             <summary>
@@ -658,7 +658,7 @@
         </member>
         <member name="M:StockSharp.Logging.LogManager.DisposeManaged">
             <summary>
-            Освободить ресурсы.
+            Освободить занятые ресурсы.
             </summary>
         </member>
         <member name="M:StockSharp.Logging.LogManager.Load(Ecng.Serialization.SettingsStorage)">
@@ -993,7 +993,7 @@
         </member>
         <member name="M:StockSharp.Logging.TraceSource.DisposeManaged">
             <summary>
-            Удалить занятые ресурсы.
+            Освободить занятые ресурсы.
             </summary>
         </member>
         <member name="P:StockSharp.Logging.TraceSource.Name">
@@ -1013,7 +1013,7 @@
         </member>
         <member name="M:StockSharp.Logging.UnhandledExceptionSource.DisposeManaged">
             <summary>
-            Удалить занятые ресурсы.
+            Освободить занятые ресурсы.
             </summary>
         </member>
         <member name="P:StockSharp.Logging.UnhandledExceptionSource.Name">

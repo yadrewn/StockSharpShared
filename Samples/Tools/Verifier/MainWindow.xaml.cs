@@ -16,6 +16,7 @@ namespace StockSharp.Quik.Verifier
 
 	public partial class MainWindow
 	{
+		private QuikTrader connector;
 		private sealed class SettingsError
 		{
 			public SettingsError(string message, bool isCritical)
@@ -89,7 +90,10 @@ namespace StockSharp.Quik.Verifier
 
 			var isDde = IsDde.IsChecked == true;
 
-			var connector = new QuikTrader(terminal.SystemProcess.MainModule.FileName) { IsDde = isDde };
+			if ((connector != null) && (!connector.IsDisposed))
+				connector.Dispose();
+
+			connector = new QuikTrader(terminal.SystemProcess.MainModule.FileName) { IsDde = isDde };
 
 			if (isDde && CheckDde.IsChecked == false)
 				connector.Adapter.InnerAdapters.Remove(connector.MarketDataAdapter);

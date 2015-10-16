@@ -1,0 +1,1529 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StockSharp.Hydra.Core</name>
+    </assembly>
+    <members>
+        <member name="T:StockSharp.Hydra.Core.AuxiliaryAttribute">
+            <summary>
+            Вспомогательный аттрибут
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.BaseHydraTask">
+            <summary>
+            Базовая класс для задачи.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.IHydraTask">
+            <summary>
+            Интерфейс, описывающий задачу.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.IHydraTask.Init(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Инициализировать задачу.
+            </summary>
+            <param name="settings">Настройки задачи.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.IHydraTask.SaveSettings">
+            <summary>
+            Сохранить настройки.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.IHydraTask.Start">
+            <summary>
+            Запустить.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.IHydraTask.Stop">
+            <summary>
+            Остановить.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.IHydraTask.Icon">
+            <summary>
+            Адрес иконки, для визуального обозначения.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.IHydraTask.Settings">
+            <summary>
+            Настройки задачи <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.IHydraTask.SupportedMarketDataTypes">
+            <summary>
+            Поддерживаемые маркет-данные.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.IHydraTask.SupportedCandleSeries">
+            <summary>
+            Поддерживаемые серии свечек.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.IHydraTask.DataLoaded">
+            <summary>
+            Событие о загрузке маркет-данных.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.IHydraTask.Started">
+            <summary>
+            Событие запуска.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.IHydraTask.Stopped">
+            <summary>
+            Событие остановки.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.IHydraTask.State">
+            <summary>
+            Текущее состояние задачи.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveSecurity(StockSharp.BusinessEntities.Security)">
+            <summary>
+            Сохранить инструмент если он отсутствует в <see cref="P:StockSharp.Algo.Storages.IEntityRegistry.Securities"/>.
+            </summary>
+            <param name="security">Инструмент.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.Init(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Инициализировать задачу.
+            </summary>
+            <param name="settings">Настройки задачи.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveSettings">
+            <summary>
+            Сохранить настройки источника.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.ApplySettings(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Применить настройки.
+            </summary>
+            <param name="settings">Настройки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.Start">
+            <summary>
+            Запустить.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.HandleError(System.Exception)">
+            <summary>
+            Обработать ошибку.
+            </summary>
+            <param name="error">Ошибка.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.Stop">
+            <summary>
+            Остановить.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.OnStarting">
+            <summary>
+            Действие при запуске загрузки данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.RaiseStarted">
+            <summary>
+            Вызвать событие <see cref="E:StockSharp.Hydra.Core.BaseHydraTask.Started"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.OnStopped">
+            <summary>
+            Действие при остановке загрузки данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.CanProcess(System.Boolean)">
+            <summary>
+            Можно ли продолжить работу задачи в методе <see cref="M:StockSharp.Hydra.Core.BaseHydraTask.OnProcess"/>.
+            </summary>
+            <param name="chechTime">Проверять рабочее время.</param>
+            <returns><see langword="true"/>, если работу продолжить возможно, иначе, работу метода необходимо прервать.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.OnProcess">
+            <summary>
+            Выполнить задачу.
+            </summary>
+            <returns>Минимальный интервал, после окончания которого необходимо снова выполнить задачу.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveTrades(StockSharp.Hydra.Core.HydraTaskSecurity,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Trade})">
+            <summary>
+            Сохранить сделки в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="trades">Сделки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveTrades(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Trade})">
+            <summary>
+            Сохранить сделки в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="trades">Сделки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveDepths(StockSharp.Hydra.Core.HydraTaskSecurity,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.MarketDepth})">
+            <summary>
+            Сохранить стаканы в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="depths">Стаканы.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveDepths(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.MarketDepth})">
+            <summary>
+            Сохранить стаканы в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="depths">Стаканы.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveOrderLog(StockSharp.Hydra.Core.HydraTaskSecurity,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.OrderLogItem})">
+            <summary>
+            Сохранить лог заявок по инструменту в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="items">Лог заявок.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveOrderLog(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.OrderLogItem})">
+            <summary>
+            Сохранить лог заявок по инструменту в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="items">Лог заявок.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveLevel1Changes(StockSharp.Hydra.Core.HydraTaskSecurity,System.Collections.Generic.IEnumerable{StockSharp.Messages.Level1ChangeMessage})">
+            <summary>
+            Сохранить изменения по инструменту в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="messages">Изменения.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveLevel1Changes(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{StockSharp.Messages.Level1ChangeMessage})">
+            <summary>
+            Сохранить изменения по инструменту в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="messages">Изменения.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveCandles``1(StockSharp.Hydra.Core.HydraTaskSecurity,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Сохранить свечи по инструменту в хранилище.
+            </summary>
+            <typeparam name="TCandle">Тип свечи.</typeparam>
+            <param name="security">Инструмент.</param>
+            <param name="candles">Свечи.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveCandles``1(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            Сохранить свечи по инструменту в хранилище.
+            </summary>
+            <typeparam name="TCandle">Тип свечи.</typeparam>
+            <param name="security">Инструмент.</param>
+            <param name="candles">Свечи.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveNews(System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.News})">
+            <summary>
+            Сохранить новости в хранилище.
+            </summary>
+            <param name="news">Новости.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.SaveExecutions(StockSharp.BusinessEntities.Security,System.Collections.Generic.IEnumerable{StockSharp.Messages.ExecutionMessage})">
+            <summary>
+            Сохранить исполнения в хранилище.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="executions">Исполнения.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.RaiseDataLoaded(StockSharp.BusinessEntities.Security,System.Type,System.Object,System.DateTimeOffset,System.Int32)">
+            <summary>
+            Вызывать событие <see cref="E:StockSharp.Hydra.Core.BaseHydraTask.DataLoaded"/>.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="dataType">Тип данных.</param>
+            <param name="arg">Параметр данных.</param>
+            <param name="time">Время последних данных.</param>
+            <param name="count">Количество последних данных.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.GetWorkingSecurities">
+            <summary>
+            Получить список инструментов, с которыми будет работать данный источник.
+            </summary>
+            <returns>Инструменты.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.BaseHydraTask.GetTempPath">
+            <summary>
+            Получить путь для временной директории.
+            </summary>
+            <returns>Временная директория.</returns>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.BaseHydraTask.Started">
+            <summary>
+            Событие запуска.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.BaseHydraTask.Stopped">
+            <summary>
+            Событие остановки.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.Name">
+            <summary>
+            Название источника (для различия в лог файлах).
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.LogLevel">
+            <summary>
+            Уровень логирования для источника.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.Icon">
+            <summary>
+            Адрес иконки, для визуального обозначения.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.EntityRegistry">
+            <summary>
+            Хранилище торговых объектов.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.StorageRegistry">
+            <summary>
+            Хранилище маркет-данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.Settings">
+            <summary>
+            Настройки задачи <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.State">
+            <summary>
+            Текущее состояние задачи.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.SupportedMarketDataTypes">
+            <summary>
+            Поддерживаемые маркет-данные.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.BaseHydraTask.SupportedCandleSeries">
+            <summary>
+            Поддерживаемые серии свечек.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.BaseHydraTask.DataLoaded">
+            <summary>
+            Событие заргрузки данных. 
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.BaseHydraTask.PropertyChanged">
+            <summary>
+            Событие изменения настроек.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DatabaseConnectionCache">
+            <summary>
+            Кэш <see cref="T:Ecng.Xaml.Database.DatabaseConnectionPair"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionCache.GetConnection(Ecng.Data.DatabaseProvider,System.String)">
+            <summary>
+            Получить подключение к базе данных.
+            </summary>
+            <param name="provider">Провайдер баз данных.</param>
+            <param name="connectionString">Строка подключения.</param>
+            <returns>Подключение к базе данных</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionCache.AddConnection(Ecng.Xaml.Database.DatabaseConnectionPair)">
+            <summary>
+            Добавить новое подключение к базе данных.
+            </summary>
+            <param name="connection">Новое подключение.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionCache.Load(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Загрузить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionCache.Save(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Сохранить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DatabaseConnectionCache.Instance">
+            <summary>
+            Кэш.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DatabaseConnectionCache.AllConnections">
+            <summary>
+            Список всех подключений.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.DatabaseConnectionCache.NewConnectionCreated">
+            <summary>
+            Событие создания нового подключения.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DatabaseConnectionComboBox">
+            <summary>
+            Комбо элемент для выбора подключения к базе данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionComboBox.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.DatabaseConnectionComboBox"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionComboBox.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обработчик события смены выбранного элемента.
+            </summary>
+            <param name="e">Параметр события.</param>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.DatabaseConnectionComboBox.SelectedConnectionProperty">
+            <summary>
+            <see cref="T:System.Windows.DependencyProperty"/> для <see cref="P:StockSharp.Hydra.Core.DatabaseConnectionComboBox.SelectedConnection"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DatabaseConnectionComboBox.SelectedConnection">
+            <summary>
+            Выбранное подключения.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DatabaseConnectionEditor">
+            <summary>
+            <see cref="T:Xceed.Wpf.Toolkit.PropertyGrid.Editors.ITypeEditor"/> для <see cref="T:StockSharp.Hydra.Core.DatabaseConnectionComboBox"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DatabaseConnectionEditor.SetValueDependencyProperty">
+            <summary>
+            Установить <see cref="P:Xceed.Wpf.Toolkit.PropertyGrid.Editors.TypeEditor`1.ValueProperty"/> значением <see cref="F:StockSharp.Hydra.Core.DatabaseConnectionComboBox.SelectedConnectionProperty"/>.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DriveCache">
+            <summary>
+            Кэш <see cref="T:StockSharp.Algo.Storages.IMarketDataDrive"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveCache.GetDrive(System.String)">
+            <summary>
+            Получить хранилище маркет-данных.
+            </summary>
+            <param name="path">Путь к данным.</param>
+            <returns>Хранилище маркет-данных.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveCache.Load(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Загрузить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveCache.Save(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Сохранить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveCache.DisposeManaged">
+            <summary>
+            Освободить занятые ресурсы.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DriveCache.Instance">
+            <summary>
+            Кэш.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DriveCache.AllDrives">
+            <summary>
+            Список всех хранилищ маркет-данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DriveCache.DefaultDrive">
+            <summary>
+            Хранилище маркет-данных, используемое по-умолчанию.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.DriveCache.NewDriveCreated">
+            <summary>
+            Событие создания нового хранилища.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DriveComboBox">
+            <summary>
+            Визуальный контрол выбора хранилища маркет-данных.
+            </summary>
+            <summary>
+            DriveComboBox
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveComboBox.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.DriveComboBox"/>.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.DriveComboBox.DrivesProperty">
+            <summary>
+            <see cref="T:System.Windows.DependencyProperty"/> для <see cref="P:StockSharp.Hydra.Core.DriveComboBox.Drives"/>.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.DriveComboBox.SelectedDriveProperty">
+            <summary>
+            <see cref="T:System.Windows.DependencyProperty"/> для <see cref="P:StockSharp.Hydra.Core.DriveComboBox.SelectedDrive"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveComboBox.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Обработчик события смены выбранного элемента.
+            </summary>
+            <param name="e">Параметр события.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveComboBox.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DriveComboBox.Drives">
+            <summary>
+            Все доступные хранилища маркет-данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.DriveComboBox.SelectedDrive">
+            <summary>
+            Выбранное хранилище маркет-данных.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.DriveComboBoxEditor">
+            <summary>
+            Визуальный редактор для выбора хранилища маркет-данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.DriveComboBoxEditor.SetValueDependencyProperty">
+            <summary>
+            Установить <see cref="P:Xceed.Wpf.Toolkit.PropertyGrid.Editors.TypeEditor`1.ValueProperty"/> значением <see cref="F:StockSharp.Hydra.Core.DriveComboBox.SelectedDriveProperty"/>.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.ExportTypes">
+            <summary>
+            Типы экспортов.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.ExportTypes.Excel">
+            <summary>
+            В Excel.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.ExportTypes.Xml">
+            <summary>
+            В xml.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.ExportTypes.Txt">
+            <summary>
+            В текстовый файл.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.ExportTypes.Sql">
+            <summary>
+            В базу данных.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.ExportTypes.Bin">
+            <summary>
+            В формат StockSharp.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.OrderLogBuilders">
+            <summary>
+            Построители стаканов из лога заявок.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.OrderLogBuilders.Plaza2">
+            <summary>
+            Плаза 2.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.OrderLogBuilders.ITCH">
+            <summary>
+            ITCH.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.Extensions">
+            <summary>
+            Вспомогательный класс.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.Extensions.AllSecurityId">
+            <summary>
+            Идентификатор инструмента "Все инструменты".
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetAllSecurity(StockSharp.Hydra.Core.IHydraTask)">
+            <summary>
+            Получить инструмент "Все инструменты" для задачи.
+            </summary>
+            <param name="task">Задача.</param>
+            <returns>Инструмент "Все инструменты".</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.IsExecLogEnabled(StockSharp.Hydra.Core.IHydraTask)">
+            <summary>
+            Включено ли у задачи закачка лога собственной торговли.
+            </summary>
+            <param name="task">Задача.</param>
+            <returns>Включено ли у задачи закачка лога собственной торговли.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.IsAllSecurity(StockSharp.BusinessEntities.Security)">
+            <summary>
+            Проверить, является ли инструмент "Все инструменты".
+            </summary>
+            <param name="security">Инструмент.</param>
+            <returns><see langword="true"/>, если инструмент "Все инструменты", иначе, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.ToHydraSecurities(StockSharp.Hydra.Core.IHydraTask,System.Collections.Generic.IEnumerable{StockSharp.BusinessEntities.Security})">
+            <summary>
+            Преобразовать <see cref="T:StockSharp.BusinessEntities.Security"/> в <see cref="T:StockSharp.Hydra.Core.HydraTaskSecurity"/>.
+            </summary>
+            <param name="task">Задача.</param>
+            <param name="securities">Исходные инструменты.</param>
+            <returns>Сконвертированные инструменты.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetDisplayName(StockSharp.Hydra.Core.IHydraTask)">
+            <summary>
+            Получить отображаемое имя для задачи.
+            </summary>
+            <param name="task">Задача.</param>
+            <returns>Отображаемое имя.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetDescription(StockSharp.Hydra.Core.IHydraTask)">
+            <summary>
+            Получить описание задачи.
+            </summary>
+            <param name="task">Задача.</param>
+            <returns>Описание задачи.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetFileName(StockSharp.BusinessEntities.Security,System.Type,System.Object,System.Nullable{System.DateTime},System.Nullable{System.DateTime},StockSharp.Hydra.Core.ExportTypes)">
+            <summary>
+            Сгенерировать имя эспортируемого файла.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="dataType">Тип маркет-данных.</param>
+            <param name="arg">Параметр свечи.</param>
+            <param name="from">Дата начала.</param>
+            <param name="to">Дата окончания.</param>
+            <param name="type">Тип экспорта.</param>
+            <returns>Имя эспортируемого файла.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.IsTradeDate(StockSharp.Hydra.Core.HydraTaskSecurity,System.DateTime)">
+            <summary>
+            Проверить, является ли дата торгуемой.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="date">Передаваемая дата, которую необходимо проверить.</param>
+            <returns><see langword="true"/>, если торгуемая дата, иначе, неторгуемая.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetTxtTemplate(System.Type,System.Object)">
+            <summary>
+            Получить шаблон для текстового экспорта данных.
+            </summary>
+            <param name="dataType">Тип данных.</param>
+            <param name="arg">Параметр данных.</param>
+            <returns>Шаблон для текстового экспорта данных.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.IsCategoryOf(StockSharp.Hydra.Core.IHydraTask,StockSharp.Hydra.Core.TaskCategories)">
+            <summary>
+            Принадлежит ли задача категории.
+            </summary>
+            <param name="task">Задача.</param>
+            <param name="category">Категория.</param>
+            <returns>Принадлежит ли задача категории.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.IsCategoryOf(System.Type,StockSharp.Hydra.Core.TaskCategories)">
+            <summary>
+            Принадлежит ли задача категории.
+            </summary>
+            <param name="taskType">Задача.</param>
+            <param name="category">Категория.</param>
+            <returns>Принадлежит ли задача категории.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.GetIcon(System.Type)">
+            <summary>
+            Получить инонку задачи.
+            </summary>
+            <param name="taskType">Задача.</param>
+            <returns>Иконка задачи.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.Extensions.CreateBuilder(StockSharp.Hydra.Core.OrderLogBuilders,StockSharp.Messages.SecurityId)">
+            <summary>
+            Создать построитель стакана из лога заявок.
+            </summary>
+            <param name="builder">Тип построителя.</param>
+            <param name="securityId">Идентификатор инструмента.</param>
+            <returns>Построитель стакана из лога заявок.</returns>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.Extensions.Tasks">
+            <summary>
+            Все созданные задачи.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraEntityRegistry">
+            <summary>
+            Корневой объект для доступа к базе данных Hydra.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraEntityRegistry.#ctor(Ecng.Serialization.IStorage)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraEntityRegistry"/>.
+            </summary>
+            <param name="storage">Специальный интерфейс для прямого доступа к хранилищу.</param>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.HydraEntityRegistry.LatestVersion">
+            <summary>
+            Последняя версия, которой должна быть актуальная база данных Hydra.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraEntityRegistry.TasksSettings">
+            <summary>
+            Настройки задач <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraEntityRegistry.Version">
+            <summary>
+            Версия.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraEntityRegistry.Settings">
+            <summary>
+            Настройки.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraSettings">
+            <summary>
+            Настройки.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraSettings.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraSettings"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettings.Name">
+            <summary>
+            Имя.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettings.Value">
+            <summary>
+            Значение.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraSettingsRegistry">
+            <summary>
+            Класс для представления всех настроек.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraSettingsRegistry.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraSettingsRegistry"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraSettingsRegistry.Load(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Загрузить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraSettingsRegistry.Save(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Сохранить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.IsServer">
+            <summary>
+            Серверный режим.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.MaxSecurityCount">
+            <summary>
+            Максимальное количество инструментов, которое можно запрашивать с сервера.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.Authorization">
+            <summary>
+            Авторизация для получения доступа к S#.Data сервер.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.AutoStart">
+            <summary>
+            Автостарт скачивания котировок при запуске.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.MinimizeToTray">
+            <summary>
+            Сворачивать в трей.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.AutoStop">
+            <summary>
+            Остановка работы по времени.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.StopTime">
+            <summary>
+            Время для Авто-стоп.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.EmailErrorCount">
+            <summary>
+            Количество ошибок, после которых будет отправлено письмо на почту с сообщение об ошибке.
+            Значение 0 означает выключенный режим.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.EmailErrorAddress">
+            <summary>
+            Адрес почты, куда будет отправлено письмо с сообщением о превышении максимально допустимого количества ошибок.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraSettingsRegistry.TemplateTxtRegistry">
+            <summary>
+            Реестр шаблонов для экспорта в формат txt.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraTaskSecurityList">
+            <summary>
+            Коллекция <see cref="T:StockSharp.Hydra.Core.HydraTaskSecurityList"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSecurityList.#ctor(Ecng.Serialization.IStorage,StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraTaskSecurityList"/>.
+            </summary>
+            <param name="storage">Хранилище.</param>
+            <param name="settings">Настройки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSecurityList.OnUpdate(StockSharp.Hydra.Core.HydraTaskSecurity)">
+            <summary>
+            Обновить инструмент.
+            </summary>
+            <param name="entity">Инструмент.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSecurityList.OnRemove(StockSharp.Hydra.Core.HydraTaskSecurity)">
+            <summary>
+            Удалить инструмент.
+            </summary>
+            <param name="entity">Инструмент.</param>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskStates">
+            <summary>
+            Состояния задачи.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskStates.Stopped">
+            <summary>
+            Остановлен.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskStates.Stopping">
+            <summary>
+            Останавливается.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskStates.Starting">
+            <summary>
+            Запускается.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskStates.Started">
+            <summary>
+            Запущен.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraTaskSettings">
+            <summary>
+            Настройки задачи <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettings.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraTaskSettings"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettings.#ctor(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraTaskSettings"/>.
+            </summary>
+            <param name="settings">Реальные настройки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettings.ApplyChanges(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Применить изменения, сделанные в копии настроек.
+            </summary>
+            <param name="settingsCopy">Копия.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettings.Clone">
+            <summary>
+            Создать копию <see cref="T:StockSharp.Hydra.Core.HydraTaskSettings"/>.
+            </summary>
+            <returns>Копия объекта.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettings.NotifyPropertyChanged(System.String)">
+            <summary>
+            Вызвать событие <see cref="E:StockSharp.Hydra.Core.HydraTaskSettings.PropertyChanged"/>.
+            </summary>
+            <param name="name">Название свойства.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.Id">
+            <summary>
+            Идентификатор задачи.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.TaskType">
+            <summary>
+            Тип задачи.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.IsEnabled">
+            <summary>
+            Включена ли задача.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.WorkingFrom">
+            <summary>
+            Время начала работы.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.WorkingTo">
+            <summary>
+            Время окончания работы.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.Interval">
+            <summary>
+            Интервал работы.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.Drive">
+            <summary>
+            Директория с данными, куда будут сохраняться конечные файлы в формате StockSharp.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.StorageFormat">
+            <summary>
+            Формат данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.DependFrom">
+            <summary>
+            Задача, которая должна быть выполнена перед запуском текущей.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.MaxErrorCount">
+            <summary>
+            Максимальное количество ошибок, после которого задача будет остановлена.
+            По-умолчанию равно 0, что означает игнорирование количества ошибок.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.SupportedLevel1Fields">
+            <summary>
+            Поддерживаемые поля маркет-данных первого уровня.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.IsDefault">
+            <summary>
+            Настройки содержат значений, заданные по-умолчанию.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.Title">
+            <summary>
+            Заголовок задачи.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.LogLevel">
+            <summary>
+            Уровень логирования.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.ExtensionInfo">
+            <summary>
+            Расширенная информация, храняющая в себе дополнительные настройки задачи.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSettings.Securities">
+            <summary>
+            Инструменты, связанные с задачей.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.HydraTaskSettings.PropertyChanged">
+            <summary>
+            Событие изменения настроек.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.ConnectorHydraTaskSettings">
+            <summary>
+            Настройки задачи <see cref="T:StockSharp.Hydra.Core.ConnectorHydraTask`1"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTaskSettings.#ctor(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Инициализировать <see cref="T:StockSharp.Hydra.Core.ConnectorHydraTaskSettings"/>.
+            </summary>
+            <param name="settings">Реальные настройки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTaskSettings.ApplyChanges(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Применить изменения, сделанные в копии настроек.
+            </summary>
+            <param name="settingsCopy">Копия.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.ConnectorHydraTaskSettings.SupportedLevel1Fields">
+            <summary>
+            Поддерживаемые поля маркет-данных первого уровня.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.ConnectorHydraTaskSettings.ReConnectionSettings">
+            <summary>
+            Настройки контроля подключения <see cref="T:StockSharp.BusinessEntities.IConnector"/> к торговой системе.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.ConnectorHydraTaskSettings.IsDownloadNews">
+            <summary>
+            Скачивать новости.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraTaskSettingsList">
+            <summary>
+            Коллекция настроек для <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSettingsList.#ctor(Ecng.Serialization.IStorage)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraTaskSettingsList"/>.
+            </summary>
+            <param name="storage">Специальный интерфейс для прямого доступа к хранилищу.</param>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.MarketDataConnector`1">
+            <summary>
+            Обертка над подключение <see cref="T:StockSharp.BusinessEntities.IConnector"/> для получения маркет-данных в реальном времени.
+            </summary>
+            <typeparam name="TConnector">Тип подключения.</typeparam>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.#ctor(StockSharp.BusinessEntities.ISecurityProvider,StockSharp.Hydra.Core.ConnectorHydraTask{`0},System.Func{`0})">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.MarketDataConnector`1"/>.
+            </summary>
+            <param name="securityProvider">Поставщик информации об инструментах.</param>
+            <param name="task">Задача.</param>
+            <param name="createConnector">Обработчик, создающий подключение к торговой системе.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.InitializeConnector">
+            <summary>
+            Инициализировать подключение.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.UnInitializeConnector">
+            <summary>
+            Деинициализировать подключение.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetMarketDepths">
+            <summary>
+            Получить накопленные стаканы.
+            </summary>
+            <returns>Накопленные стаканы.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetTrades">
+            <summary>
+            Получить накопленные тиковые сделки.
+            </summary>
+            <returns>Накопленные сделки.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetOrderLog">
+            <summary>
+            Получить накопленный лог заявок.
+            </summary>
+            <returns>Накопленный лог заявок.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetLevel1Messages">
+            <summary>
+            Получить накопленные изменения по инструменту.
+            </summary>
+            <returns>Накопленные изменения по инструменту.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetCandles">
+            <summary>
+            Получить накопленные свечи.
+            </summary>
+            <returns>Накопленные свечи.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetNews">
+            <summary>
+            Получить накопленные новости.
+            </summary>
+            <returns>Накопленные новости.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.GetExecutionMessages">
+            <summary>
+            Получить накопленные заявки и сделки по инструменту.
+            </summary>
+            <returns>Накопленные заявки и сделки по инструменту.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.AddTrade(StockSharp.BusinessEntities.Trade)">
+            <summary>
+            Добавить новую сделку.
+            </summary>
+            <param name="trade">Новая сделка.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.AddMarketDepth(StockSharp.BusinessEntities.MarketDepth)">
+            <summary>
+            Добавить новый стакан.
+            </summary>
+            <param name="depth">Новый стакан.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.AddOrderLog(StockSharp.BusinessEntities.OrderLogItem)">
+            <summary>
+            Добавить новую лог-заявку.
+            </summary>
+            <param name="item">Новая лог-заявка.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.AddLevel1Change(StockSharp.BusinessEntities.Security,StockSharp.Messages.Level1ChangeMessage)">
+            <summary>
+            Добавить первый уровень маркет-данных.
+            </summary>
+            <param name="security">Инструмент.</param>
+            <param name="message">Первый уровень маркет-данных.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.Start">
+            <summary>
+            Запустить накопление маркет-данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.Stop">
+            <summary>
+            Остановить накопление маркет-данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.Refresh(StockSharp.Algo.Storages.ISecurityStorage,StockSharp.BusinessEntities.Security,System.Action{StockSharp.BusinessEntities.Security},System.Func{System.Boolean})">
+            <summary>
+            Закачать новые инструменты.
+            </summary>
+            <param name="storage">Хранилище информации об инструментах.</param>
+            <param name="criteria">Инструмент, поля которого будут использоваться в качестве фильтра.</param>
+            <param name="newSecurity">Обработчик, через который будет передан новый инструмент.</param>
+            <param name="isCancelled">Обработчик, возвращающий признак отмены поиска.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.MarketDataConnector`1.DisposeManaged">
+            <summary>
+            Освободить занятые ресурсы.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.MarketDataConnector`1.TraderError">
+            <summary>
+            Ошибка в подключении.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.MarketDataConnector`1.Connector">
+            <summary>
+            Подключение к торговой системе.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.MarketDataConnector`1.LastError">
+            <summary>
+            Информация о последней ошибке.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.MarketDataConnector`1.Connected">
+            <summary>
+            Событие успешного подключения.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.MarketDataConnector`1.ConnectionError">
+            <summary>
+            Событие ошибки подключения.
+            </summary>
+        </member>
+        <member name="E:StockSharp.Hydra.Core.MarketDataConnector`1.NewSecurities">
+            <summary>
+            Событие получения инструментов.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.ConnectorHydraTask`1">
+            <summary>
+            Базовый источник, работающий через <see cref="T:StockSharp.Hydra.Core.MarketDataConnector`1"/>.
+            </summary>
+            <typeparam name="TConnector">Тип подключения.</typeparam>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.#ctor">
+            <summary>
+            Инициализировать <see cref="T:StockSharp.Hydra.Core.ConnectorHydraTask`1"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.ApplySettings(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Применить настройки.
+            </summary>
+            <param name="settings">Настройки.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.OnStarting">
+            <summary>
+            Запустить загрузку данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.OnStopped">
+            <summary>
+            Остановить загрузку данных.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.SubscribeSecurity(StockSharp.BusinessEntities.Security)">
+            <summary>
+            Подписаться на получение реалтайм данных для инструмента.
+            </summary>
+            <param name="security">Инструмент.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.OnProcess">
+            <summary>
+            Выполнить задачу.
+            </summary>
+            <returns>Минимальный интервал, после окончания которого необходимо снова выполнить задачу.</returns>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.ConnectorHydraTask`1.CreateConnector(StockSharp.Hydra.Core.HydraTaskSettings)">
+            <summary>
+            Создать подключение к торговой системе.
+            </summary>
+            <param name="settings">Настройки.</param>
+            <returns>Подключение к торговой системе.</returns>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.ConnectorHydraTask`1.Connector">
+            <summary>
+            Обертка над подключением <see cref="T:StockSharp.BusinessEntities.IConnector"/> для получения маркет-данных в реальном времени.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.ConnectorHydraTask`1.SupportedMarketDataTypes">
+            <summary>
+            Поддерживаемые маркет-данные.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraTaskSecurity">
+            <summary>
+            Инструмент, ассоциированный с <see cref="T:StockSharp.Hydra.Core.IHydraTask"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSecurity.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.HydraTaskSecurity"/>.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.HydraTaskSecurity.MarketDataTypesSet">
+            <summary>
+            Хэш-коллекция для быстрой проверки <see cref="P:StockSharp.Hydra.Core.HydraTaskSecurity.MarketDataTypes"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.HydraTaskSecurity.ToString">
+            <summary>
+            Получить строковое представление.
+            </summary>
+            <returns>Строковое представление.</returns>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.Id">
+            <summary>
+            Уникальный идентификатор инструмента.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.Settings">
+            <summary>
+            Настройки.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.Security">
+            <summary>
+            Биржевой инструмент.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.MarketDataTypes">
+            <summary>
+            Типы данных, которые нужно получать для данного инструмента.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.CandleSeries">
+            <summary>
+            Серии свечек, которые необходимо скачивать для данного инструмента.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.TradeInfo">
+            <summary>
+            Информация о сделках.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.DepthInfo">
+            <summary>
+            Информация о стаканах.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.OrderLogInfo">
+            <summary>
+            Информация о логе заявок.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.Level1Info">
+            <summary>
+            Информация о Level1.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.CandleInfo">
+            <summary>
+            Информация о свечах.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.ExecutionInfo">
+            <summary>
+            Информация о логе собственных транзакций.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.HydraTaskSecurity.TypeInfo">
+            <summary>
+            Информация по типу данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.TypeInfo.Count">
+            <summary>
+            Обработанное количество данных.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.HydraTaskSecurity.TypeInfo.LastTime">
+            <summary>
+            Временная метка последних обработанных данных.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskSettingsDisplayNameAttribute">
+            <summary>
+            Localized task settings display name.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TaskSettingsDisplayNameAttribute.#ctor(System.String)">
+            <summary>
+            Initizalize new instance.
+            </summary>
+            <param name="sourceName">Default name of the task.</param>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskDocAttribute">
+            <summary>
+            Документация задачи.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TaskDocAttribute.#ctor(System.String)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.TaskDocAttribute"/>.
+            </summary>
+            <param name="docUrl">Ссылка на раздел документации.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TaskDocAttribute.DocUrl">
+            <summary>
+            Ссылка на раздел документации.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskIconAttribute">
+            <summary>
+            Иконка задачи.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TaskIconAttribute.#ctor(System.String)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.TaskIconAttribute"/>.
+            </summary>
+            <param name="icon">Иконка.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TaskIconAttribute.Icon">
+            <summary>
+            Иконка.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskCategories">
+            <summary>
+            Категории задач.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Russia">
+            <summary>
+            Россия.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.America">
+            <summary>
+            Америка.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Stock">
+            <summary>
+            Фондовая биржа.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Forex">
+            <summary>
+            Форекс.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Crypto">
+            <summary>
+            Криптовалюта.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.History">
+            <summary>
+            История.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.RealTime">
+            <summary>
+            Реал-тайм.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Free">
+            <summary>
+            Бесплатно.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Paid">
+            <summary>
+            Платно.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Ticks">
+            <summary>
+            Тики (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Candles">
+            <summary>
+            Свечи (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.MarketDepth">
+            <summary>
+            Стакан (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Level1">
+            <summary>
+            Level1 (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.OrderLog">
+            <summary>
+            Лог заявок (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.News">
+            <summary>
+            Новости (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Transactions">
+            <summary>
+            Транзакции (источник).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TaskCategories.Tool">
+            <summary>
+            Вспомогательная задача.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TaskCategoryAttribute">
+            <summary>
+            Артибут, задающий категории задач.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TaskCategoryAttribute.#ctor(StockSharp.Hydra.Core.TaskCategories)">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.TaskCategoryAttribute"/>.
+            </summary>
+            <param name="categories">Категории задач.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TaskCategoryAttribute.Categories">
+            <summary>
+            Категории задач.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TempFiles">
+            <summary>
+            Использование временных файлов.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TempFiles.NotUse">
+            <summary>
+            Не использовать.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TempFiles.Use">
+            <summary>
+            Использовать.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Hydra.Core.TempFiles.UseAndDelete">
+            <summary>
+            Использовать и удалять.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Hydra.Core.TemplateTxtRegistry">
+            <summary>
+            Реестр txt шаблонов.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TemplateTxtRegistry.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Hydra.Core.TemplateTxtRegistry"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TemplateTxtRegistry.Load(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Загрузить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Hydra.Core.TemplateTxtRegistry.Save(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Сохранить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtDepth">
+            <summary>
+            Шаблон экспорта в txt для стаканов.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtTick">
+            <summary>
+            Шаблон экспорта в txt для тиков.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtCandle">
+            <summary>
+            Шаблон экспорта в txt для свечей.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtLevel1">
+            <summary>
+            Шаблон экспорта в txt для level1.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtOrderLog">
+            <summary>
+            Шаблон экспорта в txt для лога заявок.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtTransaction">
+            <summary>
+            Шаблон экспорта в txt для транзакций.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtSecurity">
+            <summary>
+            Шаблон экспорта в txt для инструментов.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Hydra.Core.TemplateTxtRegistry.TemplateTxtNews">
+            <summary>
+            Шаблон экспорта в txt для новостей.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -352,7 +352,7 @@
         </member>
         <member name="F:StockSharp.Alerts.AlertTypes.Log">
             <summary>
-            Логом.
+            Логированием.
             </summary>
         </member>
         <member name="T:StockSharp.Alerts.Properties.Resources">

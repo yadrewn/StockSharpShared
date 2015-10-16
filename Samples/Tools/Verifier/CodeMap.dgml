@@ -1,0 +1,1076 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@107 @108 @109 Member=AnonymousMethod__1)" Category="CodeSchema_Method" Bounds="2328.91,1285.335,157.843333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__1" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/MainWindow.xaml.cs StartLineNumber=100 StartCharacterOffset=0 EndLineNumber=100 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@139 Namespace=Ecng.Collections Type=(Name=BaseBlockingQueue GenericParameterCount=2) Member=Close)" Category="CodeSchema_Method" Bounds="1914.46333333333,997.097500000001,64.7366666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Close" FunctionTypeFlags="Method" Label="Close" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Collections/Ecng/Collections/BaseBlockingQueue`2.cs StartLineNumber=74 StartCharacterOffset=0 EndLineNumber=74 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@139 Namespace=Ecng.Collections Type=(Name=BaseBlockingQueue GenericParameterCount=2) Member=Open)" Category="CodeSchema_Method" Bounds="935.248333333333,1112.3925,65.166666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Open" FunctionTypeFlags="Method" Label="Open" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Collections/Ecng/Collections/BaseBlockingQueue`2.cs StartLineNumber=83 StartCharacterOffset=0 EndLineNumber=83 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@19 @29 @69 Member=(Name=LogoutRequestHandle OverloadingParameters=[(@19 @29 Type=IFixWriter)]))" Category="CodeSchema_Method" Bounds="398.808333333333,1054.745,154.046666666667,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" CommonLabel="LogoutRequestHandle" FunctionTypeFlags="Method" Label="LogoutRequestHandle" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/FixMessageWriter.cs StartLineNumber=217 StartCharacterOffset=0 EndLineNumber=217 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@38 @39 @31 Member=(Name=RemoveMarketDataSupport OverloadingParameters=[@71]))" Category="CodeSchema_Method" Bounds="664.111666666667,736.275000000001,183.44,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="RemoveMarketDataSupport" FunctionTypeFlags="Method" Label="RemoveMarketDataSupport" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/Extensions.cs StartLineNumber=303 StartCharacterOffset=0 EndLineNumber=303 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@38 @39 @58 @63)" Category="CodeSchema_Method" Bounds="1393.245,793.922500000001,125.173333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsProtected="True" CommonLabel="MessageAdapter" FunctionTypeFlags="Constructor" Label="MessageAdapter" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=76 StartCharacterOffset=0 EndLineNumber=76 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@38 @39 @58 Member=StockSharp.Messages.IMessageChannel.Close)" Category="CodeSchema_Method" Bounds="1671.44833333333,931.470000000001,276.766666666667,25.9600000000002" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.Close" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.Close" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=279 StartCharacterOffset=0 EndLineNumber=279 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@38 @39 Type=(Name=CodeTimeOut ParentType=MessageAdapter) Member=(Name=ProcessTime OverloadingParameters=[(@33 @34 Type=TimeSpan)]))" Category="CodeSchema_Method" Bounds="3662.96333333333,865.8425,101.736666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ProcessTime" FunctionTypeFlags="Method" Label="ProcessTime" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=51 StartCharacterOffset=0 EndLineNumber=51 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@42 @43 @44 Member=AnonymousMethod__6c)" Category="CodeSchema_Method" Bounds="1912.13833333333,318.47,163.386666666667,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__6c" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTerminal.cs StartLineNumber=1287 StartCharacterOffset=0 EndLineNumber=1287 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@42 @43 @44 Member=CloseAllEditWindows)" Category="CodeSchema_Method" Bounds="1734.24666666667,318.47,147.17,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="CloseAllEditWindows" FunctionTypeFlags="Method" Label="CloseAllEditWindows" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTerminal.cs StartLineNumber=1688 StartCharacterOffset=0 EndLineNumber=1688 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@47 @48 @103 Member=(Name=To @37 OverloadingParameters=[(@33 @34 Type=Object)]))" Category="CodeSchema_Method" Bounds="373.82,931.470000000001,72.0233333333335,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="To" FunctionTypeFlags="Method" Label="To‎&lt;T‎&gt;" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/Converter.cs StartLineNumber=653 StartCharacterOffset=0 EndLineNumber=653 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@47 @48 Type=IncrementalIdGenerator Member=GetNextId)" Category="CodeSchema_Method" Bounds="0,1054.745,89.6633333333334,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="GetNextId" FunctionTypeFlags="Method" IsOverloaded="True" Label="GetNextId" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/IncrementalIdGenerator.cs StartLineNumber=27 StartCharacterOffset=0 EndLineNumber=27 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@47 @48 Type=MillisecondIncrementalIdGenerator @124)" Category="CodeSchema_Method" Bounds="1327.80666666667,736.275000000001,222.05,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="MillisecondIncrementalIdGenerator" FunctionTypeFlags="Constructor" Label="MillisecondIncrementalIdGenerator" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/MillisecondIncrementalIdGenerator.cs StartLineNumber=12 StartCharacterOffset=0 EndLineNumber=12 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@47 @48 Type=ThreadingHelper Member=(Name=CreateThread OverloadingParameters=[(@33 Namespace=System.Threading Type=ThreadStart)]))" Category="CodeSchema_Method" Bounds="815.316666666667,1170.04,107.03,25.96" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" CommonLabel="CreateThread" FunctionTypeFlags="Method" Label="CreateThread" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/ThreadingHelper.cs StartLineNumber=115 StartCharacterOffset=0 EndLineNumber=115 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 @52 @53 Member=(Name=set_Adapter OverloadingParameters=[(@51 @52 @55)]))" Category="CodeSchema_Method" Bounds="1198.38166666667,736.275000000001,98.9000000000005,25.96" CodeSchemaProperty_IsPublic="True" FunctionTypeFlags="Property Set" IsCodeType="False" IsOverloaded="False" IsOverridable="False" Label="set_Adapter" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" MustImplement="False" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=192 StartCharacterOffset=0 EndLineNumber=192 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 @52 @53 Member=RaiseDisconnected)" Category="CodeSchema_Method" Bounds="2181.15333333333,1170.04,135.356666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="RaiseDisconnected" FunctionTypeFlags="Method" Label="RaiseDisconnected" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_Raise.cs StartLineNumber=402 StartCharacterOffset=0 EndLineNumber=402 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 @52 @55 Member=AnonymousMethod__f)" Category="CodeSchema_Method" Bounds="945.266666666667,865.842500000001,155.13,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__f" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=244 StartCharacterOffset=0 EndLineNumber=244 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 @52 Type=(Name=InnerAdapterList ParentType=BasketMessageAdapter) @124)" Category="CodeSchema_Method" Bounds="1549.12,793.922500000001,123.423333333333,25.9599999999998" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="InnerAdapterList" FunctionTypeFlags="Constructor" Label="InnerAdapterList" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=41 StartCharacterOffset=0 EndLineNumber=41 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 @52 Type=ManagedMessageAdapter Member=(Name=ProcessRisk @76))" Category="CodeSchema_Method" Bounds="2042.29666666667,1285.335,97.0700000000002,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ProcessRisk" FunctionTypeFlags="Method" Label="ProcessRisk" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/ManagedMessageAdapter.cs StartLineNumber=262 StartCharacterOffset=0 EndLineNumber=262 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="(@51 Namespace=StockSharp.Algo.Latency Type=LatencyManager Member=(Name=ProcessMessage @76))" Category="CodeSchema_Method" Bounds="2169.52166666667,1285.335,122.62,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ProcessMessage" FunctionTypeFlags="Method" Label="ProcessMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Latency/LatencyManager.cs StartLineNumber=46 StartCharacterOffset=0 EndLineNumber=46 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@100" Category="CodeSchema_Method" Bounds="1190.43666666667,606.707500000001,94.79,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="QuikTrader" FunctionTypeFlags="Constructor" Label="QuikTrader" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTrader.cs StartLineNumber=46 StartCharacterOffset=0 EndLineNumber=46 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@101" Category="CodeSchema_Method" Bounds="303.515,1112.3925,64.6333333333334,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Write" FunctionTypeFlags="Method" Label="Write" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixWriter.cs StartLineNumber=133 StartCharacterOffset=0 EndLineNumber=133 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@102" Category="CodeSchema_Method" Bounds="218.233333333334,997.097500000001,109.196666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="SendMessage" FunctionTypeFlags="Method" Label="SendMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/FixMessageWriter.cs StartLineNumber=164 StartCharacterOffset=0 EndLineNumber=164 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@104" Category="CodeSchema_Method" Bounds="2134.90166666667,188.9025,99.8600000000001,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="DoInCulture" FunctionTypeFlags="Method" Label="DoInCulture" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/Converter.cs StartLineNumber=703 StartCharacterOffset=0 EndLineNumber=703 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@105" Category="CodeSchema_Method" Bounds="3344.55833333333,1054.745,166.546666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ProcessConnectMessage" FunctionTypeFlags="Method" Label="ProcessConnectMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=403 StartCharacterOffset=0 EndLineNumber=403 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@106" Category="CodeSchema_Method" Bounds="3541.295,1054.745,181.073333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ProcessDisconnectMessage" FunctionTypeFlags="Method" Label="ProcessDisconnectMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=411 StartCharacterOffset=0 EndLineNumber=411 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@111" Category="CodeSchema_Method" Bounds="1686.95,131.255,95.7633333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="OnConnect" FunctionTypeFlags="Method" Label="OnConnect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/MainWindow.xaml.cs StartLineNumber=125 StartCharacterOffset=0 EndLineNumber=125 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@112" Category="CodeSchema_Method" Bounds="3818.38,736.275,130.903333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ParseUserRequest" FunctionTypeFlags="Method" Label="ParseUserRequest" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=490 StartCharacterOffset=0 EndLineNumber=490 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@113" Category="CodeSchema_Method" Bounds="3453.49333333333,549.06,184.676666666667,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="ProcessMarketDataMessage" FunctionTypeFlags="Method Virtual" Label="ProcessMarketDataMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=982 StartCharacterOffset=0 EndLineNumber=982 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@114" Category="CodeSchema_Method" Bounds="3669.075,549.06,183.513333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="ProcessTransactionMessage" FunctionTypeFlags="Method Virtual" Label="ProcessTransactionMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=1192 StartCharacterOffset=0 EndLineNumber=1192 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@115" Category="CodeSchema_Method" Bounds="3425.75166666667,997.097500000001,192.16,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="OnInnerAdapterNewMessage" FunctionTypeFlags="Method Virtual" Label="OnInnerAdapterNewMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=385 StartCharacterOffset=0 EndLineNumber=385 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@117" Category="CodeSchema_Method" Bounds="1458.455,549.06,92.7533333333331,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="CheckClick" FunctionTypeFlags="Method" Label="CheckClick" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/MainWindow.xaml.cs StartLineNumber=109 StartCharacterOffset=0 EndLineNumber=109 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@118" Category="CodeSchema_Method" Bounds="303.515,1054.745,64.6333333333334,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Write" FunctionTypeFlags="Method" Label="Write" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixWriter.cs StartLineNumber=138 StartCharacterOffset=0 EndLineNumber=138 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@119" Category="CodeSchema_Method" Bounds="3501.23,491.4125,89.2033333333334,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ParseCmd" FunctionTypeFlags="Method" Label="ParseCmd" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=2625 StartCharacterOffset=0 EndLineNumber=2625 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@120" Category="CodeSchema_Method" Bounds="202.358333333334,931.470000000001,140.946666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="WriteLogonRequest" FunctionTypeFlags="Method" Label="WriteLogonRequest" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/FixMessageWriter.cs StartLineNumber=282 StartCharacterOffset=0 EndLineNumber=282 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@121" Category="CodeSchema_Method" Bounds="2923.72166666667,865.842500000001,116.219999999999,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="SafeInvoke" FunctionTypeFlags="Method" Label="SafeInvoke‎&lt;T‎&gt;" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/DelegateHelper.cs StartLineNumber=121 StartCharacterOffset=0 EndLineNumber=121 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@122" Category="CodeSchema_Method" Bounds="2123.54833333333,246.55,122.566666666667,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="DoInCulture" FunctionTypeFlags="Method" Label="DoInCulture‎&lt;T‎&gt;" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/Converter.cs StartLineNumber=691 StartCharacterOffset=0 EndLineNumber=691 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@123" Category="CodeSchema_Method" Bounds="1268.73166666667,664.355,122.2,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" CommonLabel="static Connector" FunctionTypeFlags="Constructor" Label="static Connector" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=218 StartCharacterOffset=0 EndLineNumber=218 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@125" Category="CodeSchema_Method" Bounds="3795.52333333333,865.8425,126.616666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="ConnectMessage" FunctionTypeFlags="Constructor" Label="ConnectMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ConnectMessage.cs StartLineNumber=15 StartCharacterOffset=0 EndLineNumber=15 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@126" Category="CodeSchema_Method" Bounds="3427.26,865.8425,141.143333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="DisconnectMessage" FunctionTypeFlags="Constructor" Label="DisconnectMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/DisconnectMessage.cs StartLineNumber=15 StartCharacterOffset=0 EndLineNumber=15 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@127" Category="CodeSchema_Method" Bounds="3931.76333333333,931.47,200.136666666666,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="PortfolioLookupResultMessage" FunctionTypeFlags="Constructor" Label="PortfolioLookupResultMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/PortfolioLookupResultMessage.cs StartLineNumber=29 StartCharacterOffset=0 EndLineNumber=29 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@128" Category="CodeSchema_Method" Bounds="1910.91,131.255,157.843333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__0" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/InMemoryMessageChannel.cs StartLineNumber=150 StartCharacterOffset=0 EndLineNumber=150 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@129" Category="CodeSchema_Method" Bounds="2105.91,793.922500000001,157.843333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__1" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/InMemoryMessageChannel.cs StartLineNumber=167 StartCharacterOffset=0 EndLineNumber=167 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@130" Category="CodeSchema_Method" Bounds="750.675,865.842500000001,164.313333333334,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__10" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=246 StartCharacterOffset=0 EndLineNumber=246 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@131" Category="CodeSchema_Method" Bounds="1535.91,73.6075000000001,157.843333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__2" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/MainWindow.xaml.cs StartLineNumber=102 StartCharacterOffset=0 EndLineNumber=102 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@132" Category="CodeSchema_Method" Bounds="1769.675,736.275000000001,164.313333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__22" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=526 StartCharacterOffset=0 EndLineNumber=526 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@133" Category="CodeSchema_Method" Bounds="1723.91,73.6075000000001,157.843333333333,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__4" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/MainWindow.xaml.cs StartLineNumber=115 StartCharacterOffset=0 EndLineNumber=115 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@134" Category="CodeSchema_Method" Bounds="3442.61166666667,931.47,158.44,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__d" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=231 StartCharacterOffset=0 EndLineNumber=231 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@135" Category="CodeSchema_Method" Bounds="3952.61166666667,865.8425,158.44,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__d" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=468 StartCharacterOffset=0 EndLineNumber=468 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@136" Category="CodeSchema_Method" Bounds="1131.00666666667,865.842500000001,157.65,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__e" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=238 StartCharacterOffset=0 EndLineNumber=238 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@137" Category="CodeSchema_Method" Bounds="2106.00666666667,318.47,157.65,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__e" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/Converter.cs StartLineNumber=705 StartCharacterOffset=0 EndLineNumber=705 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@138" Category="CodeSchema_Method" Bounds="1912.26666666667,73.6075000000001,155.13,25.96" CodeSchemaProperty_IsAnonymous="True" Label="AnonymousMethod__f" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/ThreadingHelper.cs StartLineNumber=82 StartCharacterOffset=0 EndLineNumber=82 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@140" Category="CodeSchema_Method" Bounds="1978.46333333333,931.470000000001,64.7366666666667,25.9599999999998" CodeSchemaProperty_IsPublic="True" CommonLabel="Close" FunctionTypeFlags="Method" Label="Close" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/InMemoryMessageChannel.cs StartLineNumber=187 StartCharacterOffset=0 EndLineNumber=187 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@141" Category="CodeSchema_Method" Bounds="927.868333333334,931.470000000001,79.9266666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Connect" FunctionTypeFlags="Method" Label="Connect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=567 StartCharacterOffset=0 EndLineNumber=567 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@142" Category="CodeSchema_Method" Bounds="3266.79166666667,376.1175,136.08,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ConnectionControl" FunctionTypeFlags="Method" Label="ConnectionControl" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=419 StartCharacterOffset=0 EndLineNumber=419 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@143" Category="CodeSchema_Method" Bounds="2215.605,736.275000000001,94.4533333333334,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Disconnect" FunctionTypeFlags="Method" Label="Disconnect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=610 StartCharacterOffset=0 EndLineNumber=610 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@144" Category="CodeSchema_Method" Bounds="1893.89833333333,606.7075,77.8666666666668,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="Dispose" FunctionTypeFlags="Method Virtual" Label="Dispose" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/Disposable.cs StartLineNumber=45 StartCharacterOffset=0 EndLineNumber=45 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@145" Category="CodeSchema_Method" Bounds="1787.80333333333,664.355,128.056666666667,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="DisposeManaged" FunctionTypeFlags="Method" IsOverloaded="True" Label="DisposeManaged" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=526 StartCharacterOffset=0 EndLineNumber=526 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@146" Category="CodeSchema_Method" Bounds="1946.80333333333,664.355,128.056666666667,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="DisposeManaged" FunctionTypeFlags="Method" IsOverloaded="True" Label="DisposeManaged" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=1583 StartCharacterOffset=0 EndLineNumber=1583 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@147" Category="CodeSchema_Method" Bounds="2099.29166666667,131.255,171.08,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="InvokeConnectionControl" FunctionTypeFlags="Method" Label="InvokeConnectionControl" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=256 StartCharacterOffset=0 EndLineNumber=256 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@148" Category="CodeSchema_Method" Bounds="2042.95,1112.3925,95.7633333333333,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="OnConnect" FunctionTypeFlags="Method Virtual" Label="OnConnect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=580 StartCharacterOffset=0 EndLineNumber=580 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@149" Category="CodeSchema_Method" Bounds="2294.68666666667,793.922500000001,110.29,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="OnDisconnect" FunctionTypeFlags="Method Virtual" Label="OnDisconnect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=623 StartCharacterOffset=0 EndLineNumber=623 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@150" Category="CodeSchema_Method" Bounds="935.248333333334,1054.745,65.1666666666665,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Open" FunctionTypeFlags="Method" Label="Open" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/InMemoryMessageChannel.cs StartLineNumber=147 StartCharacterOffset=0 EndLineNumber=147 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@151" Category="CodeSchema_Method" Bounds="2347.41666666667,1170.04,120.83,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="RaiseConnected" FunctionTypeFlags="Method" Label="RaiseConnected" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_Raise.cs StartLineNumber=393 StartCharacterOffset=0 EndLineNumber=393 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@152" Category="CodeSchema_Method" Bounds="3134.00333333333,664.355,85.6566666666668,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="ReadByte" FunctionTypeFlags="Method" Label="ReadByte" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/BaseFixReader.cs StartLineNumber=17 StartCharacterOffset=0 EndLineNumber=17 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@153" Category="CodeSchema_Method" Bounds="3051.83,606.7075,94.0033333333331,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ReadString" FunctionTypeFlags="Method" Label="ReadString" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixReader.cs StartLineNumber=256 StartCharacterOffset=0 EndLineNumber=256 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@154" Category="CodeSchema_Method" Bounds="3149.78833333333,549.06,82.0866666666666,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ReadTag" FunctionTypeFlags="Method" Label="ReadTag" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixReader.cs StartLineNumber=282 StartCharacterOffset=0 EndLineNumber=282 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@155" Category="CodeSchema_Method" Bounds="1703.44833333333,865.842500000001,276.766666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.Close" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.Close" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ChannelMessageAdapter.cs StartLineNumber=112 StartCharacterOffset=0 EndLineNumber=112 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@156" Category="CodeSchema_Method" Bounds="1703.44833333333,793.922500000001,276.766666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.Close" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.Close" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/HeartbeatAdapter.cs StartLineNumber=307 StartCharacterOffset=0 EndLineNumber=307 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@157" Category="CodeSchema_Method" Bounds="905.570000000001,997.097500000001,124.523333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="TryOpenChannel" FunctionTypeFlags="Method" Label="TryOpenChannel" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector.cs StartLineNumber=536 StartCharacterOffset=0 EndLineNumber=536 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@158" Category="CodeSchema_Method" Bounds="461.325,865.842500000001,145.013333333333,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="WriteLogoutRequest" FunctionTypeFlags="Method" Label="WriteLogoutRequest" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/FixMessageWriter.cs StartLineNumber=300 StartCharacterOffset=0 EndLineNumber=300 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@159" Category="CodeSchema_Method" Bounds="293.418333333334,1170.04,84.8266666666666,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="WriteSoh" FunctionTypeFlags="Method" Label="WriteSoh" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/BaseFixWriter.cs StartLineNumber=43 StartCharacterOffset=0 EndLineNumber=43 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@161" Category="CodeSchema_CallStackUnresolvedMethod" Bounds="3207.86,606.7075,93.9433333333332,25.96" Label="ReadBytesI" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixReader.cs StartLineNumber=117 StartCharacterOffset=0 EndLineNumber=117 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@162" Category="CodeSchema_CallStackUnresolvedMethod" Bounds="3278.2,433.765,113.263333333333,25.96" Label="ProcessStream" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=340 StartCharacterOffset=0 EndLineNumber=340 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="@163" Category="CodeSchema_CallStackUnresolvedMethod" Bounds="3134.2,433.765,113.263333333333,25.96" Label="ProcessStream" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=316 StartCharacterOffset=0 EndLineNumber=316 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@30" Category="CodeSchema_Method" Bounds="3537.13666666667,736.275,95.3899999999999,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="ProcessTag" FunctionTypeFlags="Method" Label="ProcessTag" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=2240 StartCharacterOffset=0 EndLineNumber=2240 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@35" Category="CodeSchema_Method" Bounds="3462.03333333333,664.355,167.596666666667,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="ReadTagsUntilCheckSum" FunctionTypeFlags="Method" Label="ReadTagsUntilCheckSum" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=52 StartCharacterOffset=0 EndLineNumber=52 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@36" Category="CodeSchema_Method" Bounds="3129.60833333333,491.4125,122.446666666667,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPrivate="True" CodeSchemaProperty_IsStatic="True" CommonLabel="ReadSpecificTag" FunctionTypeFlags="Method" Label="ReadSpecificTag" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=21 StartCharacterOffset=0 EndLineNumber=21 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@41" Category="CodeSchema_Method" Bounds="3463.37833333333,606.7075,164.906666666667,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="SendSecurityListRequest" FunctionTypeFlags="Method" Label="SendSecurityListRequest" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/Extensions.cs StartLineNumber=1570 StartCharacterOffset=0 EndLineNumber=1570 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@45" Category="CodeSchema_Method" Bounds="1735.635,246.55,144.393333333333,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="GetLuaTableSettings" FunctionTypeFlags="Method" Label="GetLuaTableSettings" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTerminal.cs StartLineNumber=1287 StartCharacterOffset=0 EndLineNumber=1287 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@46" Category="CodeSchema_Method" Bounds="1733.90833333333,188.9025,125.846666666667,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="GetTableSettings" FunctionTypeFlags="Method" Label="GetTableSettings" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTerminal.cs StartLineNumber=1270 StartCharacterOffset=0 EndLineNumber=1270 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@49" Category="CodeSchema_Method" Bounds="2361.075,1227.6875,93.5133333333333,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="SafeInvoke" FunctionTypeFlags="Method" Label="SafeInvoke" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/DelegateHelper.cs StartLineNumber=112 StartCharacterOffset=0 EndLineNumber=112 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@50" Category="CodeSchema_Method" Bounds="832.481666666667,1112.3925,72.6999999999998,25.96" CodeSchemaProperty_IsExtension="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Thread" FunctionTypeFlags="Method" Label="Thread" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/Ecng/Common/ThreadingHelper.cs StartLineNumber=82 StartCharacterOffset=0 EndLineNumber=82 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@54" Category="CodeSchema_Method" Bounds="2324.55833333333,1112.3925,166.546666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="ProcessConnectMessage" FunctionTypeFlags="Method" Label="ProcessConnectMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=564 StartCharacterOffset=0 EndLineNumber=564 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@56" Category="CodeSchema_Method" Bounds="292,1227.6875,87.6633333333334,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="WriteByte" FunctionTypeFlags="Method" Label="WriteByte" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/BaseFixWriter.cs StartLineNumber=14 StartCharacterOffset=0 EndLineNumber=14 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@57" Category="CodeSchema_Method" Bounds="2041.81666666667,865.842500000001,108.03,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="SendOutError" FunctionTypeFlags="Method" Label="SendOutError" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=249 StartCharacterOffset=0 EndLineNumber=249 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@59" Category="CodeSchema_Method" Bounds="3282.81666666667,491.4125,108.03,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="SendOutError" FunctionTypeFlags="Method" Label="SendOutError" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=500 StartCharacterOffset=0 EndLineNumber=500 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@62" Category="CodeSchema_Method" Bounds="184.515,1112.3925,64.6333333333332,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Write" FunctionTypeFlags="Method" Label="Write" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixWriter.cs StartLineNumber=52 StartCharacterOffset=0 EndLineNumber=52 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@64" Category="CodeSchema_Method" Bounds="1580.05166666667,736.275000000001,159.56,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="BasketMessageAdapter" FunctionTypeFlags="Constructor" Label="BasketMessageAdapter" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=125 StartCharacterOffset=0 EndLineNumber=125 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@67" Category="CodeSchema_Method" Bounds="1028.10833333333,736.275000000001,139.446666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="FixMessageAdapter" FunctionTypeFlags="Constructor" Label="FixMessageAdapter" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=60 StartCharacterOffset=0 EndLineNumber=60 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@68" Category="CodeSchema_Method" Bounds="988.388333333333,664.355000000001,218.886666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CommonLabel="LuaFixTransactionMessageAdapter" FunctionTypeFlags="Constructor" Label="LuaFixTransactionMessageAdapter" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/Lua/LuaFixTransactionMessageAdapter.cs StartLineNumber=22 StartCharacterOffset=0 EndLineNumber=22 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@70" Category="CodeSchema_Method" Bounds="152.168333333334,1054.745,89.3266666666666,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="WriteData" FunctionTypeFlags="Method" Label="WriteData" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/FixMessageWriter.cs StartLineNumber=610 StartCharacterOffset=0 EndLineNumber=610 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@72" Category="CodeSchema_Method" Bounds="350.868333333334,865.842500000001,79.9266666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="Connect" FunctionTypeFlags="Method" Label="Connect" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=387 StartCharacterOffset=0 EndLineNumber=387 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@73" Category="CodeSchema_Method" Bounds="89.5150000000003,1112.3925,64.6333333333332,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="Write" FunctionTypeFlags="Method" Label="Write" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixWriter.cs StartLineNumber=126 StartCharacterOffset=0 EndLineNumber=126 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@74" Category="CodeSchema_Method" Bounds="170.453333333334,1170.04,92.7566666666667,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="WriteBytes" FunctionTypeFlags="Method" Label="WriteBytes" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///d:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/Native/TextFixWriter.cs StartLineNumber=13 StartCharacterOffset=0 EndLineNumber=13 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@77" Category="CodeSchema_Method" Bounds="3012.41166666667,931.470000000001,184.84,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="AdapterOnNewOutMessage" FunctionTypeFlags="Method" Label="AdapterOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ChannelMessageAdapter.cs StartLineNumber=74 StartCharacterOffset=0 EndLineNumber=74 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@78" Category="CodeSchema_Method" Bounds="2200.41166666667,997.097500000001,184.84,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="AdapterOnNewOutMessage" FunctionTypeFlags="Method" Label="AdapterOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=140 StartCharacterOffset=0 EndLineNumber=140 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@79" Category="CodeSchema_Method" Bounds="3227.41166666667,931.470000000001,184.84,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="AdapterOnNewOutMessage" FunctionTypeFlags="Method" Label="AdapterOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/HeartbeatAdapter.cs StartLineNumber=91 StartCharacterOffset=0 EndLineNumber=91 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@80" Category="CodeSchema_Method" Bounds="2105.16166666667,931.470000000001,213.34,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="InputChannelOnNewOutMessage" FunctionTypeFlags="Method" Label="InputChannelOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ChannelMessageAdapter.cs StartLineNumber=80 StartCharacterOffset=0 EndLineNumber=80 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@81" Category="CodeSchema_Method" Bounds="2755.60333333333,1054.745,138.456666666667,25.96" CodeSchemaProperty_IsProtected="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="OnProcessMessage" FunctionTypeFlags="Method Virtual" Label="OnProcessMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=415 StartCharacterOffset=0 EndLineNumber=415 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@82" Category="CodeSchema_Method" Bounds="2755.60333333333,997.097500000001,138.456666666667,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="OnProcessMessage" FunctionTypeFlags="Method" IsOverloaded="True" Label="OnProcessMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Connectors/Quik/QuikTrader.cs StartLineNumber=437 StartCharacterOffset=0 EndLineNumber=437 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@83" Category="CodeSchema_Method" Bounds="955.323333333334,793.922500000001,135.016666666667,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="OnSendInMessage" FunctionTypeFlags="Method" IsOverloaded="True" Label="OnSendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/BasketMessageAdapter.cs StartLineNumber=240 StartCharacterOffset=0 EndLineNumber=240 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@84" Category="CodeSchema_Method" Bounds="466.323333333334,793.922500000001,135.016666666667,25.96" CodeSchemaProperty_IsProtected="True" CommonLabel="OnSendInMessage" FunctionTypeFlags="Method" IsOverloaded="True" Label="OnSendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/StockSharp/Fix/FixMessageAdapter.cs StartLineNumber=791 StartCharacterOffset=0 EndLineNumber=791 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@85" Category="CodeSchema_Method" Bounds="2698.81166666667,931.470000000001,252.04,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="OutMessageChannelOnNewOutMessage" FunctionTypeFlags="Method" Label="OutMessageChannelOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=178 StartCharacterOffset=0 EndLineNumber=178 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@86" Category="CodeSchema_Method" Bounds="2413.20166666667,931.470000000001,223.26,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="OutputChannelOnNewOutMessage" FunctionTypeFlags="Method" Label="OutputChannelOnNewOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ChannelMessageAdapter.cs StartLineNumber=67 StartCharacterOffset=0 EndLineNumber=67 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@87" Category="CodeSchema_Method" Bounds="2031.24166666667,1170.04,119.18,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="SendInMessage" FunctionTypeFlags="Method" Label="SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=258 StartCharacterOffset=0 EndLineNumber=258 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@89" Category="CodeSchema_Method" Bounds="2014.24166666667,1054.745,119.18,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="SendInMessage" FunctionTypeFlags="Method" Label="SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/InMemoryMessageChannel.cs StartLineNumber=195 StartCharacterOffset=0 EndLineNumber=195 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@90" Category="CodeSchema_Method" Bounds="878.241666666667,736.275000000001,119.18,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="SendInMessage" FunctionTypeFlags="Method" Label="SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=323 StartCharacterOffset=0 EndLineNumber=323 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@91" Category="CodeSchema_Method" Bounds="2009.28166666667,997.097500000001,129.1,25.96" CodeSchemaProperty_IsPublic="True" CommonLabel="SendOutMessage" FunctionTypeFlags="Method" Label="SendOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/Connector_ProcessMessage.cs StartLineNumber=239 StartCharacterOffset=0 EndLineNumber=239 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@92" Category="CodeSchema_Method" Bounds="3567.28166666667,793.9225,129.1,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" CommonLabel="SendOutMessage" FunctionTypeFlags="Method Virtual" Label="SendOutMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/MessageAdapter.cs StartLineNumber=472 StartCharacterOffset=0 EndLineNumber=472 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@94" Category="CodeSchema_Method" Bounds="1092.22666666667,997.097500000001,331.21,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/ChannelMessageAdapter.cs StartLineNumber=119 StartCharacterOffset=0 EndLineNumber=119 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@95" Category="CodeSchema_Method" Bounds="1038.22666666667,931.470000000001,331.21,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/HeartbeatAdapter.cs StartLineNumber=167 StartCharacterOffset=0 EndLineNumber=167 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@96" Category="CodeSchema_Method" Bounds="1925.22666666667,1227.6875,331.21,25.9600000000003" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Algo/ManagedMessageAdapter.cs StartLineNumber=215 StartCharacterOffset=0 EndLineNumber=215 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@97" Category="CodeSchema_Method" Bounds="2924.22666666667,997.097500000001,331.21,25.96" CodeSchemaProperty_IsPrivate="True" CommonLabel="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" FunctionTypeFlags="Method" Label="StockSharp‎.Messages‎.IMessageChannel‎.SendInMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/IMessageChannel.cs StartLineNumber=69 StartCharacterOffset=0 EndLineNumber=69 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@98" Category="CodeSchema_Method" Bounds="3733.98166666667,931.47,167.7,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsProtected="True" CommonLabel="BaseConnectionMessage" FunctionTypeFlags="Constructor" Label="BaseConnectionMessage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/BaseConnectionMessage.cs StartLineNumber=18 StartCharacterOffset=0 EndLineNumber=18 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="@99" Category="CodeSchema_Method" Bounds="3776.48666666667,997.097500000001,82.6900000000001,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsProtected="True" CommonLabel="Message" FunctionTypeFlags="Constructor" Label="Message" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///e:/Disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Messages/Message.cs StartLineNumber=73 StartCharacterOffset=0 EndLineNumber=73 EndCharacterOffset=0)">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CodeSchema_SourceLocation" />
+    </Node>
+    <Node Id="ExternalCodeRootNode" Category="ExternalCallStackEntry" Bounds="1568.33833333333,7.98000000000002,92.9866666666667,25.96" Label="External Code">
+      <Category Ref="CallStackEntry" />
+      <Category Ref="CurrentCallStackEntry" />
+    </Node>
+    <Node Id="NewThread&quot;ConnectorOut&quot;" Category="Comment" Bounds="726.008333333333,931.470000000001,171.646666666667,25.96" Label="NewThread &quot;Connector Out&quot;" />
+    <Node Id="ЕслиНужноСоздаютсяПотоки&quot;Quik.FIX(TS,MD)&quot;" Category="Comment" Bounds="1400.41666666667,923.490000000001,240.83,41.9200000000001" Label="Если нужно создаются потоки &quot;Quik. FIX (TS, MD)&quot;" />
+    <Node Id="ПотокTSПолучаетСообщениеConnect" Category="Comment" Bounds="1692.26166666667,0,221.14,41.92" Label="Потоки TS, MD получает сообщение Connect" />
+    <Node Id="Потоки&quot;Quik.FIX(TS,MD)&quot;" Category="Comment" Bounds="1943.75166666667,7.98000000000002,168.16,25.96" Label="Потоки &quot;Quik. FIX (TS, MD)&quot;" />
+  </Nodes>
+  <Links>
+    <Link Source="@100" Target="@123" Category="CallStackDirectCall" Bounds="1258.54650878906,632.66748046875,42.94384765625,26.9087524414063" />
+    <Link Source="@100" Target="@67" Category="CallStackDirectCall" Bounds="1157.08264160156,632.66748046875,80.7490234375,101.368469238281" />
+    <Link Source="@100" Target="@68" Category="CallStackDirectCall" Bounds="1137.67639160156,632.66748046875,68.6326904296875,28.2607421875" />
+    <Link Source="@101" Target="@159" Category="CallStackDirectCall" Bounds="335.831665039063,1138.3525390625,0,22.6875" />
+    <Link Source="@102" Target="(@19 @29 @69 Member=(Name=LogoutRequestHandle OverloadingParameters=[(@19 @29 Type=IFixWriter)]))" Category="CallStackDirectCall" Bounds="318.539459228516,1023.05749511719,102.926727294922,29.2288818359375" />
+    <Link Source="@102" Target="(@47 @48 Type=IncrementalIdGenerator Member=GetNextId)" Category="CallStackDirectCall" Bounds="72.4109649658203,1018.63037109375,145.822372436523,31.5645751953125" />
+    <Link Source="@102" Target="@118" Category="CallStackDirectCall" Bounds="287.242004394531,1023.05749511719,28.0324096679688,25.565673828125" />
+    <Link Source="@102" Target="@62" Category="CallStackDirectCall" Bounds="249.88801574707,1023.05749511719,22.9436492919922,84.912109375" />
+    <Link Source="@102" Target="@70" Category="CallStackDirectCall" Bounds="221.114517211914,1023.05749511719,34.6048736572266,26.24853515625" />
+    <Link Source="@102" Target="@73" Category="CallStackDirectCall" Bounds="120.831665039063,1020.42663574219,97.4244689941406,82.969482421875" />
+    <Link Source="@104" Target="@122" Category="CallStackDirectCall" Bounds="2184.83178710938,214.862503051758,0,22.6875">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@105" Target="@92" Category="CallStackDirectCall" Bounds="2390.07421875,809.073852539063,1168.21142578125,253.907592773438" />
+    <Link Source="@106" Target="@92" Category="CallStackDirectCall" Bounds="3631.83178710938,828.882507324219,0,225.862487792969" />
+    <Link Source="@111" Target="@144" Category="CallStackDirectCall" Bounds="1702.83166503906,157.214996337891,182.136474609375,456.474212646484" />
+    <Link Source="@111" Target="@46" Category="CallStackDirectCall" Bounds="1748.79162597656,157.214996337891,27.4888916015625,25.5590972900391" />
+    <Link Source="@112" Target="@125" Category="CallStackDirectCall" Bounds="3872.900390625,762.234985351563,10.931396484375,96.154296875" />
+    <Link Source="@112" Target="@92" Category="CallStackDirectCall" Bounds="3697.345703125,762.234985351563,129.745361328125,29.6805419921875" />
+    <Link Source="@113" Target="@41" Category="CallStackDirectCall" Bounds="3545.83178710938,575.02001953125,0,22.6875" />
+    <Link Source="@114" Target="@92" Category="CallStackDirectCall" Bounds="3635.07299804688,575.02001953125,82.077392578125,209.999633789063" />
+    <Link Source="@115" Target="@105" Category="CallStackDirectCall" Bounds="3456.6689453125,1023.05749511719,43.99755859375,26.982421875" />
+    <Link Source="@115" Target="@106" Category="CallStackDirectCall" Bounds="3546.59936523438,1023.05749511719,52.492919921875,27.509765625" />
+    <Link Source="@115" Target="@92" Category="CallStackDirectCall" Bounds="3543.587890625,828.882507324219,88.243896484375,168.214965820313" />
+    <Link Source="@117" Target="@100" Category="CallStackDirectCall" Bounds="1294.01342773438,572.053039550781,164.441772460938,35.5043334960938" />
+    <Link Source="@117" Target="@141" Category="CallStackDirectCall" Bounds="632.831665039063,563.572998046875,825.623291015625,368.947326660156" />
+    <Link Source="@117" Target="@144" Category="CallStackDirectCall" Bounds="1551.20837402344,570.044494628906,333.744384765625,44.35546875" />
+    <Link Source="@118" Target="@101" Category="CallStackDirectCall" Bounds="335.831665039063,1080.70495605469,0,22.6875" />
+    <Link Source="@119" Target="@112" Category="CallStackDirectCall" Bounds="3590.43334960938,508.196014404297,293.3984375,219.079010009766" />
+    <Link Source="@119" Target="@113" Category="CallStackDirectCall" Bounds="3545.83178710938,517.372497558594,0,22.6875" />
+    <Link Source="@119" Target="@114" Category="CallStackDirectCall" Bounds="3589.82202148438,516.187561035156,113.906982421875,30.5416259765625" />
+    <Link Source="@120" Target="@102" Category="CallStackDirectCall" Bounds="272.831665039063,957.429992675781,0,30.66748046875" />
+    <Link Source="@121" Target="@134" Category="CallStackDirectCall" Bounds="3039.94165039063,885.692504882813,393.79443359375,47.0859375" />
+    <Link Source="@121" Target="@77" Category="CallStackDirectCall" Bounds="2998.92163085938,891.802490234375,67.65478515625,36.0932006835938" />
+    <Link Source="@121" Target="@78" Category="CallStackDirectCall" Bounds="2393.54833984375,884.15673828125,530.17333984375,113.1728515625" />
+    <Link Source="@121" Target="@79" Category="CallStackDirectCall" Bounds="3039.6689453125,890.052429199219,204.47705078125,39.7021484375" />
+    <Link Source="@121" Target="@80" Category="CallStackDirectCall" Bounds="2280.58374023438,881.614074707031,643.137939453125,47.9515991210938" />
+    <Link Source="@121" Target="@85" Category="CallStackDirectCall" Bounds="2864.18725585938,891.802490234375,86.592529296875,36.1964721679688" />
+    <Link Source="@121" Target="@86" Category="CallStackDirectCall" Bounds="2571.44018554688,883.621765136719,352.281494140625,44.9451904296875" />
+    <Link Source="@122" Target="@137" Category="CallStackDirectCall" Bounds="2184.83178710938,272.510009765625,0,36.9599914550781">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@123" Target="(@47 @48 Type=MillisecondIncrementalIdGenerator @124)" Category="CallStackDirectCall" Bounds="1349.50378417969,690.315002441406,62.1436767578125,41.0033569335938" />
+    <Link Source="@123" Target="(@51 @52 @53 Member=(Name=set_Adapter OverloadingParameters=[(@51 @52 @55)]))" Category="CallStackDirectCall" Bounds="1269.39709472656,690.315002441406,45.6353759765625,40.0255126953125" />
+    <Link Source="@123" Target="@64" Category="CallStackDirectCall" Bounds="1388.80017089844,690.1865234375,202.680053710938,44.1719970703125" />
+    <Link Source="@125" Target="@98" Category="CallStackDirectCall" Bounds="3830.70922851563,891.802490234375,20.013427734375,32.0346069335938" />
+    <Link Source="@126" Target="@98" Category="CallStackDirectCall" Bounds="3558.17504882813,891.802490234375,185.22900390625,37.9205322265625" />
+    <Link Source="@127" Target="@99" Category="CallStackDirectCall" Bounds="3866.64477539063,957.429992675781,122.861328125,37.6779174804688" />
+    <Link Source="@128" Target="@104" Category="CallStackDirectCall" Bounds="2033.73815917969,157.214996337891,98.5562744140625,29.1360168457031" />
+    <Link Source="@129" Target="@121" Category="CallStackDirectCall" Bounds="2255.94018554688,819.882507324219,658.797607421875,54.9188232421875" />
+    <Link Source="@129" Target="@57" Category="CallStackDirectCall" Bounds="2118.89428710938,819.882507324219,49.874755859375,40.3032836914063" />
+    <Link Source="@130" Target="@95" Category="CallStackDirectCall" Bounds="906.209167480469,891.802490234375,215.382629394531,38.0997924804688" />
+    <Link Source="@131" Target="@111" Category="CallStackDirectCall" Bounds="1641.85107421875,99.567497253418,57.8487548828125,27.7903137207031" />
+    <Link Source="@132" Target="@156" Category="CallStackDirectCall" Bounds="1849.00769042969,762.234985351563,2.823974609375,23.0935668945313" />
+    <Link Source="@133" Target="@111" Category="CallStackDirectCall" Bounds="1757.00769042969,99.567497253418,30.512939453125,25.8676071166992" />
+    <Link Source="@134" Target="@115" Category="CallStackDirectCall" Bounds="3521.83178710938,957.429992675781,0,30.66748046875" />
+    <Link Source="@135" Target="@127" Category="CallStackDirectCall" Bounds="4031.83178710938,891.802490234375,0,30.66748046875" />
+    <Link Source="@135" Target="@92" Category="CallStackDirectCall" Bounds="3663.94580078125,824.138671875,289.02197265625,43.2861328125" />
+    <Link Source="@136" Target="@95" Category="CallStackDirectCall" Bounds="1205.83776855469,891.802490234375,2.8072509765625,30.7048950195313" />
+    <Link Source="@137" Target="@129" Category="CallStackDirectCall" Bounds="2184.83178710938,344.429992675781,0,440.492492675781" />
+    <Link Source="@137" Target="@142" Category="CallStackDirectCall" Bounds="2263.65673828125,335.4013671875,994.146240234375,49.8348083496094">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@138" Target="@128" Category="CallStackDirectCall" Bounds="1989.83166503906,99.567497253418,0,22.6875" />
+    <Link Source="@138" Target="@147" Category="CallStackDirectCall" Bounds="2033.73815917969,99.567497253418,98.5562744140625,29.1360092163086">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@140" Target="(@139 Namespace=Ecng.Collections Type=(Name=BaseBlockingQueue GenericParameterCount=2) Member=Close)" Category="CallStackDirectCall" Bounds="1965.77331542969,957.429992675781,32.4002685546875,33.2241821289063" />
+    <Link Source="@141" Target="@148" Category="CallStackDirectCall" Bounds="1000.63104248047,957.429992675781,1033.33306884766,164.759704589844" />
+    <Link Source="@141" Target="@157" Category="CallStackDirectCall" Bounds="967.831665039063,957.429992675781,0,30.66748046875" />
+    <Link Source="@142" Target="@162" Category="CallStackDirectCall" Bounds="3334.83178710938,402.077514648438,0,22.6875">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@142" Target="@163" Category="CallStackDirectCall" Bounds="3231.6103515625,402.077514648438,70.798095703125,28.3425903320313" />
+    <Link Source="@142" Target="@92" Category="CallStackDirectCall" Bounds="3374.46020507813,402.077514648438,183.90576171875,394.693176269531" />
+    <Link Source="@143" Target="@149" Category="CallStackDirectCall" Bounds="2282.42065429688,762.234985351563,40.319580078125,26.7162475585938" />
+    <Link Source="@144" Target="@145" Category="CallStackDirectCall" Bounds="1877.40234375,632.66748046875,37.1912841796875,26.4689331054688" />
+    <Link Source="@144" Target="@146" Category="CallStackDirectCall" Bounds="1967.95690917969,632.66748046875,40.422607421875,23.0280151367188" />
+    <Link Source="@145" Target="@132" Category="CallStackIndirectCall" Bounds="1851.83166503906,690.315002441406,0,36.9600219726563" Label="External Code" LabelBounds="1778.845,705.315,72.9866666666676,15.96" />
+    <Link Source="@146" Target="@140" Category="CallStackDirectCall" Bounds="2010.83166503906,690.315002441406,0,232.154968261719" />
+    <Link Source="@146" Target="@143" Category="CallStackDirectCall" Bounds="2056.31225585938,690.315002441406,152.801513671875,43.6090698242188" />
+    <Link Source="@146" Target="@144" Category="CallStackDirectCall" Bounds="1935.28381347656,641.326965332031,40.422607421875,23.0280151367188" />
+    <Link Source="@147" Target="@104" Category="CallStackDirectCall" Bounds="2184.83178710938,157.214996337891,0,22.6875">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="@148" Target="@87" Category="CallStackDirectCall" Bounds="2090.83178710938,1138.3525390625,0,22.6875" />
+    <Link Source="@149" Target="@126" Category="CallStackDirectCall" Bounds="2404.9765625,810.357238769531,1013.30102539063,63.4813232421875" />
+    <Link Source="@149" Target="@87" Category="CallStackDirectCall" Bounds="2115.8896484375,819.882507324219,233.942138671875,344.852355957031" />
+    <Link Source="@150" Target="(@139 Namespace=Ecng.Collections Type=(Name=BaseBlockingQueue GenericParameterCount=2) Member=Open)" Category="CallStackDirectCall" Bounds="967.831665039063,1080.70495605469,0,22.6875" />
+    <Link Source="@150" Target="@50" Category="CallStackDirectCall" Bounds="898.900146484375,1080.70495605469,46.6405029296875,27.15869140625" />
+    <Link Source="@151" Target="@49" Category="CallStackDirectCall" Bounds="2407.83178710938,1196,0,22.6875" />
+    <Link Source="@153" Target="@152" Category="CallStackDirectCall" Bounds="3116.39428710938,632.66748046875,35.636962890625,26.3382568359375" />
+    <Link Source="@154" Target="@152" Category="CallStackDirectCall" Bounds="3176.83178710938,575.02001953125,7.6953125,80.3349609375" />
+    <Link Source="@154" Target="@161" Category="CallStackDirectCall" Bounds="3205.24194335938,575.02001953125,28.4921875,25.6640625" />
+    <Link Source="@155" Target="(@38 @39 @58 Member=StockSharp.Messages.IMessageChannel.Close)" Category="CallStackDirectCall" Bounds="1820.10522460938,891.802490234375,15.3973388671875,31.5779418945313" />
+    <Link Source="@155" Target="@140" Category="CallStackDirectCall" Bounds="1875.25695800781,891.802490234375,95.789794921875,37.1978759765625" />
+    <Link Source="@156" Target="@155" Category="CallStackDirectCall" Bounds="1841.83166503906,819.882507324219,0,36.9600219726563" />
+    <Link Source="@157" Target="@150" Category="CallStackDirectCall" Bounds="967.831665039063,1023.05749511719,0,22.6875" />
+    <Link Source="@158" Target="@102" Category="CallStackDirectCall" Bounds="336.341491699219,891.802490234375,190.267211914063,109.301513671875" />
+    <Link Source="@159" Target="@56" Category="CallStackDirectCall" Bounds="335.831665039063,1196,0,22.6875" />
+    <Link Source="@161" Target="@152" Category="CallStackDirectCall" Bounds="3201.63208007813,632.66748046875,35.636962890625,26.3382568359375" />
+    <Link Source="@162" Target="@119" Category="CallStackDirectCall" Bounds="3388.79418945313,459.706695556641,107.4755859375,28.9963684082031" />
+    <Link Source="@162" Target="@36" Category="CallStackDirectCall" Bounds="3231.6103515625,459.725006103516,70.798095703125,28.3425903320313" />
+    <Link Source="@162" Target="@59" Category="CallStackDirectCall" Bounds="3335.732421875,459.725006103516,1.0302734375,22.687744140625" />
+    <Link Source="@163" Target="@119" Category="CallStackDirectCall" Bounds="3247.46337890625,455.941253662109,244.883056640625,39.7658996582031" />
+    <Link Source="@163" Target="@153" Category="CallStackDirectCall" Bounds="3098.83178710938,459.725006103516,50.570068359375,137.982513427734" />
+    <Link Source="@163" Target="@36" Category="CallStackDirectCall" Bounds="3190.83178710938,459.725006103516,0,22.6875" />
+    <Link Source="@163" Target="@59" Category="CallStackDirectCall" Bounds="3209.294921875,459.725006103516,71.576416015625,29.2959594726563" />
+    <Link Source="@30" Target="@92" Category="CallStackDirectCall" Bounds="3595.41430664063,762.234985351563,20.147705078125,24.7120361328125" />
+    <Link Source="@35" Target="@30" Category="CallStackDirectCall" Bounds="3552.87036132813,690.315002441406,20.63232421875,38.04833984375" />
+    <Link Source="@36" Target="@154" Category="CallStackDirectCall" Bounds="3190.83178710938,517.372497558594,0,22.6875" />
+    <Link Source="@41" Target="@35" Category="CallStackDirectCall" Bounds="3545.83178710938,632.66748046875,0,22.6875" />
+    <Link Source="@45" Target="(@42 @43 @44 Member=AnonymousMethod__6c)" Category="CallStackIndirectCall" Bounds="1845.37121582031,272.510009765625,110.619750976563,42.345458984375" Label="External Code" LabelBounds="1838.845,287.51,72.9866666666676,15.96" />
+    <Link Source="@45" Target="(@42 @43 @44 Member=CloseAllEditWindows)" Category="CallStackDirectCall" Bounds="1807.83166503906,272.510009765625,0,36.9599914550781" />
+    <Link Source="@46" Target="@45" Category="CallStackDirectCall" Bounds="1799.30847167969,214.862503051758,4.3594970703125,22.8470001220703" />
+    <Link Source="@49" Target="(@107 @108 @109 Member=AnonymousMethod__1)" Category="CallStackDirectCall" Bounds="2407.83178710938,1253.6474609375,0,22.6875" />
+    <Link Source="@50" Target="(@47 @48 Type=ThreadingHelper Member=(Name=CreateThread OverloadingParameters=[(@33 Namespace=System.Threading Type=ThreadStart)]))" Category="CallStackDirectCall" Bounds="868.831665039063,1138.3525390625,0,22.6875" />
+    <Link Source="@54" Target="(@51 @52 @53 Member=RaiseDisconnected)" Category="CallStackDirectCall" Bounds="2293.09350585938,1138.3525390625,78.9375,28.6197509765625" />
+    <Link Source="@54" Target="@151" Category="CallStackDirectCall" Bounds="2407.83178710938,1138.3525390625,0,22.6875" />
+    <Link Source="@54" Target="@87" Category="CallStackDirectCall" Bounds="2159.15795898438,1138.3525390625,177.297607421875,32.2420654296875" />
+    <Link Source="@57" Target="@91" Category="CallStackDirectCall" Bounds="2073.83178710938,891.802490234375,12.0927734375,96.2949829101563" />
+    <Link Source="@59" Target="@92" Category="CallStackDirectCall" Bounds="3336.83178710938,517.372497558594,221.492431640625,282.347778320313" />
+    <Link Source="@62" Target="@74" Category="CallStackDirectCall" Bounds="216.831665039063,1138.3525390625,0,22.6875" />
+    <Link Source="@64" Target="(@51 @52 Type=(Name=InnerAdapterList ParentType=BasketMessageAdapter) @124)" Category="CallStackDirectCall" Bounds="1627.693359375,762.234985351563,21.1053466796875,24.8300170898438" />
+    <Link Source="@67" Target="(@38 @39 @58 @63)" Category="CallStackDirectCall" Bounds="1166.64453125,761.387634277344,252.632690429688,28.7904663085938" />
+    <Link Source="@68" Target="(@38 @39 @31 Member=(Name=RemoveMarketDataSupport OverloadingParameters=[@71]))" Category="CallStackDirectCall" Bounds="826.362609863281,690.315002441406,209.745422363281,44.1078491210938" />
+    <Link Source="@68" Target="@67" Category="CallStackDirectCall" Bounds="1097.83166503906,690.315002441406,0,36.9600219726563" />
+    <Link Source="@70" Target="@62" Category="CallStackDirectCall" Bounds="201.334899902344,1080.70495605469,8.04359436035156,23.1846923828125" />
+    <Link Source="@72" Target="(@47 @48 @103 Member=(Name=To @37 OverloadingParameters=[(@33 @34 Type=Object)]))" Category="CallStackDirectCall" Bounds="394.589538574219,891.802490234375,8.98141479492188,31.0225219726563" />
+    <Link Source="@72" Target="@120" Category="CallStackDirectCall" Bounds="304.035430908203,891.802490234375,63.4578552246094,35.2930297851563" />
+    <Link Source="@73" Target="@74" Category="CallStackDirectCall" Bounds="143.222015380859,1138.3525390625,44.5251007080078,27.0185546875" />
+    <Link Source="@74" Target="@56" Category="CallStackDirectCall" Bounds="243.625885009766,1196,57.3119201660156,27.7637939453125" />
+    <Link Source="@77" Target="@97" Category="CallStackDirectCall" Bounds="3094.8037109375,957.429992675781,7.061279296875,30.8937377929688" />
+    <Link Source="@78" Target="@89" Category="CallStackDirectCall" Bounds="2111.36938476563,1023.05749511719,112.112548828125,28.129150390625" />
+    <Link Source="@79" Target="@121" Category="CallStackDirectCall" Bounds="3022.86401367188,895.017333984375,206.080078125,36.8361206054688" />
+    <Link Source="@80" Target="@90" Category="CallStackDirectCall" Bounds="1006.12542724609,761.791625976563,1196.98663330078,169.678344726563" />
+    <Link Source="@81" Target="@54" Category="CallStackDirectCall" Bounds="2499.630859375,1077.29541015625,255.972412109375,35.386474609375" />
+    <Link Source="@82" Target="@81" Category="CallStackDirectCall" Bounds="2824.83178710938,1023.05749511719,0,22.6875" />
+    <Link Source="@83" Target="(@51 @52 @55 Member=AnonymousMethod__f)" Category="CallStackIndirectCall" Bounds="1022.83166503906,819.882507324219,0,36.9600219726563" Label="External Code" LabelBounds="949.845,834.882500000001,72.9866666666667,15.96" />
+    <Link Source="@83" Target="@130" Category="CallStackIndirectCall" Bounds="869.53857421875,819.882507324219,113.226928710938,42.2313842773438" Label="External Code" LabelBounds="838.845,834.882500000001,72.9866666666667,15.96" />
+    <Link Source="@83" Target="@136" Category="CallStackIndirectCall" Bounds="1062.89782714844,819.882507324219,111.365844726563,42.1107177734375" Label="External Code" LabelBounds="1060.845,834.882500000001,72.9866666666667,15.96" />
+    <Link Source="@84" Target="@158" Category="CallStackDirectCall" Bounds="533.831665039063,819.882507324219,0,36.9600219726563" />
+    <Link Source="@84" Target="@72" Category="CallStackDirectCall" Bounds="424.680450439453,819.882507324219,83.3428039550781,41.9161987304688" />
+    <Link Source="@85" Target="@82" Category="CallStackDirectCall" Bounds="2824.83178710938,957.429992675781,0,30.66748046875" />
+    <Link Source="@86" Target="@121" Category="CallStackDirectCall" Bounds="2535.412109375,883.351257324219,379.330078125,48.1187133789063" />
+    <Link Source="@87" Target="@96" Category="CallStackDirectCall" Bounds="2090.83178710938,1196,0,22.6875" />
+    <Link Source="@90" Target="@50" Category="CallStackIndirectCall" Bounds="687.831665039063,760.811706542969,190.857727050781,346.745544433594" Label="External Code" LabelBounds="631.100301523653,908.653163367616,72.9866666666667,15.96" />
+    <Link Source="@90" Target="@83" Category="CallStackDirectCall" Bounds="956.970397949219,762.234985351563,39.2739868164063,26.6358642578125" />
+    <Link Source="@90" Target="@84" Category="CallStackDirectCall" Bounds="601.614685058594,761.101135253906,277.278076171875,30.8916625976563" />
+    <Link Source="@90" Target="@92" Category="CallStackDirectCall" Bounds="984.724304199219,762.234985351563,2573.55816650391,43.7459106445313" />
+    <Link Source="@91" Target="@89" Category="CallStackDirectCall" Bounds="2073.83178710938,1023.05749511719,0,22.6875" />
+    <Link Source="@92" Target="(@38 @39 Type=(Name=CodeTimeOut ParentType=MessageAdapter) Member=(Name=ProcessTime OverloadingParameters=[(@33 @34 Type=TimeSpan)]))" Category="CallStackDirectCall" Bounds="3643.38232421875,819.882507324219,45.094970703125,40.7048950195313" />
+    <Link Source="@92" Target="@121" Category="CallStackDirectCall" Bounds="3048.88696289063,814.044738769531,518.394775390625,57.3583374023438" />
+    <Link Source="@92" Target="@135" Category="CallStackIndirectCall" Bounds="3696.2451171875,817.777160644531,259.24951171875,46.3657836914063" Label="External Code" LabelBounds="3771.845,834.8825,72.9866666666667,15.96" />
+    <Link Source="@94" Target="@150" Category="CallStackDirectCall" Bounds="1003.99523925781,1023.05749511719,151.162719726563,28.0758056640625" />
+    <Link Source="@94" Target="@89" Category="CallStackDirectCall" Bounds="1422.92016601563,1021.74041748047,582.343872070313,41.1405639648438" />
+    <Link Source="@95" Target="@94" Category="CallStackDirectCall" Bounds="1214.51196289063,957.429992675781,26.9210205078125,32.7177124023438" />
+    <Link Source="@96" Target="(@51 @52 Type=ManagedMessageAdapter Member=(Name=ProcessRisk @76))" Category="CallStackDirectCall" Bounds="2090.83178710938,1253.6474609375,0,22.6875" />
+    <Link Source="@96" Target="(@51 Namespace=StockSharp.Algo.Latency Type=LatencyManager Member=(Name=ProcessMessage @76))" Category="CallStackDirectCall" Bounds="2122.35424804688,1253.6474609375,68.6328125,28.2607421875" />
+    <Link Source="@96" Target="@90" Category="CallStackDirectCall" Bounds="583.831665039063,765.910705566406,1341.39501953125,471.589294433594" />
+    <Link Source="@97" Target="@121" Category="CallStackDirectCall" Bounds="2981.83178710938,900.802490234375,59.364990234375,96.2949829101563" />
+    <Link Source="@98" Target="@99" Category="CallStackDirectCall" Bounds="3817.83178710938,957.429992675781,0,30.66748046875" />
+    <Link Source="ExternalCodeRootNode" Target="@117" Category="CallStackIndirectCall" Bounds="1504.83166503906,33.939998626709,71.205078125,506.119998931885" />
+    <Link Source="ExternalCodeRootNode" Target="@131" Category="CallStackIndirectCall" Bounds="1614.83166503906,33.939998626709,0,30.6674995422363" />
+    <Link Source="ExternalCodeRootNode" Target="@133" Category="CallStackIndirectCall" Bounds="1652.01489257813,33.939998626709,105.136474609375,36.7012977600098" />
+    <Link Source="ExternalCodeRootNode" Target="@138" Category="CallStackIndirectCall" Bounds="1647.3251953125,33.939998626709,259.472534179688,38.1161613464355">
+      <Category Ref="CurrentCallStackCall" />
+    </Link>
+    <Link Source="NewThread&quot;ConnectorOut&quot;" Target="@157" Bounds="842.685791015625,957.429992675781,85.9959106445313,36.1775512695313" />
+    <Link Source="ЕслиНужноСоздаютсяПотоки&quot;Quik.FIX(TS,MD)&quot;" Target="@94" Bounds="1318.58081054688,965.409973144531,118.25439453125,29.508544921875" />
+    <Link Source="ПотокTSПолучаетСообщениеConnect" Target="@138" Bounds="1862.55541992188,41.9199981689453,81.798583984375,28.7071685791016" />
+    <Link Source="Потоки&quot;Quik.FIX(TS,MD)&quot;" Target="@138" Bounds="2001.85717773438,33.939998626709,18.458740234375,31.8789253234863" />
+  </Links>
+  <Categories>
+    <Category Id="BaseCustomContent" CanBeDataDriven="True" IsProviderRoot="False" />
+    <Category Id="CallStackDirectCall" Label="Call Stack direct call" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Call Stack direct call" OutgoingActionLabel="Call Stack direct call" />
+    <Category Id="CallStackEntry" Label="Call Stack Entry" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Call Stack Entry" />
+    <Category Id="CallStackIndirectCall" Label="Call Stack indirect call" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Call Stack indirect call" OutgoingActionLabel="Call Stack indirect call" />
+    <Category Id="CodeSchema_CallStackUnresolvedMethod" Label="Unresolved Method" CanBeDataDriven="True" DefaultAction="Microsoft.AllOutBoundLinks" IsProviderRoot="False" NavigationActionLabel="Unresolved Method" />
+    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
+    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
+    <Category Id="CodeSchema_SourceLocation" Label="Source Location" Icon="File" />
+    <Category Id="Comment" Label="Comment" Description="Represents a user defined comment on the diagram" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Comments" />
+    <Category Id="CurrentCallStackCall" Label="Current Call Stack call" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Current Call Stack call" OutgoingActionLabel="Current Call Stack call" />
+    <Category Id="CurrentCallStackEntry" Label="Current Call Stack Entry" BasedOn="BaseCustomContent" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Current Call Stack Entry" />
+    <Category Id="ExternalCallStackEntry" Label="External Call Stack Entry" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="External Call Stack Entry" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsAnonymous" Label="Is Anonymous" Description="Flag indicating if this delegate, type, or method is anonymous" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExtension" Label="Is Extension" Description="Flag indicating if the method is an extension method" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPrivate" Label="Is Private" Description="Flag to indicate the scope is Private" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsProtected" Label="Is Protected" Description="Flag to indicate the scope is Protected" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsVirtual" Label="Is Virtual" Description="Flag to indicate the method can be overridden" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FunctionTypeFlags" Label="FunctionTypeFlags" Description="FunctionTypeFlags" DataType="System.String" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsCodeType" Label="IsCodeType" Description="IsCodeType" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsOverloaded" Label="IsOverloaded" Description="IsOverloaded" DataType="System.Boolean" />
+    <Property Id="IsOverridable" Label="IsOverridable" Description="IsOverridable" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="MustImplement" Label="MustImplement" Description="MustImplement" DataType="System.Boolean" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="ArrayRank" Label="Array Rank" ValueType="System.String" />
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="GenericArguments" Label="Generic Arguments" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" />
+    <Name Id="GenericParameterCount" Label="Generic Parameter Count" ValueType="System.String" />
+    <Name Id="IsUnresolved" Label="Is Unresolved" ValueType="System.String" />
+    <Name Id="Member" Label="Member" ValueType="System.Object" />
+    <Name Id="Name" Label="Name" ValueType="System.String" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="ParameterIdentifier" Label="Parameter Identifier" ValueType="System.String" />
+    <Name Id="ParentType" Label="Parent Type" ValueType="System.Object" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="19" Uri="Assembly=$(8ce1bcd0-e763-4df9-a7cc-eb896c711aec.OutputPathUri)" />
+    <Alias n="29" Id="Namespace=StockSharp.Fix.Native" />
+    <Alias n="30" Id="(@19 Type=(Name=SecurityListRequest ParentType=Extensions) Member=(Name=ProcessTag OverloadingParameters=[(@19 @29 Type=FixTags)]))" />
+    <Alias n="31" Id="Type=Extensions" />
+    <Alias n="32" Id="(@19 @29 Type=IFixReader)" />
+    <Alias n="33" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.0/mscorlib.dll" />
+    <Alias n="34" Id="Namespace=System" />
+    <Alias n="35" Id="(@19 @31 Member=(Name=ReadTagsUntilCheckSum OverloadingParameters=[@32,(@33 @34 Type=(Name=Func GenericParameterCount=2 GenericArguments=[(@19 @29 Type=FixTags),(@33 @34 Type=Boolean)]))]))" />
+    <Alias n="36" Id="(@19 @31 Member=(Name=ReadSpecificTag OverloadingParameters=[@32,(@19 @29 Type=FixTags)]))" />
+    <Alias n="37" Id="GenericParameterCount=1" />
+    <Alias n="38" Uri="Assembly=$(335e5af6-b0c2-4eed-ad3f-f35ee3a324e7.OutputPathUri)" />
+    <Alias n="39" Id="Namespace=StockSharp.Messages" />
+    <Alias n="40" Id="(@33 @34 Type=String)" />
+    <Alias n="41" Id="(@19 @31 Member=(Name=SendSecurityListRequest OverloadingParameters=[@32,(@33 @34 Type=(Name=Action @37 GenericArguments=[(@38 @39 Type=Message)])),@40,(@33 @34 Type=TimeSpan)]))" />
+    <Alias n="42" Uri="Assembly=$(1b798a4e-2271-46f9-9c2d-4e563114e268.OutputPathUri)" />
+    <Alias n="43" Id="Namespace=StockSharp.Quik" />
+    <Alias n="44" Id="Type=QuikTerminal" />
+    <Alias n="45" Id="(@42 @43 @44 Member=(Name=GetLuaTableSettings OverloadingParameters=[(@42 @43 Type=(Name=DdeTable ArrayRank=1 ParentType=DdeTable))]))" />
+    <Alias n="46" Id="(@42 @43 @44 Member=(Name=GetTableSettings OverloadingParameters=[(@42 @43 Type=(Name=DdeTable ArrayRank=1 ParentType=DdeTable))]))" />
+    <Alias n="47" Uri="Assembly=$(3a9e6a09-3887-4612-b127-9b95bd2c3eed.OutputPathUri)" />
+    <Alias n="48" Id="Namespace=Ecng.Common" />
+    <Alias n="49" Id="(@47 @48 Type=DelegateHelper Member=(Name=SafeInvoke OverloadingParameters=[(@33 @34 Type=Action)]))" />
+    <Alias n="50" Id="(@47 @48 Type=ThreadingHelper Member=(Name=Thread OverloadingParameters=[(@33 @34 Type=Action)]))" />
+    <Alias n="51" Uri="Assembly=$(2a5c6fad-106c-4a4a-b602-77a6b1034ca2.OutputPathUri)" />
+    <Alias n="52" Id="Namespace=StockSharp.Algo" />
+    <Alias n="53" Id="Type=Connector" />
+    <Alias n="54" Id="(@51 @52 @53 Member=(Name=ProcessConnectMessage OverloadingParameters=[(@38 @39 Type=BaseConnectionMessage)]))" />
+    <Alias n="55" Id="Type=BasketMessageAdapter" />
+    <Alias n="56" Id="(@19 @29 Type=BaseFixWriter Member=(Name=WriteByte OverloadingParameters=[(@33 @34 Type=Byte)]))" />
+    <Alias n="57" Id="(@51 @52 @53 Member=(Name=SendOutError OverloadingParameters=[(@33 @34 Type=Exception)]))" />
+    <Alias n="58" Id="Type=MessageAdapter" />
+    <Alias n="59" Id="(@38 @39 @58 Member=(Name=SendOutError OverloadingParameters=[(@33 @34 Type=Exception)]))" />
+    <Alias n="60" Id="Type=TextFixWriter" />
+    <Alias n="61" Id="Name=Write" />
+    <Alias n="62" Id="(@19 @29 @60 Member=(@61 OverloadingParameters=[(@19 @29 Type=FixTags)]))" />
+    <Alias n="63" Id="Member=(Name=.ctor OverloadingParameters=[(@47 @48 Type=IdGenerator)])" />
+    <Alias n="64" Id="(@51 @52 @55 @63)" />
+    <Alias n="65" Id="Namespace=StockSharp.Fix" />
+    <Alias n="66" Id="Type=FixMessageAdapter" />
+    <Alias n="67" Id="(@19 @65 @66 @63)" />
+    <Alias n="68" Id="(@42 Namespace=StockSharp.Quik.Lua Type=LuaFixTransactionMessageAdapter @63)" />
+    <Alias n="69" Id="Type=FixMessageWriter" />
+    <Alias n="70" Id="(@19 @29 Type=(Name=AuthParamsWriter ParentType=FixMessageWriter) Member=(Name=WriteData OverloadingParameters=[(@19 @29 Type=IFixWriter)]))" />
+    <Alias n="71" Id="(@38 @39 Type=IMessageAdapter)" />
+    <Alias n="72" Id="(@19 @65 @66 Member=(Name=Connect OverloadingParameters=[(@33 @34 Type=Int64)]))" />
+    <Alias n="73" Id="(@19 @29 @60 Member=(@61 OverloadingParameters=[(@33 @34 Type=Int64)]))" />
+    <Alias n="74" Id="(@19 @29 @60 Member=(Name=WriteBytes OverloadingParameters=[(@33 @34 Type=Int64)]))" />
+    <Alias n="75" Id="Type=ChannelMessageAdapter" />
+    <Alias n="76" Id="OverloadingParameters=[(@38 @39 Type=Message)]" />
+    <Alias n="77" Id="(@38 @39 @75 Member=(Name=AdapterOnNewOutMessage @76))" />
+    <Alias n="78" Id="(@51 @52 @53 Member=(Name=AdapterOnNewOutMessage @76))" />
+    <Alias n="79" Id="(@51 @52 Type=HeartbeatAdapter Member=(Name=AdapterOnNewOutMessage @76))" />
+    <Alias n="80" Id="(@38 @39 @75 Member=(Name=InputChannelOnNewOutMessage @76))" />
+    <Alias n="81" Id="(@51 @52 @53 Member=(Name=OnProcessMessage @76))" />
+    <Alias n="82" Id="(@42 @43 Type=QuikTrader Member=(Name=OnProcessMessage @76))" />
+    <Alias n="83" Id="(@51 @52 @55 Member=(Name=OnSendInMessage @76))" />
+    <Alias n="84" Id="(@19 @65 @66 Member=(Name=OnSendInMessage @76))" />
+    <Alias n="85" Id="(@51 @52 @53 Member=(Name=OutMessageChannelOnNewOutMessage @76))" />
+    <Alias n="86" Id="(@38 @39 @75 Member=(Name=OutputChannelOnNewOutMessage @76))" />
+    <Alias n="87" Id="(@51 @52 @53 Member=(Name=SendInMessage @76))" />
+    <Alias n="88" Id="Type=InMemoryMessageChannel" />
+    <Alias n="89" Id="(@38 @39 @88 Member=(Name=SendInMessage @76))" />
+    <Alias n="90" Id="(@38 @39 @58 Member=(Name=SendInMessage @76))" />
+    <Alias n="91" Id="(@51 @52 @53 Member=(Name=SendOutMessage @76))" />
+    <Alias n="92" Id="(@38 @39 @58 Member=(Name=SendOutMessage @76))" />
+    <Alias n="93" Id="Member=(Name=StockSharp.Messages.IMessageChannel.SendInMessage @76)" />
+    <Alias n="94" Id="(@38 @39 @75 @93)" />
+    <Alias n="95" Id="(@51 @52 Type=HeartbeatAdapter @93)" />
+    <Alias n="96" Id="(@51 @52 Type=ManagedMessageAdapter @93)" />
+    <Alias n="97" Id="(@38 @39 Type=PassThroughMessageChannel @93)" />
+    <Alias n="98" Id="(@38 @39 Type=BaseConnectionMessage Member=(Name=.ctor OverloadingParameters=[(@38 @39 Type=MessageTypes)]))" />
+    <Alias n="99" Id="(@38 @39 Type=Message Member=(Name=.ctor OverloadingParameters=[(@38 @39 Type=MessageTypes)]))" />
+    <Alias n="100" Id="(@42 @43 Type=QuikTrader Member=(Name=.ctor OverloadingParameters=[@40]))" />
+    <Alias n="101" Id="(@19 @29 @60 Member=(@61 OverloadingParameters=[@40]))" />
+    <Alias n="102" Id="(@19 @29 @69 Member=(Name=SendMessage OverloadingParameters=[@40,(@33 @34 Type=(Name=Action @37 GenericArguments=[(@19 @29 Type=IFixWriter)]))]))" />
+    <Alias n="103" Id="Type=Converter" />
+    <Alias n="104" Id="(@47 @48 @103 Member=(Name=DoInCulture OverloadingParameters=[(@33 Namespace=System.Globalization Type=CultureInfo),(@33 @34 Type=Action)]))" />
+    <Alias n="105" Id="(@51 @52 @55 Member=(Name=ProcessConnectMessage OverloadingParameters=[@71,(@38 @39 Type=ConnectMessage)]))" />
+    <Alias n="106" Id="(@51 @52 @55 Member=(Name=ProcessDisconnectMessage OverloadingParameters=[@71,(@38 @39 Type=DisconnectMessage)]))" />
+    <Alias n="107" Uri="Assembly=$(20a01ed4-f07c-4c9f-8230-3f861ec37b30.OutputPathUri)" />
+    <Alias n="108" Id="Namespace=StockSharp.Quik.Verifier" />
+    <Alias n="109" Id="Type=MainWindow" />
+    <Alias n="110" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.1/mscorlib.dll" />
+    <Alias n="111" Id="(@107 @108 @109 Member=(Name=OnConnect OverloadingParameters=[(@42 @43 Type=QuikTrader),(@110 @34 Type=Exception)]))" />
+    <Alias n="112" Id="(@19 @65 @66 Member=(Name=ParseUserRequest OverloadingParameters=[@40,@32]))" />
+    <Alias n="113" Id="(@19 @65 @66 Member=(Name=ProcessMarketDataMessage OverloadingParameters=[@40,@32]))" />
+    <Alias n="114" Id="(@19 @65 @66 Member=(Name=ProcessTransactionMessage OverloadingParameters=[@40,@32]))" />
+    <Alias n="115" Id="(@51 @52 @55 Member=(Name=OnInnerAdapterNewMessage OverloadingParameters=[@71,(@38 @39 Type=Message)]))" />
+    <Alias n="116" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.1/PresentationCore.dll" />
+    <Alias n="117" Id="(@107 @108 @109 Member=(Name=CheckClick OverloadingParameters=[(@110 @34 Type=Object),(@116 Namespace=System.Windows Type=RoutedEventArgs)]))" />
+    <Alias n="118" Id="(@19 @29 @60 Member=(@61 OverloadingParameters=[(@33 @34 Type=DateTime),@40]))" />
+    <Alias n="119" Id="(@19 @65 Type=(Name=ParseCommand ParentType=FixMessageAdapter) Member=(Name=ParseCmd OverloadingParameters=[@32,@40]))" />
+    <Alias n="120" Id="(@19 @29 @69 Member=(Name=WriteLogonRequest OverloadingParameters=[(@33 @34 Type=TimeSpan),(@33 @34 Type=Boolean),@40,@40]))" />
+    <Alias n="121" Id="(@47 @48 Type=DelegateHelper Member=(Name=SafeInvoke @37 OverloadingParameters=[(@33 @34 Type=(Name=Action @37 GenericArguments=[(ParameterIdentifier=0)])),(ParameterIdentifier=0)]))" />
+    <Alias n="122" Id="(@47 @48 @103 Member=(Name=DoInCulture @37 OverloadingParameters=[(@33 Namespace=System.Globalization Type=CultureInfo),(@33 @34 Type=(Name=Func @37 GenericArguments=[(ParameterIdentifier=0)]))]))" />
+    <Alias n="123" Id="(@51 @52 @53 Member=.cctor)" />
+    <Alias n="124" Id="Member=.ctor" />
+    <Alias n="125" Id="(@38 @39 Type=ConnectMessage @124)" />
+    <Alias n="126" Id="(@38 @39 Type=DisconnectMessage @124)" />
+    <Alias n="127" Id="(@38 @39 Type=PortfolioLookupResultMessage @124)" />
+    <Alias n="128" Id="(@38 @39 @88 Member=AnonymousMethod__0)" />
+    <Alias n="129" Id="(@38 @39 @88 Member=AnonymousMethod__1)" />
+    <Alias n="130" Id="(@51 @52 @55 Member=AnonymousMethod__10)" />
+    <Alias n="131" Id="(@107 @108 @109 Member=AnonymousMethod__2)" />
+    <Alias n="132" Id="(@51 @52 @55 Member=AnonymousMethod__22)" />
+    <Alias n="133" Id="(@107 @108 @109 Member=AnonymousMethod__4)" />
+    <Alias n="134" Id="(@51 @52 @55 Member=AnonymousMethod__d)" />
+    <Alias n="135" Id="(@38 @39 @58 Member=AnonymousMethod__d)" />
+    <Alias n="136" Id="(@51 @52 @55 Member=AnonymousMethod__e)" />
+    <Alias n="137" Id="(@47 @48 @103 Member=AnonymousMethod__e)" />
+    <Alias n="138" Id="(@47 @48 Type=ThreadingHelper Member=AnonymousMethod__f)" />
+    <Alias n="139" Uri="Assembly=$(3bbb7feb-8f1b-4368-8913-807cf14f0586.OutputPathUri)" />
+    <Alias n="140" Id="(@38 @39 @88 Member=Close)" />
+    <Alias n="141" Id="(@51 @52 @53 Member=Connect)" />
+    <Alias n="142" Id="(@19 @65 @66 Member=ConnectionControl)" />
+    <Alias n="143" Id="(@51 @52 @53 Member=Disconnect)" />
+    <Alias n="144" Id="(@47 @48 Type=Disposable Member=Dispose)" />
+    <Alias n="145" Id="(@51 @52 @55 Member=DisposeManaged)" />
+    <Alias n="146" Id="(@51 @52 @53 Member=DisposeManaged)" />
+    <Alias n="147" Id="(@19 @65 @66 Member=InvokeConnectionControl)" />
+    <Alias n="148" Id="(@51 @52 @53 Member=OnConnect)" />
+    <Alias n="149" Id="(@51 @52 @53 Member=OnDisconnect)" />
+    <Alias n="150" Id="(@38 @39 @88 Member=Open)" />
+    <Alias n="151" Id="(@51 @52 @53 Member=RaiseConnected)" />
+    <Alias n="152" Id="(@19 @29 Type=BaseFixReader Member=ReadByte)" />
+    <Alias n="153" Id="(@19 @29 Type=TextFixReader Member=ReadString)" />
+    <Alias n="154" Id="(@19 @29 Type=TextFixReader Member=ReadTag)" />
+    <Alias n="155" Id="(@38 @39 @75 Member=StockSharp.Messages.IMessageChannel.Close)" />
+    <Alias n="156" Id="(@51 @52 Type=HeartbeatAdapter Member=StockSharp.Messages.IMessageChannel.Close)" />
+    <Alias n="157" Id="(@51 @52 @53 Member=TryOpenChannel)" />
+    <Alias n="158" Id="(@19 @29 @69 Member=WriteLogoutRequest)" />
+    <Alias n="159" Id="(@19 @29 Type=BaseFixWriter Member=WriteSoh)" />
+    <Alias n="160" Uri="Assembly=StockSharp.Fix.dll" />
+    <Alias n="161" Id="(Name=StockSharp.Fix.Native.TextFixReader.ReadBytesI @160 Type=int? OverloadingParameters=[(Type=int Name=nRefInt)] IsUnresolved=True)" />
+    <Alias n="162" Id="(Name=Extensions.ProcessStream @160 Type=bool OverloadingParameters=[(Type=&quot;StockSharp.Fix.Native.IFixReader {StockSharp.Fix.Native.TextFixReader}&quot; Name=ifixReader),(Type=bool Name=bFullMsg),(Type=string Name=fixVersionLabel),(Type=&quot;StockSharp.Logging.ILogReceiver {StockSharp.Fix.FixMessageAdapter}&quot; Name=ilogReceiver),(Type=string Name=sSessionId),(Type=&quot;System.Func&lt;StockSharp.Fix.Native.IFixReader,string,bool?&gt;&quot; Name=MsgHandler),(Type=System.Action&lt;System.Exception&gt; Name=exceptionHandler)] IsUnresolved=True)" />
+    <Alias n="163" Id="(Name=Extensions.ProcessStream @160 Type=bool OverloadingParameters=[(Type=&quot;StockSharp.Fix.Native.IFixReader {StockSharp.Fix.Native.TextFixReader}&quot; Name=ifixReader),(Type=bool Name=bFullMsg),(Type=string Name=fixVersionLabel),(Type=&quot;StockSharp.Logging.ILogReceiver {StockSharp.Quik.Lua.LuaFixTransactionMessageAdapter}&quot; Name=ilogReceiver),(Type=string Name=sSessionId),(Type=&quot;System.Func&lt;StockSharp.Fix.Native.IFixReader,string,bool?&gt;&quot; Name=MsgHandler),(Type=System.Action&lt;System.Exception&gt; Name=exceptionHandler)] IsUnresolved=True)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Link" GroupLabel="Current Call Stack Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CurrentCallStackCall')" />
+      <Setter Property="Stroke" Value="#FFD93701" />
+      <Setter Property="Weight" Value="1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Indirect Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackIndirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+      <Setter Property="StrokeDashArray" Value="4 1" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Call Stack Direct Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('CallStackDirectCall')" />
+      <Setter Property="Stroke" Value="#FFB8B8B8" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="External And Current" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('ExternalCallStackEntry') And HasCategory('CurrentCallStackEntry')" />
+      <Setter Property="Background" Value="#FFFFF8F0" />
+      <Setter Property="Stroke" Value="#FFCE5100" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Call Stack Node" ValueLabel="True">
+      <Condition Expression="HasCategory('CurrentCallStackEntry') And !HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFFFE3C6" />
+      <Setter Property="Stroke" Value="#FFD93701" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="External Call Stack Entry" ValueLabel="True">
+      <Condition Expression="HasCategory('ExternalCallStackEntry')" />
+      <Setter Property="Background" Value="#FFF7F7F7" />
+      <Setter Property="StrokeDashArray" Value="1 3" />
+      <Setter Property="Foreground" Value="#FFA5A5A5" />
+      <Setter Property="Stroke" Value="#FFA5A5A5" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="Has category">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="Has category">
+      <Condition Expression="HasCategory('InheritsFrom')" />
+      <Setter Property="Stroke" Value="#FF00A600" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Implements')" />
+      <Setter Property="Stroke" Value="#8000A600" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Calls" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Calls')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 0" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Function Pointer" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_FunctionPointer')" />
+      <Setter Property="Stroke" Value="#FFFF00FF" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Reference" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_FieldReference')" />
+      <Setter Property="Stroke" Value="#FF00AEEF" />
+      <Setter Property="DrawArrow" Value="true" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Comment" ValueLabel="Has comment">
+      <Condition Expression="HasCategory('Comment')" />
+      <Setter Property="Background" Value="#FFFFFACD" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+      <Setter Property="StrokeThickness" Value="1" />
+      <Setter Property="NodeRadius" Value="2" />
+      <Setter Property="MaxWidth" Value="250" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="1b798a4e-2271-46f9-9c2d-4e563114e268.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\References\StockSharp.Quik.dll" />
+    <Path Id="1b798a4e-2271-46f9-9c2d-4e563114e268.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/StockSharp.Quik.dll" />
+    <Path Id="20a01ed4-f07c-4c9f-8230-3f861ec37b30.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Samples\Tools\Verifier\bin\Debug\Verifier.exe" />
+    <Path Id="20a01ed4-f07c-4c9f-8230-3f861ec37b30.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Samples/Tools/Verifier/bin/Debug/Verifier.exe" />
+    <Path Id="2a5c6fad-106c-4a4a-b602-77a6b1034ca2.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\References\StockSharp.Algo.dll" />
+    <Path Id="2a5c6fad-106c-4a4a-b602-77a6b1034ca2.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/StockSharp.Algo.dll" />
+    <Path Id="335e5af6-b0c2-4eed-ad3f-f35ee3a324e7.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\References\StockSharp.Messages.dll" />
+    <Path Id="335e5af6-b0c2-4eed-ad3f-f35ee3a324e7.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/StockSharp.Messages.dll" />
+    <Path Id="3a9e6a09-3887-4612-b127-9b95bd2c3eed.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\References\Ecng\Ecng.Common\bin\Debug\Ecng.Common.dll" />
+    <Path Id="3a9e6a09-3887-4612-b127-9b95bd2c3eed.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Common/bin/Debug/Ecng.Common.dll" />
+    <Path Id="3bbb7feb-8f1b-4368-8913-807cf14f0586.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\References\Ecng\Ecng.Collections\bin\Debug\Ecng.Collections.dll" />
+    <Path Id="3bbb7feb-8f1b-4368-8913-807cf14f0586.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/References/Ecng/Ecng.Collections/bin/Debug/Ecng.Collections.dll" />
+    <Path Id="8ce1bcd0-e763-4df9-a7cc-eb896c711aec.OutputPath" Value="E:\disk\Developments\CSharp\YAR\StockSharp\StockSharpShared\Fix\bin\Debug\StockSharp.Fix.dll" />
+    <Path Id="8ce1bcd0-e763-4df9-a7cc-eb896c711aec.OutputPathUri" Value="file:///E:/disk/Developments/CSharp/YAR/StockSharp/StockSharpShared/Fix/bin/Debug/StockSharp.Fix.dll" />
+    <Path Id="FxReferenceAssemblies" Value="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework" />
+    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
+  </Paths>
+</DirectedGraph>

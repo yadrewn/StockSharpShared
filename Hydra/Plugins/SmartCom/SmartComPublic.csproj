@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\References\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -108,12 +108,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>call ..\..\..\plugins.bat $(ProjectName) $(ConfigurationName)
+    <PostBuildEvent>call plugins.bat $(ProjectName) $(ConfigurationName)
 
-copy StockSharp.SmartCom.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\StockSharp.SmartCom.dll
-copy Interop.StClientLib.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.StClientLib.dll
-copy Interop.SmartCOM3_32.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.SmartCOM3_32.dll
-copy Interop.SmartCOM3_64.dll ..\..\..\..\Hydra\bin\$(ConfigurationName)\Plugins\Interop.SmartCOM3_64.dll</PostBuildEvent>
+copy StockSharp.SmartCom.dll Plugins\StockSharp.SmartCom.dll
+copy Interop.StClientLib.dll Plugins\Interop.StClientLib.dll
+copy Interop.SmartCOM3_32.dll Plugins\Interop.SmartCOM3_32.dll
+copy Interop.SmartCOM3_64.dll Plugins\Interop.SmartCOM3_64.dll</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

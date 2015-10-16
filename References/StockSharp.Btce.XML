@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StockSharp.Btce</name>
+    </assembly>
+    <members>
+        <member name="T:StockSharp.Btce.BtceMessageAdapter">
+            <summary>
+            Адаптер сообщений для BTC-e.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.BtceMessageAdapter.#ctor(Ecng.Common.IdGenerator)">
+            <summary>
+            Создать <see cref="T:StockSharp.Btce.BtceMessageAdapter"/>.
+            </summary>
+            <param name="transactionIdGenerator">Генератор идентификаторов транзакций.</param>
+        </member>
+        <member name="M:StockSharp.Btce.BtceMessageAdapter.OnSendInMessage(StockSharp.Messages.Message)">
+            <summary>
+            Отправить сообщение.
+            </summary>
+            <param name="message">Сообщение.</param>
+        </member>
+        <member name="M:StockSharp.Btce.BtceMessageAdapter.Save(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Сохранить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Btce.BtceMessageAdapter.Load(Ecng.Serialization.SettingsStorage)">
+            <summary>
+            Загрузить настройки.
+            </summary>
+            <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Btce.BtceMessageAdapter.ToString">
+            <summary>
+            Получить строковое представление.
+            </summary>
+            <returns>Строковое представление.</returns>
+        </member>
+        <member name="P:StockSharp.Btce.BtceMessageAdapter.IsSupportNativeSecurityLookup">
+            <summary>
+            Поддерживается ли торговой системой поиск инструментов.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceMessageAdapter.IsSupportNativePortfolioLookup">
+            <summary>
+            Поддерживается ли торговой системой поиск портфелей.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceMessageAdapter.Key">
+            <summary>
+            Ключ.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceMessageAdapter.Secret">
+            <summary>
+            Секрет.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceMessageAdapter.IsValid">
+            <summary>
+            Проверить введенные параметры на валидность.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Btce.BtceTrader">
+            <summary>
+            Реализация интерфейса <see cref="T:StockSharp.BusinessEntities.IConnector"/> для взаимодействия с биржей BTC-e.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.BtceTrader.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Btce.BtceTrader"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceTrader.IsSupportAtomicReRegister">
+            <summary>
+            Поддерживается ли перерегистрация заявок через метод <see cref="M:StockSharp.BusinessEntities.IConnector.ReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order)"/>
+            в виде одной транзакции. По-умолчанию включено.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceTrader.Key">
+            <summary>
+            Ключ.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Btce.BtceTrader.Secret">
+            <summary>
+            Секрет.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Btce.Native.BtceClient">
+            <summary>
+            Объект этого класса отвечает за общение с биржей BTCE.
+            На одну пару ключ-секрет надо создавать один объект из-за параметра биржи "nonce".
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.#ctor(System.Security.SecureString,System.Security.SecureString)">
+            <summary>
+            Конструктор объекта
+            </summary>
+            <param name="key">API-ключ. NB не храните в коде!</param>
+            <param name="secret">Секрет для подписи запросов. NB не храните в коде!</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetInfo">
+            <summary>
+            Возвращает ИНФО от биржи.
+            NB: Должен быть первым запросом к бирже, поскольку настраивает nonce.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetTransactions">
+            <summary>
+            Возвращает транзакции на счете с последнего полного месяца.
+            Если сегодня 10 марта, то полный месяц начинается с 1 февраля.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetTransactions(System.DateTime)">
+            <summary>
+            Возвращает транзакции на счете с некоторой даты.
+            </summary>
+            <param name="since">Дата, с которой вернуть транзакции.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetMyTrades(System.Int64)">
+            <summary>
+            Возвращает свои сделки на счете месяц по всем инструментам c определенной даты.
+            </summary>
+            <param name="fromId">Идентификатор сделки, с которой нужны новые сделки.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetMyTrades(System.String)">
+            <summary>
+            Возвращает свои сделки на счете месяц по конкретному инструменту с последнего полного месяца.
+            </summary>
+            <param name="instrument">Интересующий инструмент (BTC_RUR).</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetMyTrades(System.String,System.DateTime)">
+            <summary>
+            Возвращает свои сделки на счете месяц по конкретному инструменту c определенной даты.
+            </summary>
+            <param name="instrument">Интересующий инструмент (BTC_RUR).</param>
+            <param name="since">Дата, с которой нужны сделки.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetOrders">
+            <summary>
+            Возвращает заявки на счете месяц по всем инструментам.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.GetOrders(System.String)">
+            <summary>
+            Возвращает заявки на счете месяц по конкретному инструменту.
+            </summary>
+            <param name="instrument">Интересующий инструмент (BTC_RUR).</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.MakeOrder(System.String,System.String,System.Decimal,System.Decimal)">
+            <summary>
+            Создает заявку новую.
+            </summary>
+            <param name="instrument">Инструмент.</param>
+            <param name="side">Тип: sell или buy.</param>
+            <param name="price">Цена.</param>
+            <param name="volume">Объем.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.CancelOrder(System.Int64)">
+            <summary>
+            Отменяет заявку.
+            </summary>
+            <param name="orderId">Идентификатор заявки.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.CancelOrder(StockSharp.Btce.Native.Command)">
+            <summary>
+            Отменяет заявку.
+            </summary>
+            <param name="command">Параметры отмены, где обязательным является OrderId.</param>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.MakePrivateRequest(System.String)">
+            <summary>
+            Запрашивает BTCE приватно, предварительно подписав запрос.
+            </summary>
+            <param name="request">Параметры запроса. без nonce, который добавится автоматически.</param>
+            <returns></returns>
+        </member>
+        <member name="M:StockSharp.Btce.Native.BtceClient.MakePublicRequest(System.String)">
+            <summary>
+            Запрашивает открытое АПИ BTCE.
+            </summary>
+            <param name="request">Параметры запроса</param>
+            <returns></returns>
+        </member>
+        <member name="P:StockSharp.Btce.Native.BtceClient.NonceProblemCount">
+            <summary>
+            Возвращает количество проблемных запросов.
+            Мы послали запрос с определенным nonce, а сервер сказал, что nonce неправильный.
+            И приходится пересылать запрос еще раз с новым nonce.
+            </summary>
+        </member>
+    </members>
+</doc>

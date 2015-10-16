@@ -1,4 +1,4 @@
-namespace StockSharp.Algo.Testing
+﻿namespace StockSharp.Algo.Testing
 {
 	using System;
 	using System.Collections.Generic;

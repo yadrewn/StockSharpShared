@@ -2,7 +2,7 @@ using System;
 
 using Ecng.Collections;
 using Ecng.Common;
-
+using StockSharp.Algo;
 using StockSharp.Alor.Metadata;
 using StockSharp.BusinessEntities;
 
@@ -11,7 +11,7 @@ namespace StockSharp.Alor
 	using StockSharp.Messages;
 	using StockSharp.Localization;
 
-	public sealed partial class AlorTrader
+    public sealed partial class AlorTrader : Connector
 	{
 		/// <summary>
 		/// Зарегистрировать заявку на бирже.
@@ -40,7 +40,7 @@ namespace StockSharp.Alor
 			const string splitFlag = "S";
 			const string issueCode = "";
 
-			var direction = order.Direction == OrderDirections.Buy ? "B" : "S";
+			var direction = order.Direction == Sides.Buy ? "B" : "S";
 			var extRef = order.TransactionId.To<String>();
 
 			int resCode;
@@ -63,8 +63,8 @@ namespace StockSharp.Alor
 			}
 
 			var exception = AlorExceptionHelper.GetException(resCode, res);
-			if (exception != null)
-				RaiseOrderFailed(order, exception);
+            //if (exception != null)
+            //    RaiseOrderFailed(order, exception);
 
 			order.Messages.Add(res);
 		}
@@ -77,20 +77,20 @@ namespace StockSharp.Alor
 		{
 			if (oldOrder.Security.Board.IsSupportAtomicReRegister)
 			{
-				var newOrderId1 = oldOrder.Id;
+				var newOrderId1 = oldOrder.Id.Value;
 				var newOrderId2 = 0L;
 
 				string res;
-				var resCode = _slot.MoveOrders(1, ref newOrderId1, (double)newOrder.Price, (int)newOrder.Volume,
+                var resCode = _slot.MoveOrders(1, ref newOrderId1, (double)newOrder.Price, (int)newOrder.Volume,
 				                              newOrder.TransactionId.To<string>(), ref newOrderId2, 0, 0, "", out res);
 
 				var exception = AlorExceptionHelper.GetException(resCode, res);
 
-				if (exception != null)
-				{
-					RaiseOrderFailed(newOrder, exception);
-					RaiseOrderFailed(oldOrder, exception);
-				}
+                //if (exception != null)
+                //{
+                //    RaiseOrderFailed(newOrder, exception);
+                //    RaiseOrderFailed(oldOrder, exception);
+                //}
 
 				newOrder.Messages.Add(res);
 			}
@@ -114,8 +114,8 @@ namespace StockSharp.Alor
 				return;
 			}
 
-			var newOrderId1 = oldOrder1.Id;
-			var newOrderId2 = oldOrder2.Id;
+			var newOrderId1 = oldOrder1.Id.Value;
+			var newOrderId2 = oldOrder2.Id.Value;
 
 			string res;
 			var resCode = _slot.MoveOrders(1, ref newOrderId1, (double)newOrder1.Price, (int)newOrder1.Volume,
@@ -125,16 +125,16 @@ namespace StockSharp.Alor
 
 			var exception = AlorExceptionHelper.GetException(resCode, res);
 
-			if (exception != null)
-			{
-				RaiseOrderFailed(oldOrder1, exception);
-				RaiseOrderFailed(newOrder1, exception);
-				if (newOrderId2 != 0)
-				{
-					RaiseOrderFailed(oldOrder2, exception);
-					RaiseOrderFailed(newOrder2, exception);
-				}
-			}
+            //if (exception != null)
+            //{
+            //    RaiseOrderFailed(oldOrder1, exception);
+            //    RaiseOrderFailed(newOrder1, exception);
+            //    if (newOrderId2 != 0)
+            //    {
+            //        RaiseOrderFailed(oldOrder2, exception);
+            //        RaiseOrderFailed(newOrder2, exception);
+            //    }
+            //}
 
 			newOrder1.Messages.Add(res);
 			newOrder2.Messages.Add(res);
@@ -144,18 +144,18 @@ namespace StockSharp.Alor
 		/// Отменить заявку на бирже.
 		/// </summary>
 		/// <param name="order">Заявка, которую нужно отменять.</param>
-		protected override void OnCancelOrder(Order order)
+		private void OnCancelOrder(Order order)
 		{
 			var id = order.Id;
 			string res;
 			var resCode = order.Type == OrderTypes.Conditional
-				              ? _slot.DeleteStopOrder(id, out res)
-				              : _slot.DeleteOrder(id, out res);
+				              ? _slot.DeleteStopOrder(id.Value, out res)
+				              : _slot.DeleteOrder(id.Value, out res);
 
 			var exception = AlorExceptionHelper.GetException(resCode, res);
 
-			if (exception != null)
-				RaiseOrderFailed(order, exception);
+            //if (exception != null)
+            //    RaiseOrderFailed(order, exception);
 
 			order.Messages.Add(res);
 		}
@@ -165,32 +165,32 @@ namespace StockSharp.Alor
 		/// Значение котировок можно получить через метод <see cref="IConnector.GetMarketDepth"/>.
 		/// </summary>
 		/// <param name="security">Инструмент, по которому необходимо начать получать котировки.</param>
-		protected override bool OnRegisterMarketDepth(Security security)
-		{
-			var quotesTable = new AlorTable(AlorTableTypes.Quote, "ORDERBOOK", RaiseProcessDataError);
-			OpenTable(quotesTable, null, false);
+        //protected override bool OnRegisterMarketDepth(Security security)
+        //{
+        //    var quotesTable = new AlorTable(AlorTableTypes.Quote, "ORDERBOOK", RaiseProcessDataError);
+        //    OpenTable(quotesTable, null, false);
 
-			_orderBooks.SyncDo(d =>
-			{
-				if (!d.ContainsValue(security))
-				{
-					var id = quotesTable.MetaTable.OpenOrderbook(_slot.ID, security.Board.Code, security.Code);
-					if (id < 1)
-						throw new InvalidOperationException(LocalizedStrings.Str3709Params.Put(security.Id));
+        //    _orderBooks.SyncDo(d =>
+        //    {
+        //        if (!d.ContainsValue(security))
+        //        {
+        //            var id = quotesTable.MetaTable.OpenOrderbook(_slot.ID, security.Board.Code, security.Code);
+        //            if (id < 1)
+        //                throw new InvalidOperationException(LocalizedStrings.Str3709Params.Put(security.Id));
 
-					QuotesTable[id] = quotesTable;
-					d.Add(id, security);
-				}
-			});
+        //            QuotesTable[id] = quotesTable;
+        //            d.Add(id, security);
+        //        }
+        //    });
 
-			return true;
-		}
+        //    return true;
+        //}
 
 		/// <summary>
 		/// Остановить получение котировок по инструменту.
 		/// </summary>
 		/// <param name="security">Инструмент, по которому необходимо остановить получение котировок.</param>
-		protected override void OnUnRegisterMarketDepth(Security security)
+		private void OnUnRegisterMarketDepth(Security security)
 		{
 			_orderBooks.SyncDo(d =>
 			{

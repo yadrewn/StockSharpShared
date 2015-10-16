@@ -126,16 +126,16 @@ namespace StockSharp.Alor
 			_slot.Disconnected += SlotDisconnected;
 			_slot.Error += SlotError;
 
-			SecuritiesTable = new AlorTable(AlorTableTypes.Security, "SECURITIES", RaiseProcessDataError);
-			TradesTable = new AlorTable(AlorTableTypes.Trade, "ALL_TRADES", RaiseProcessDataError);
-			OrdersTable = new AlorTable(AlorTableTypes.Order, "ORDERS", RaiseProcessDataError);
-			StopOrdersTable = new AlorTable(AlorTableTypes.StopOrder, "STOPORDERS", RaiseProcessDataError);
-			MyTradesTable = new AlorTable(AlorTableTypes.MyTrade, "TRADES", RaiseProcessDataError);
-			QuotesTable = new Dictionary<int, AlorTable>();
-			PortfoliosTable = new AlorTable(AlorTableTypes.Portfolio, "TRDACC", RaiseProcessDataError);
-			HoldingTable = new AlorTable(AlorTableTypes.Position, "HOLDING", RaiseProcessDataError);
-			MoneyPositionTable = new AlorTable(AlorTableTypes.Money, "POSITIONS", RaiseProcessDataError);
-			TimeTable = new AlorTable(AlorTableTypes.Time, "TESYSTIME", RaiseProcessDataError);
+            //SecuritiesTable = new AlorTable(AlorTableTypes.Security, "SECURITIES", RaiseProcessDataError);
+            //TradesTable = new AlorTable(AlorTableTypes.Trade, "ALL_TRADES", RaiseProcessDataError);
+            //OrdersTable = new AlorTable(AlorTableTypes.Order, "ORDERS", RaiseProcessDataError);
+            //StopOrdersTable = new AlorTable(AlorTableTypes.StopOrder, "STOPORDERS", RaiseProcessDataError);
+            //MyTradesTable = new AlorTable(AlorTableTypes.MyTrade, "TRADES", RaiseProcessDataError);
+            //QuotesTable = new Dictionary<int, AlorTable>();
+            //PortfoliosTable = new AlorTable(AlorTableTypes.Portfolio, "TRDACC", RaiseProcessDataError);
+            //HoldingTable = new AlorTable(AlorTableTypes.Position, "HOLDING", RaiseProcessDataError);
+            //MoneyPositionTable = new AlorTable(AlorTableTypes.Money, "POSITIONS", RaiseProcessDataError);
+            //TimeTable = new AlorTable(AlorTableTypes.Time, "TESYSTIME", RaiseProcessDataError);
 			AlorManagerColumns.InitMetadata();
 			ManagerColumns = new AlorManagerColumns();
 			Synchronized();
@@ -145,22 +145,22 @@ namespace StockSharp.Alor
 
 		private void SlotConnected(int slotId, int connectId)
 		{
-			if (connectId == 0)
-				RaiseConnectionError(new InvalidOperationException(LocalizedStrings.Str3705));
-			else
-			{
-				RaiseConnected();
-			}
+            //if (connectId == 0)
+            //    RaiseConnectionError(new InvalidOperationException(LocalizedStrings.Str3705));
+            //else
+            //{
+            //    RaiseConnected();
+            //}
 		}
 
 		private void SlotError(int slotId, int code, string description)
 		{
-			RaiseConnectionError(AlorExceptionHelper.GetException(code, description));
+			//RaiseConnectionError(AlorExceptionHelper.GetException(code, description));
 		}
 
 		private void SlotDisconnected(int slotId, int connectId)
 		{
-			RaiseDisconnected();
+			//RaiseDisconnected();
 		}
 
 		private void SlotSynchronized(int slotId)
@@ -171,7 +171,7 @@ namespace StockSharp.Alor
 		/// <summary>
 		/// Текстовое описание подключения.
 		/// </summary>
-		public override string DisplayName
+		public string DisplayName
 		{
 			get { return "Alor"; }
 		}
@@ -180,7 +180,7 @@ namespace StockSharp.Alor
 		/// Проверить, установлено ли еще соединение. Проверяется только в том случае, если был вызван метод <see cref="IConnector.Connect"/>.
 		/// </summary>
 		/// <returns><see langword="true"/>, если соединение еще установлено, false, если торговая система разорвала подключение.</returns>
-		protected override bool IsConnectionAlive()
+		private bool IsConnectionAlive()
 		{
 			var state = (SS)_slot.GetCurrentState();
 			return state == SS.SS_READY || state == SS.SS_TRANSACTING;
@@ -208,7 +208,7 @@ namespace StockSharp.Alor
 		/// Создать для заявки типа <see cref="OrderTypes.Conditional"/> условие, которое поддерживается подключением.
 		/// </summary>
 		/// <returns>Условие для заявки. Если подключение не поддерживает заявки типа <see cref="OrderTypes.Conditional"/>, то будет возвращено <see langword="null"/>.</returns>
-		public override OrderCondition CreateOrderCondition()
+		private OrderCondition CreateOrderCondition()
 		{
 			return new AlorOrderCondition();
 		}

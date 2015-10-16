@@ -1,0 +1,1577 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StockSharp.Alor</name>
+    </assembly>
+    <members>
+        <member name="T:StockSharp.Alor.AlorAddresses">
+            <summary>
+            Адреса серверов системы Alor-Trade.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.Study">
+            <summary>
+            Демо сервер. IP адрес 213.181.12.15.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.RtsFuturesReadOnly">
+            <summary>
+            Просмотровый сервер на Forts (фьючерсы).  адрес 212.5.162.212.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.RtsOptionsReadOnly">
+            <summary>
+            Просмотровый сервер на Forts (опционы).  адрес 212.5.162.213.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.RtsStandardReadOnly">
+            <summary>
+            Просмотровый сервер на Rts Standard.  адрес 195.146.76.141.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.FortsDemo">
+            <summary>
+            Демо сервер «Срочный рынок FORTS».  адрес 213.181.16.52.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorAddresses.H247Demo">
+            <summary>
+            Демо сервер «24/7». IP адрес train.alor.ru.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorManagerColumns">
+            <summary>
+            Менеджер  по столбцам таблиц 
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorManagerColumns.IncludeSetAlorColumns">
+            <summary>
+            Список загружаемых столбцов при вызове метода startexport
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorManagerColumns.AllAlorColumn">
+            <summary>
+            последовательность всех доступных стобцов
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.InitMetadata">
+            <summary>
+            инициализация всех столбцов  и следовательно запись в AllAlorColumn
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.Add(StockSharp.Alor.Metadata.AlorColumn)">
+            <summary>
+            добавить столбец в загрузку
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.Remove(StockSharp.Alor.Metadata.AlorColumn)">
+            <summary>
+            удалить столбец из загрузки
+            </summary>
+            <param name="column"></param>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.RemoveAllBy(StockSharp.Alor.Metadata.AlorTable)">
+            <summary>
+            Удаляет все возможное столбцы по таблице
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.RemoveAll">
+            <summary>
+            Удаляет все возможное столбцы
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.AddAllBy(StockSharp.Alor.Metadata.AlorTable)">
+            <summary>
+            добавляет все возможные столбцы по таблице
+            </summary>
+            <param name="table"></param>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorManagerColumns.AddAll">
+            <summary>
+            добавляет все возможные столбцы 
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorColumn">
+            <summary>
+             Описание столбца.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorColumn.Clone">
+            <summary>
+            Создать копию <see cref="T:StockSharp.Alor.Metadata.AlorColumn"/>.
+            </summary>
+            <returns>Копия.</returns>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorColumn.OnEquals(StockSharp.Alor.Metadata.AlorColumn)">
+            <summary>
+            Сравнить <see cref="T:StockSharp.Alor.Metadata.AlorColumn"/> на эквивалентность.
+            </summary>
+            <param name="other">Другое значение, с которым необходимо сравнивать.</param>
+            <returns><see langword="true"/>, если другое значение равно текущему, иначе, <see langword="false"/>.</returns>
+        </member>
+        <member name="M:StockSharp.Alor.Metadata.AlorColumn.GetHashCode">
+            <summary>
+            Рассчитать хеш-код колонки.
+            </summary>
+            <returns>Хеш-код колонки.</returns>
+        </member>
+        <member name="P:StockSharp.Alor.Metadata.AlorColumn.IsMandatory">
+            <summary>
+            входит ли загрузку по умолчанию
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.Metadata.AlorColumn.Name">
+            <summary>
+            Название колонки.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.Metadata.AlorColumn.DataType">
+            <summary>
+            Тип колонки.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.AlorException">
+            <summary>
+            Ошибка системы Alor.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorException.Code">
+            <summary>
+            Код ошибки.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns">
+            <summary>
+            Колонки системной таблицы POSITIONS.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.ClientId">
+            <summary>
+            Идентификатор клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Account">
+            <summary>
+            Номер торгового счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.BrokerRef">
+            <summary>
+            Ссылка типа &lt;счет клиента&gt;[/&lt;субсчет&gt;].
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.BeginValue">
+            <summary>
+            Входящий остаток – остаток денежных средств на счете клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.CurrentValue">
+            <summary>
+            Текущий остаток – входящий остаток плюс суммарный объем заключенных клиентом сделок на продажу минус суммарный объем сделок на покупку.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.CurrentBidsVolume">
+            <summary>
+            Объём активных заявок на покупку – суммарный неудовлетворенный объём всех активных заявок на покупку, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.CurrentAsksVolume">
+            <summary>
+            Объём активных заявок на продажу – суммарный неудовлетворенный объём всех активных заявок на продажу, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.TotalPortfolio">
+            <summary>
+            Расчетное значение портфеля по текущему курсу, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.TotalTrades">
+            <summary>
+            Суммарный объем в сделках за текущую торговую сессию, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.MarketCommission">
+            <summary>
+            Биржевой сбор, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.BrokerCommission">
+            <summary>
+            Комиссия брокера, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.MarketPlannedCommission">
+            <summary>
+            Планируемый биржевой сбор (учитываются выставленные заявки), в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.BrokerPlannedCommission">
+            <summary>
+            Планируемая комиссия брокера (учитываются выставленные заявки), в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.PnL">
+            <summary>
+            Доход, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Free">
+            <summary>
+            Свободные средства.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.FreeForShorting">
+            <summary>
+            Расчетное значение свободных средств для коротких продаж, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.FreeForMargin">
+            <summary>
+            Расчетное значение свободных средств для покупок маржинальных бумаг, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.FreeForNonMargin">
+            <summary>
+            Расчетное значение свободных средств для покупок немаржинальных бумаг, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.MarginLevel">
+            <summary>
+            Текущий уровень маржи.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.MarginPlannedLevel">
+            <summary>
+            Планируемый уровень маржи (с учетом выставленных заявок).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.FirmId">
+            <summary>
+            Идентификатор фирмы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Currency">
+            <summary>
+            Код валюты.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Code">
+            <summary>
+            Код позиции.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.Limit">
+            <summary>
+            Текущий лимит, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.VarMargin">
+            <summary>
+            Накопленная по сделкам вариационная маржа, рассчитанная по текущей котировке, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMoneyPositionsColumns.AccCode">
+            <summary>
+            Код счета ("0" – деньги, "1" – залоги)
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorMyTradeColumns">
+            <summary>
+            Колонки системной таблицы TRADES.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.TradeNo">
+            <summary>
+            Номер сделки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.OrderNo">
+            <summary>
+            Номер заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Time">
+            <summary>
+            Время регистрации сделки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.SecurityBoard">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.IssueCode">
+            <summary>
+            Код выпуска ценной бумаги.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.OrderDirection">
+            <summary>
+            Направленность заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Volume">
+            <summary>
+            Объем сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Price">
+            <summary>
+            Цена за одну ценную бумагу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Value">
+            <summary>
+            Объем сделки, в руб.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Yield">
+            <summary>
+            Доходность.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.AccruedInt">
+            <summary>
+            Накопленный купонный доход.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.RepoRate">
+            <summary>
+            Ставка РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.RepoTerm">
+            <summary>
+            Срок РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.StartDiscount">
+            <summary>
+            Начальный дисконт.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Commission">
+            <summary>
+            Объем комиссии по сделке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Period">
+            <summary>
+            Период торговой сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Type">
+            <summary>
+            Тип сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.SettlementCode">
+            <summary>
+            Код расчетов по сделке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.BrokerRef">
+            <summary>
+            Ссылка типа &lt;счет клиента&gt;[/&lt;субсчет&gt;].
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.BrokerId">
+            <summary>
+            Код клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.UserId">
+            <summary>
+            Идентификатор трейдера.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.FirmId">
+            <summary>
+            Идентификатор фирмы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.Account">
+            <summary>
+            Торговый счет.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorMyTradeColumns.ExtRef">
+            <summary>
+            Поле-примечание.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorOrderColumns">
+            <summary>
+            Колонки системной таблицы ORDERS.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.OrderNo">
+            <summary>
+            Идентификационный номер заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Time">
+            <summary>
+            Время регистрации заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.CancelTime">
+            <summary>
+            Время снятия (отмены) заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.State">
+            <summary>
+            Текущее состояние заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Type">
+            <summary>
+            Тип заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Direction">
+            <summary>
+            Направленность заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.SplitPrice">
+            <summary>
+            Признак расщепления цены.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.ExecutionCondition">
+            <summary>
+            Условие исполнения.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.BrokerRef">
+            <summary>
+            Ссылка типа &lt;счет клиента&gt;[/&lt;субсчет&gt;].
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.BrokerId">
+            <summary>
+            Код клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.UserId">
+            <summary>
+            Идентификатор трейдера.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.FirmId">
+            <summary>
+            Идентификатор фирмы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Account">
+            <summary>
+            Торговый счет.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.SecurityBoard">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Price">
+            <summary>
+            Цена за одну ценную бумагу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Price2">
+            <summary>
+            Цена выкупа второй части РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Volume">
+            <summary>
+            Количество ценных бумаг.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Balance">
+            <summary>
+            Объем неисполненной части заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Value">
+            <summary>
+            Объем заявки (без учета комиссионного сбора Биржи и % дохода).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.AccruedInt">
+            <summary>
+            Накопленный купонный доход.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.EnterType">
+            <summary>
+            Тип ввода значения цены.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Yield">
+            <summary>
+            Доходность.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.Period">
+            <summary>
+            Период торгов.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.ExtRef">
+            <summary>
+            Поле-примечание.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorOrderColumns.MarketMaker">
+            <summary>
+            Заявка Маркет-Мейкера.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorPortfolioColumns">
+            <summary>
+            Колонки системной таблицы TRDACC.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.Account">
+            <summary>
+            Номер торгового счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.Name">
+            <summary>
+            Наименование торгового счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.Type">
+            <summary>
+            Тип торгового счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.BankAccount">
+            <summary>
+            Код банковского счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.DepoAccount">
+            <summary>
+            Код депозитарного счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.BankName">
+            <summary>
+            Сокращенное наименование банка.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorPortfolioColumns.DepoName">
+            <summary>
+            Сокращенное наименование депозитария.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorHoldingColumns">
+            <summary>
+            Колонки системной таблицы HOLDING.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.ClientId">
+            <summary>
+            Идентификатор клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.Account">
+            <summary>
+            Код торгового счета.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.BrokerRef">
+            <summary>
+            Ссылка типа &lt;счет клиента&gt;[/&lt;субсчет&gt;].
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.BeginValue">
+            <summary>
+            Суммарный входящий остаток по данной ценной бумаге на всех торговых счетах клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.CurrentValue">
+            <summary>
+            Текущий остаток – входящий остаток плюс суммарный объем заключенных клиентом сделок на покупку минус суммарный объем сделок на продажу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.MinValue">
+            <summary>
+            Минимальное значение остатка.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.CurrentBidsVolume">
+            <summary>
+            Объём активных заявок на покупку.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorHoldingColumns.CurrentAsksVolume">
+            <summary>
+            Объём активных заявок на продажу.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorQuotesColumns">
+            <summary>
+            Колонки системной таблицы ORDERBOOK.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.SecurityBoard">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.Direction">
+            <summary>
+            Направленность котировки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.Price">
+            <summary>
+            Цена котировки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorQuotesColumns.Volume">
+            <summary>
+            Количество ценных бумаг, выраженное в лотах.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorSecurityColumns">
+            <summary>
+            Колонки системной таблицы SECURITIES.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Board">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Code">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Name">
+            <summary>
+            Наименование финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ShortName">
+            <summary>
+            Краткое наименование финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.EnglishName">
+            <summary>
+            Краткое наименование финансового инструмента на английском языке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Remarks">
+            <summary>
+            Примечания.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MarketCode">
+            <summary>
+            Код рынка, на котором торгуется финансовый инструмент.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ContractCode">
+            <summary>
+            Код контракта (для фьючерсов и опционов).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.DepoCode">
+            <summary>
+            Код депо.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Description">
+            <summary>
+            Описание финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Status">
+            <summary>
+            Состояние.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.TradingStatus">
+            <summary>
+            Состояние торговой сессии по инструменту.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MinLotSize">
+            <summary>
+            Количество ценных бумаг в одном стандартном лоте.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LotStep">
+            <summary>
+            Кратность объема заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MinStep">
+            <summary>
+            Минимально возможная разница между ценами.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MinStepPrice">
+            <summary>
+            Стоимость шага цены.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Decimals">
+            <summary>
+            Количество знаков после запятой для полей типа PRICE.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Precision">
+            <summary>
+            Разрядность полей типа PRICE.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.FaceValue">
+            <summary>
+            Номинальная стоимость одной ценной бумаги.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.FaceUnit">
+            <summary>
+            Код валюты.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.PrevDate">
+            <summary>
+            Дата предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.PrevPrice">
+            <summary>
+            Цена последней сделки предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.CloseYield">
+            <summary>
+            Доходность по цене периода закрытия.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.CouponValue">
+            <summary>
+            Величина купона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.CouponPeriod">
+            <summary>
+            Длительность купона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.NextCoupon">
+            <summary>
+            Дата выплаты купона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.IssueSize">
+            <summary>
+            Объем обращения.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Repo2Price">
+            <summary>
+            Цена второй части РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.CurrencyId">
+            <summary>
+            Код сопряженной валюты ценной бумаги.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BuyBackPrice">
+            <summary>
+            Цена оферты.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BuyBackDate">
+            <summary>
+            Дата оферты.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.AgentId">
+            <summary>
+            Агент по размещению.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.QuoteBasis">
+            <summary>
+            Тип цены.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ISIN">
+            <summary>
+            Международный идентификационный код ценной бумаги.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.RegNumber">
+            <summary>
+            Номер государственной регистрации.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.PrevWaPrice">
+            <summary>
+            Значение оценки предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.YieldAtPrevWaPrice">
+            <summary>
+            Доходность по оценке предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.WaPrice">
+            <summary>
+            Средневзвешенная цена.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.YieldAtWaPrice">
+            <summary>
+            Доходность по средневзвешенной цене.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Contracts">
+            <summary>
+            Количество заключенных контрактов.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.OpenPositions">
+            <summary>
+            Количество открытых позиций.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ModificationTime">
+            <summary>
+            Время модификации.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.CancellationDate">
+            <summary>
+            Дата окончания обращения инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ExecutionDate">
+            <summary>
+            Дата исполнения контракта.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BuyDeposit">
+            <summary>
+            Гарантийные обязательства покупателя.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.SellDeposit">
+            <summary>
+            Гарантийные обязательства продавца.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.OptionType">
+            <summary>
+            Тип опциона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.OptionStyle">
+            <summary>
+            Разновидность опциона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Strike">
+            <summary>
+            Цена страйк.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.FutureCode">
+            <summary>
+            Код фьючерсного инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.FuturePrice">
+            <summary>
+            Котировка фьючерсного инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.OptionPrice">
+            <summary>
+            Расчетная цена опциона.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Volatility">
+            <summary>
+            Волатильность финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.HighPriceLimit">
+            <summary>
+            Верхний лимит цены (задается относительно PrevPrice).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LowPriceLimit">
+            <summary>
+            Нижний лимит цены (задается относительно PrevPrice).
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Type">
+            <summary>
+            Тип финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BestBidPrice">
+            <summary>
+            Лучшая котировка на покупку.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BestBidVolume">
+            <summary>
+            Объем заявок на покупку по лучшей котировке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BidVolumes">
+            <summary>
+            Объем всех заявок на покупку в очереди торговой системы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BidsCount">
+            <summary>
+            Количество заявок на покупку в очереди торговой системы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MaxBidPrice">
+            <summary>
+            Наибольшая цена спроса в течение торговой сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BestAskPrice">
+            <summary>
+            Лучшая котировка на продажу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.BestAskVolume">
+            <summary>
+            Объем заявок на продажу по лучшей котировке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.AskVolumes">
+            <summary>
+            Объем всех заявок на продажу в очереди торговой системы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.AsksCount">
+            <summary>
+            Количество заявок на продажу в очереди торговой системы.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MinAskPrice">
+            <summary>
+            Наименьшая цена предложения в течение торговой сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.OpenPrice">
+            <summary>
+            Цена открытия.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LowPrice">
+            <summary>
+            Минимальное значение цены в текущей сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.HighPrice">
+            <summary>
+            Максимальное значение цены в текущей сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LastTradePrice">
+            <summary>
+            Цена последней сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LastPriceChange">
+            <summary>
+            Изменение цены последней сделки по отношению к цене последней сделки предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LastTradeVolume">
+            <summary>
+            Количество лотов в последней сделке.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Yield">
+            <summary>
+            Доходность.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.AccruedInt">
+            <summary>
+            Накопленный купонный доход на дату торгов в расчете на одну бумагу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.PrimaryDist">
+            <summary>
+            Индикатор информирующий.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MatureDate">
+            <summary>
+            Дата погашения.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LastTradeTime">
+            <summary>
+            Время последней сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.TradesCount">
+            <summary>
+            Количество сделок за торговый день.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.VolumeToday">
+            <summary>
+            Объем совершенных сделок, выраженный в единицах ценных бумаг.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.ValueToday">
+            <summary>
+            Объем совершенных сделок.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LastTradeValue">
+            <summary>
+            Объем последней сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.PrevMarketPrice">
+            <summary>
+            Рыночная цена предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MarketPrice">
+            <summary>
+            Рыночная цена по результатам торгов текущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.MarketPrice2">
+            <summary>
+            Рыночная цена 2.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LegalPrevPrice">
+            <summary>
+            Официальная цена закрытия предыдущего торгового дня.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LegalOpenPrice">
+            <summary>
+            Официальная цена открытия.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LegalCurrentPrice">
+            <summary>
+            Официальная текущая цена.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.LegalClosePrice">
+            <summary>
+            Официальная цена закрытия.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorSecurityColumns.Ticker">
+            <summary>
+            Наименование для главного инструмента.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.AlorOrderConditionTypes">
+            <summary>
+            Типы условий стоп-заявок, специфичных для <see cref="T:StockSharp.Alor.AlorTrader"/>.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorOrderConditionTypes.Inactive">
+            <summary>
+            Не активна.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorOrderConditionTypes.StopLoss">
+            <summary>
+            Стоп-лосс.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorOrderConditionTypes.TakeProfit">
+            <summary>
+            Тейк-профит.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.AlorOrderCondition">
+            <summary>
+            Условие заявок, специфичных для <see cref="N:StockSharp.Alor"/>.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorOrderCondition.#ctor">
+            <summary>
+            Создать <see cref="T:StockSharp.Alor.AlorOrderCondition"/>.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorOrderCondition.Type">
+            <summary>
+            Тип условия.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorOrderCondition.StopPrice">
+            <summary>
+            Стоп-цена.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorStopOrderColumns">
+            <summary>
+            Колонки системной таблицы STOPORDERS.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.OrderNo">
+            <summary>
+            Номер стоп-заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Time">
+            <summary>
+            Время регистрации стоп-заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.CancelTime">
+            <summary>
+            Время снятия (отмены) стоп-заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.SecurityBoard">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Direction">
+            <summary>
+            Направленность заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Type">
+            <summary>
+            Тип заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.SplitPrice">
+            <summary>
+            Признак расщепления цены.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.ExecutionCondition">
+            <summary>
+            Условие исполнения.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.StopType">
+            <summary>
+            Тип стоп-заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.ExpiryTime">
+            <summary>
+            Время окончания действия стоп-заявки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.StopPrice">
+            <summary>
+            Цена активизации стоп-заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Price">
+            <summary>
+            Цена за одну ценную бумагу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Volume">
+            <summary>
+            Количество ценных бумаг.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Yield">
+            <summary>
+            Доходность.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.AccruedInt">
+            <summary>
+            Накопленный купонный доход.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.State">
+            <summary>
+            Текущее состояние заявки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.BrokerRef">
+            <summary>
+            Ссылка типа &lt;счет клиента&gt;[/&lt;субсчет&gt;].
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.BrokerId">
+            <summary>
+            Код клиента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.Account">
+            <summary>
+            Торговый счет.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorStopOrderColumns.ExtRef">
+            <summary>
+            Поле-примечание.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorTable">
+            <summary>
+            Информация о системной таблице Alor-Trade.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.Metadata.AlorTable.Name">
+            <summary>
+            Название таблицы.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorTimeColumns">
+            <summary>
+            Колонки системной таблицы TESYSTIME.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTimeColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTimeColumns.Time">
+            <summary>
+            Время торгового сервера.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.Metadata.AlorTradeColumns">
+            <summary>
+            Колонки системной таблицы ALL_TRADES.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Id">
+            <summary>
+            Идентификатор строки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.TradeNo">
+            <summary>
+            Номер сделки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Time">
+            <summary>
+            Время регистрации сделки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.SecurityBoard">
+            <summary>
+            Идентификатор режима торгов для финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.SecurityCode">
+            <summary>
+            Идентификатор финансового инструмента.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Volume">
+            <summary>
+            Объем сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Price">
+            <summary>
+            Цена за одну ценную бумагу.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.State">
+            <summary>
+            Номер сделки в торговой системе.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Value">
+            <summary>
+            Объем сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Yield">
+            <summary>
+            Доходность.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.AccruedInt">
+            <summary>
+            Накопленный купонный доход.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.RepoRate">
+            <summary>
+            Ставка РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.RepoTerm">
+            <summary>
+            Срок РЕПО.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.StartDiscount">
+            <summary>
+            Начальный дисконт.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Period">
+            <summary>
+            Период торговой сессии.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.Type">
+            <summary>
+            Тип сделки.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.Metadata.AlorTradeColumns.SettlementCode">
+            <summary>
+            Код расчетов по сделке.
+            </summary>
+        </member>
+        <member name="T:StockSharp.Alor.AlorTrader">
+            <summary>
+            Реализация интерфейса <see cref="T:StockSharp.BusinessEntities.IConnector"/>, предоставляющая подключение брокером Alor.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnStartExport">
+            <summary>
+            Запустить экспорт данных из торговой системы в программу (получение портфелей, инструментов, заявок и т.д.).
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnStopExport">
+            <summary>
+            Остановить экспорт данных из торговой системы в программу, запущенный через <see cref="M:StockSharp.BusinessEntities.ITrader.StartExport"/>.
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorTrader._slot">
+            <summary>
+            Slot
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorTrader.ManagerColumns">
+            <summary>
+            включение и выключение столбцов. Настройте до вызова функции StartExport()
+            </summary>
+        </member>
+        <member name="F:StockSharp.Alor.AlorTrader._password">
+            <summary>
+            Пароль.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.#ctor(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Создать подключение.
+            </summary>
+            <param name="slotId">Номер слота.</param>
+            <param name="address">Адрес сервера.</param>
+            <param name="login">Логин.</param>
+            <param name="password">Пароль.</param>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.IsConnectionAlive">
+            <summary>
+            Проверить, установлено ли еще соединение. Проверяется только в том случае, если был вызван метод <see cref="M:StockSharp.BusinessEntities.IConnector.Connect"/>.
+            </summary>
+            <returns><see langword="true"/>, если соединение еще установлено, false, если торговая система разорвала подключение.</returns>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnConnect">
+            <summary>
+            Подключиться к торговой системе.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnDisconnect">
+            <summary>
+            Отключиться от торговой системы.
+            </summary>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.CreateOrderCondition">
+            <summary>
+            Создать для заявки типа <see cref="F:StockSharp.Messages.OrderTypes.Conditional"/> условие, которое поддерживается подключением.
+            </summary>
+            <returns>Условие для заявки. Если подключение не поддерживает заявки типа <see cref="F:StockSharp.Messages.OrderTypes.Conditional"/>, то будет возвращено <see langword="null"/>.</returns>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnRegisterOrder(StockSharp.BusinessEntities.Order)">
+            <summary>
+            Зарегистрировать заявку на бирже.
+            </summary>
+            <param name="order">Заявка, содержащая информацию для регистрации.</param>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order)">
+            <summary>
+            Перерегистрировать заявку на бирже.
+            </summary>
+            <param name="oldOrder">Заявка, которую нужно снять.</param><param name="newOrder">Новая заявка, которую нужно зарегистрировать.</param>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnReRegisterOrderPair(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order)">
+            <summary>
+            Перерегистрировать пару заявок на бирже.
+            </summary>
+            <param name="oldOrder1">Первая заявка, которую нужно снять.</param><param name="newOrder1">Первая новая заявка, которую нужно зарегистрировать.</param><param name="oldOrder2">Вторая заявка, которую нужно снять.</param><param name="newOrder2">Вторая новая заявка, которую нужно зарегистрировать.</param>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnCancelOrder(StockSharp.BusinessEntities.Order)">
+            <summary>
+            Отменить заявку на бирже.
+            </summary>
+            <param name="order">Заявка, которую нужно отменять.</param>
+        </member>
+        <member name="M:StockSharp.Alor.AlorTrader.OnUnRegisterMarketDepth(StockSharp.BusinessEntities.Security)">
+            <summary>
+            Остановить получение котировок по инструменту.
+            </summary>
+            <param name="security">Инструмент, по которому необходимо остановить получение котировок.</param>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.Address">
+            <summary>
+            Адрес сервера.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.Login">
+            <summary>
+            Логин.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.SecuritiesTable">
+            <summary>
+            Настройки таблицы SECURITIES.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.TradesTable">
+            <summary>
+            Настройки таблицы ALL_TRADES.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.OrdersTable">
+            <summary>
+            Настройки таблицы ORDERS.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.StopOrdersTable">
+            <summary>
+            Настройки таблицы STOPORDERS.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.MyTradesTable">
+            <summary>
+            Настройки таблицы TRADES.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.QuotesTable">
+            <summary>
+            Настройки таблицы ORDERBOOK.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.MoneyPositionTable">
+            <summary>
+            Настройки таблицы POSITIONS.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.HoldingTable">
+            <summary>
+            Настройки таблицы HOLDING.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.PortfoliosTable">
+            <summary>
+            Настройки таблицы TRDACC.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.TimeTable">
+            <summary>
+            Настройки таблицы TESYSTIME.
+            </summary>
+        </member>
+        <member name="P:StockSharp.Alor.AlorTrader.DisplayName">
+            <summary>
+            Текстовое описание подключения.
+            </summary>
+        </member>
+    </members>
+</doc>

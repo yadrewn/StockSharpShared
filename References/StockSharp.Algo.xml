@@ -158,7 +158,7 @@
         </member>
         <member name="M:StockSharp.Algo.BasketMessageAdapter.OnInnerAdapterNewMessage(StockSharp.Messages.IMessageAdapter,StockSharp.Messages.Message)">
             <summary>
-            Обработчик события <see cref="E:StockSharp.Messages.IMessageChannel.NewOutMessage"/> вложенного адаптера.
+            Обработчик события <see cref="E:StockSharp.Messages.IMessageChannel.OnNewOutMessage"/> вложенного адаптера.
             </summary>
             <param name="innerAdapter">Вложенный адаптер.</param>
             <param name="message">Сообщение.</param>
@@ -180,6 +180,11 @@
             Загрузить настройки.
             </summary>
             <param name="storage">Хранилище настроек.</param>
+        </member>
+        <member name="M:StockSharp.Algo.BasketMessageAdapter.DisposeManaged">
+            <summary>
+            Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="!:Disconnect"/>, а также закрыть поток Connector Out
+            </summary>
         </member>
         <member name="P:StockSharp.Algo.BasketMessageAdapter.InnerAdapters">
             <summary>
@@ -1600,7 +1605,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.TimeFrameCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.TimeFrameCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.TimeFrameCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -1621,7 +1626,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.TickCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.TickCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.TickCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -1647,7 +1652,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.VolumeCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.VolumeCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.VolumeCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -1668,7 +1673,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.RangeCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.RangeCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.RangeCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -1689,7 +1694,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.PnFCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.PnFCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.PnFCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -1715,7 +1720,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.RenkoCandle.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Algo.Candles.RenkoCandle"/>.
+            Создать копию <see cref="T:StockSharp.Algo.Candles.RenkoCandle"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -3548,7 +3553,7 @@
         </member>
         <member name="M:StockSharp.Algo.Connector.DisposeManaged">
             <summary>
-            Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="M:StockSharp.Algo.Connector.Disconnect"/>.
+            Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="M:StockSharp.Algo.Connector.Disconnect"/>, а также закрыть поток Connector Out
             </summary>
         </member>
         <member name="M:StockSharp.Algo.Connector.Load(Ecng.Serialization.SettingsStorage)">
@@ -3831,7 +3836,7 @@
         <member name="P:StockSharp.Algo.Connector.Securities">
             <summary>
             Список всех загруженных инструментов.
-            Вызывать необходимо после того, как пришло событие <see cref="E:StockSharp.BusinessEntities.IConnector.NewSecurities"/>. Иначе будет возвращено постое множество.
+            Вызывать необходимо после того, как пришло событие <see cref="E:StockSharp.BusinessEntities.IConnector.NewSecurities"/>. Иначе будет возвращено пустое множество.
             </summary>
         </member>
         <member name="P:StockSharp.Algo.Connector.CurrentTime">
@@ -5440,7 +5445,7 @@
         </member>
         <member name="M:StockSharp.Algo.ExpressionIndexSecurity.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.BusinessEntities.Security"/>.
+            Создать копию <see cref="T:StockSharp.BusinessEntities.Security"/>.
             </summary>
             <returns>Копия объекта.</returns>
         </member>
@@ -5561,9 +5566,9 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.BaseIndicator.Clone">
             <summary>
-            Создать копию данного объекта.
+            Создать копию <see cref="T:StockSharp.Algo.Indicators.IIndicator"/>.
             </summary>
-            <returns>Копия данного объекта.</returns>
+            <returns>Копия.</returns>
         </member>
         <member name="M:StockSharp.Algo.Indicators.BaseIndicator.ToString">
             <summary>
@@ -5798,17 +5803,17 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.BaseIndicatorValue.CompareTo(StockSharp.Algo.Indicators.IIndicatorValue)">
             <summary>
-            Сравнить с другим значением индикатора.
+            Сравнить <see cref="T:StockSharp.Algo.Indicators.IIndicatorValue"/> на эквивалентность.
             </summary>
             <param name="other">Другое значение, с которым необходимо сравнивать.</param>
-            <returns>Код сравнения.</returns>
+            <returns>Результат сравнения.</returns>
         </member>
         <member name="M:StockSharp.Algo.Indicators.BaseIndicatorValue.System#IComparable#CompareTo(System.Object)">
             <summary>
-            Сравнить с другим значением индикатора.
+            Сравнить <see cref="T:StockSharp.Algo.Indicators.IIndicatorValue"/> на эквивалентность.
             </summary>
             <param name="other">Другое значение, с которым необходимо сравнивать.</param>
-            <returns>Код сравнения.</returns>
+            <returns>Результат сравнения.</returns>
         </member>
         <member name="P:StockSharp.Algo.Indicators.BaseIndicatorValue.Indicator">
             <summary>
@@ -5873,10 +5878,10 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.SingleIndicatorValue`1.CompareTo(StockSharp.Algo.Indicators.IIndicatorValue)">
             <summary>
-            Сравнить с другим значением индикатора.
+            Сравнить <see cref="T:StockSharp.Algo.Indicators.SingleIndicatorValue`1"/> на эквивалентность.
             </summary>
             <param name="other">Другое значение, с которым необходимо сравнивать.</param>
-            <returns>Код сравнения.</returns>
+            <returns>Результат сравнения.</returns>
         </member>
         <member name="M:StockSharp.Algo.Indicators.SingleIndicatorValue`1.ToString">
             <summary>
@@ -5935,10 +5940,10 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.VolumeProfileIndicatorValue.CompareTo(StockSharp.Algo.Indicators.IIndicatorValue)">
             <summary>
-            Сравнить с другим значением индикатора.
+            Сравнить <see cref="T:StockSharp.Algo.Indicators.VolumeProfileIndicatorValue"/> на эквивалентность.
             </summary>
             <param name="other">Другое значение, с которым необходимо сравнивать.</param>
-            <returns>Код сравнения.</returns>
+            <returns>Результат сравнения.</returns>
         </member>
         <member name="P:StockSharp.Algo.Indicators.VolumeProfileIndicatorValue.Levels">
             <summary>
@@ -6770,10 +6775,10 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.ComplexIndicatorValue.CompareTo(StockSharp.Algo.Indicators.IIndicatorValue)">
             <summary>
-            Сравнить с другим значением индикатора.
+            Сравнить <see cref="T:StockSharp.Algo.Indicators.ComplexIndicatorValue"/> на эквивалентность.
             </summary>
             <param name="other">Другое значение, с которым необходимо сравнивать.</param>
-            <returns>Код сравнения.</returns>
+            <returns>Результат сравнения.</returns>
         </member>
         <member name="P:StockSharp.Algo.Indicators.ComplexIndicatorValue.IsEmpty">
             <summary>
@@ -8492,9 +8497,9 @@
         </member>
         <member name="M:StockSharp.Algo.Indicators.GatorHistogram.Clone">
             <summary>
-            Создать копию данного объекта.
+            Создать копию <see cref="T:StockSharp.Algo.Indicators.GatorHistogram"/>.
             </summary>
-            <returns>Копия данного объекта.</returns>
+            <returns>Копия.</returns>
         </member>
         <member name="M:StockSharp.Algo.Indicators.GatorHistogram.Load(Ecng.Serialization.SettingsStorage)">
             <summary>
@@ -9871,7 +9876,7 @@
         </member>
         <member name="M:StockSharp.Algo.WeightedIndexSecurity.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.BusinessEntities.Security"/>.
+            Создать копию <see cref="T:StockSharp.BusinessEntities.Security"/>.
             </summary>
             <returns>Копия объекта.</returns>
         </member>
@@ -10566,7 +10571,7 @@
         </member>
         <member name="M:StockSharp.Algo.MarketTimer.DisposeManaged">
             <summary>
-            Освободить ресурсы.
+            Освободить занятые ресурсы.
             </summary>
         </member>
         <member name="T:StockSharp.Algo.PnL.PnLInfo">
@@ -12738,9 +12743,9 @@
         </member>
         <member name="M:StockSharp.Algo.Strategies.Strategy.Clone">
             <summary>
-            Создать копию стратегии со всеми настройками.
+            Создать копию <see cref="T:StockSharp.Algo.Strategies.Strategy"/>.
             </summary>
-            <returns>Копия стратегии.</returns>
+            <returns>Копия.</returns>
         </member>
         <member name="M:StockSharp.Algo.Strategies.Strategy.GetMarketDepth(StockSharp.BusinessEntities.Security)">
             <summary>
@@ -13450,7 +13455,7 @@
         </member>
         <member name="T:StockSharp.Algo.Strategies.StrategyHelper">
             <summary>
-            Вспомогательный класс для работы с классом <see cref="T:StockSharp.Algo.Strategies.Strategy"/>.
+            Вспомогательный класс для работы с <see cref="T:StockSharp.Algo.Strategies.Strategy"/>.
             </summary>
         </member>
         <member name="M:StockSharp.Algo.Strategies.StrategyHelper.BuyAtMarket(StockSharp.Algo.Strategies.Strategy,System.Nullable{System.Decimal})">
@@ -14333,6 +14338,11 @@
             Переводить время для заявок и сделок в биржевое. По-умолчанию выключено.
             </summary>
         </member>
+        <member name="P:StockSharp.Algo.Testing.MarketEmulatorSettings.TimeZone">
+            <summary>
+            Информация о временной зоне, где находится биржа.
+            </summary>
+        </member>
         <member name="P:StockSharp.Algo.Testing.MarketEmulatorSettings.PriceLimitOffset">
             <summary>
             Сдвиг цены от последней сделки, определяющие границы максимальной и минимальной цен на следующую сессию.
@@ -14520,7 +14530,7 @@
         </member>
         <member name="T:StockSharp.Algo.MarketRuleHelper">
             <summary>
-            Вспомогательный класс для работы с торговыми правилами <see cref="T:StockSharp.Algo.IMarketRule"/>.
+            Вспомогательный класс для работы с <see cref="T:StockSharp.Algo.IMarketRule"/>.
             </summary>
         </member>
         <member name="M:StockSharp.Algo.MarketRuleHelper.WhenRegistered(StockSharp.BusinessEntities.Order)">
@@ -15199,7 +15209,7 @@
         </member>
         <member name="M:StockSharp.Algo.Candles.CandleManager.ExternalCandleSource.DisposeManaged">
             <summary>
-            Освободить ресурсы.
+            Освободить занятые ресурсы.
             </summary>
         </member>
         <member name="T:StockSharp.Algo.Candles.CandleSeries">
@@ -15644,15 +15654,15 @@
             </summary>
             <param name="generator">Генератор лога заявок.</param>
         </member>
+        <member name="P:StockSharp.Algo.Testing.BaseEmulationConnector.EmulationAdapter">
+            <summary>
+            Адаптер, исполняющий сообщения в <see cref="T:StockSharp.Algo.Testing.IMarketEmulator"/>.
+            </summary>
+        </member>
         <member name="P:StockSharp.Algo.Testing.BaseEmulationConnector.IsSupportAtomicReRegister">
             <summary>
             Поддерживается ли перерегистрация заявок через метод <see cref="M:StockSharp.BusinessEntities.IConnector.ReRegisterOrder(StockSharp.BusinessEntities.Order,StockSharp.BusinessEntities.Order)"/>
             в виде одной транзакции.
-            </summary>
-        </member>
-        <member name="P:StockSharp.Algo.Testing.BaseEmulationConnector.MarketEmulator">
-            <summary>
-            Эмулятор торгов.
             </summary>
         </member>
         <member name="T:StockSharp.Algo.Storages.BasketMarketDataStorage`1">
@@ -15774,7 +15784,7 @@
         </member>
         <member name="M:StockSharp.Algo.Testing.HistoryMessageAdapter.SendOutMessage(StockSharp.Messages.Message)">
             <summary>
-            Отправить исходящее сообщение, вызвав событие <see cref="E:StockSharp.Messages.MessageAdapter.NewOutMessage"/>.
+            Отправить исходящее сообщение, вызвав событие <see cref="E:StockSharp.Messages.MessageAdapter.OnNewOutMessage"/>.
             </summary>
             <param name="message">Сообщение.</param>
         </member>
@@ -15898,7 +15908,7 @@
         </member>
         <member name="M:StockSharp.Algo.Testing.EmulationStateMessage.Clone">
             <summary>
-            Создать копию объекта <see cref="T:StockSharp.Messages.Message"/>.
+            Создать копию <see cref="T:StockSharp.Messages.Message"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -16697,7 +16707,7 @@
         </member>
         <member name="M:StockSharp.Algo.Testing.TrendMarketDepthGenerator.Clone">
             <summary>
-            Создать копию генератора.
+            Создать копию <see cref="T:StockSharp.Algo.Testing.TrendMarketDepthGenerator"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -16918,7 +16928,7 @@
             Генератор идентификаторов для сделок.
             </summary>
         </member>
-        <member name="E:StockSharp.Algo.Testing.MarketEmulator.NewOutMessage">
+        <member name="E:StockSharp.Algo.Testing.MarketEmulator.OnNewOutMessage">
             <summary>
             Событие появления нового сообщения.
             </summary>
@@ -16964,7 +16974,7 @@
         </member>
         <member name="M:StockSharp.Algo.Testing.OrderLogGenerator.Clone">
             <summary>
-            Создать копию генератора.
+            Создать копию <see cref="T:StockSharp.Algo.Testing.MarketDataGenerator"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -17079,7 +17089,7 @@
         </member>
         <member name="M:StockSharp.Algo.Testing.RandomWalkTradeGenerator.Clone">
             <summary>
-            Создать копию генератора.
+            Создать копию <see cref="T:StockSharp.Algo.Testing.RandomWalkTradeGenerator"/>.
             </summary>
             <returns>Копия.</returns>
         </member>
@@ -17930,7 +17940,7 @@
             </summary>
             <param name="receiver">Получатель логов.</param>
             <param name="order">Заявка.</param>
-            <param name="operation">Операция, которая проводится в заявокй.</param>
+            <param name="operation">Операция, которая проводится с заявкой.</param>
             <param name="getAdditionalInfo">Дополнительная информация о заявке.</param>
         </member>
         <member name="M:StockSharp.Algo.TraderHelper.AddOrderErrorLog(StockSharp.Logging.ILogReceiver,StockSharp.BusinessEntities.Order,System.String,System.Func{System.String})">
@@ -17939,7 +17949,7 @@
             </summary>
             <param name="receiver">Получатель логов.</param>
             <param name="order">Заявка.</param>
-            <param name="operation">Операция, которая проводится в заявокй.</param>
+            <param name="operation">Операция, которая проводится с заявкой.</param>
             <param name="getAdditionalInfo">Дополнительная информация о заявке.</param>
         </member>
         <member name="M:StockSharp.Algo.TraderHelper.SyncLookupSecurities(StockSharp.BusinessEntities.IConnector,StockSharp.BusinessEntities.Security)">
@@ -18123,7 +18133,7 @@
             Получить шаг цены на основе точности.
             </summary>
             <param name="decimals">Точность.</param>
-            <returns>Шан цены.</returns>
+            <returns>Шаг цены.</returns>
         </member>
         <member name="M:StockSharp.Algo.TraderHelper.SecurityIdToFolderName(System.String)">
             <summary>

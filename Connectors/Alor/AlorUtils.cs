@@ -20,7 +20,7 @@ namespace StockSharp.Alor
 			throw new ArgumentException(LocalizedStrings.Str3706Params.Put(value), "value");
 		}
 
-		public static OrderDirections ToOrderDirection(this string value)
+		public static Sides ToOrderDirection(this string value)
 		{
 			if (value.IsEmpty())
 				throw new ArgumentNullException("value");
@@ -28,9 +28,9 @@ namespace StockSharp.Alor
 			switch (value)
 			{
 				case "B":
-					return OrderDirections.Buy;
+                    return Sides.Buy;
 				case "S":
-					return OrderDirections.Sell;
+                    return Sides.Sell;
 				default:
 					throw new ArgumentException(LocalizedStrings.Str3707Params.Put(value), "value");
 			}

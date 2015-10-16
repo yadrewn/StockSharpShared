@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B798A4E-2271-46F9-9C2D-4E563114E268}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockSharp.Quik</RootNamespace>
+    <AssemblyName>StockSharp.Quik</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ReferencesDbg\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\References\StockSharp.Quik.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\StockSharp.Quik.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ecng.ComponentModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\Ecng\Ecng.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Interop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\Ecng\Ecng.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Reflection">
+      <HintPath>..\..\References\Ecng\Ecng.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecng.Serialization.FieldFactories, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\References\Ecng\Ecng.Serialization.FieldFactories.dll</HintPath>
+    </Reference>
+    <Reference Include="MoreLinq">
+      <HintPath>..\..\References\Ecng\MoreLinq.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\..\References\Ecng\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\StockSharpAssemblyInfo.cs">
+      <Link>Properties\StockSharpAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Lua\LuaFixServer.cs" />
+    <Compile Include="Lua\LuaFixTransactionMessageAdapter.cs" />
+    <Compile Include="Lua\LuaRequest.cs" />
+    <Compile Include="Lua\QuikFixTags.cs" />
+    <Compile Include="Native\Api.cs" />
+    <Compile Include="Native\Codes.cs" />
+    <Compile Include="Native\ApiException.cs" />
+    <Compile Include="DdeCurrencyPortfolioColumns.cs" />
+    <Compile Include="DdeCustomColumnAttribute.cs" />
+    <Compile Include="DdeCustomTable.cs" />
+    <Compile Include="DdeCustomTableAttribute.cs" />
+    <Compile Include="DdeCustomTableDeserializer.cs" />
+    <Compile Include="DdeCustomTypeSchemaFactory.cs" />
+    <Compile Include="DdeCustomTypeSchemaFactoryAttribute.cs" />
+    <Compile Include="DdeDerivativePortfolioColumns.cs" />
+    <Compile Include="DdeEquityPositionColumns.cs" />
+    <Compile Include="DdeEquityPortfolioColumns.cs" />
+    <Compile Include="DdeMyTradeColumns.cs" />
+    <Compile Include="DdeOrderColumns.cs" />
+    <Compile Include="DdeDerivativePositionColumns.cs" />
+    <Compile Include="DdeQuoteColumns.cs" />
+    <Compile Include="DdeSecurityColumns.cs" />
+    <Compile Include="DdeSettings.cs" />
+    <Compile Include="DdeSettingsResult.cs" />
+    <Compile Include="DdeStopOrderColumns.cs" />
+    <Compile Include="DdeTable.cs" />
+    <Compile Include="DdeTableColumn.cs" />
+    <Compile Include="DdeTableColumnList.cs" />
+    <Compile Include="DdeTradeColumns.cs" />
+    <Compile Include="DdeWindow.cs" />
+    <Compile Include="ExtensionInfoConverter.cs" />
+    <Compile Include="QuikMessageAdapter.cs" />
+    <Compile Include="QuikMessages.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QuikDdeFormatter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Native\ApiWrapper.cs" />
+    <Compile Include="QuikDdeAdapter.cs" />
+    <Compile Include="QuikOrderCondition.cs" />
+    <Compile Include="QuikTrader.cs" />
+    <Compile Include="QuikTerminal.cs" />
+    <Compile Include="QuikTrans2QuikAdapter.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionHelper.cs" />
+    <Compile Include="Xaml\DdeSecurityChangesColumnsEditor.xaml.cs">
+      <DependentUpon>DdeSecurityChangesColumnsEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\DdeSecurityColumnsEditor.xaml.cs">
+      <DependentUpon>DdeSecurityColumnsEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\DdeTableColumnsEditor.xaml.cs">
+      <DependentUpon>DdeTableColumnsEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\DdeTableColumnsPicker.xaml.cs">
+      <DependentUpon>DdeTableColumnsPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Xaml\Extensions.cs" />
+    <Compile Include="Xaml\DdeColumnsPicker.xaml.cs">
+      <DependentUpon>DdeColumnsPicker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Algo\Algo.csproj">
+      <Project>{2A5C6FAD-106C-4A4A-B602-77A6B1034CA2}</Project>
+      <Name>Algo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessEntities\BusinessEntities.csproj">
+      <Project>{DCE69DB8-53CA-4B7F-9368-02F175A31074}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Fix\StockSharp.Fix.csproj">
+      <Project>{8ce1bcd0-e763-4df9-a7cc-eb896c711aec}</Project>
+      <Name>StockSharp.Fix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localization\LocalizationDbg.csproj">
+      <Project>{a98a81ce-75a1-4fab-9c02-e6eef4b51f4f}</Project>
+      <Name>LocalizationDbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Logging\LoggingDbg.csproj">
+      <Project>{c4476add-a3d5-41bb-9d43-55d865863b78}</Project>
+      <Name>LoggingDbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Messages\MessagesDbg.csproj">
+      <Project>{335e5af6-b0c2-4eed-ad3f-f35ee3a324e7}</Project>
+      <Name>MessagesDbg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Ecng\Ecng.Collections\Ecng.Collections.csproj">
+      <Project>{3bbb7feb-8f1b-4368-8913-807cf14f0586}</Project>
+      <Name>Ecng.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Ecng\Ecng.Common\Ecng.Common.csproj">
+      <Project>{3a9e6a09-3887-4612-b127-9b95bd2c3eed}</Project>
+      <Name>Ecng.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Ecng\Ecng.Localization\Ecng.Localization.csproj">
+      <Project>{875289b3-8845-4402-a9cc-c6d7bd53e530}</Project>
+      <Name>Ecng.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Ecng\Ecng.Serialization\Ecng.Serialization.csproj">
+      <Project>{b7275381-fecd-4fdf-ad81-4a66d809bd8d}</Project>
+      <Name>Ecng.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StockSharpDecomp\Ecng\Ecng.Xaml\Ecng.Xaml.csproj">
+      <Project>{84c9d518-9a69-4b60-b135-865a4b826542}</Project>
+      <Name>Ecng.Xaml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Xaml\DdeSecurityChangesColumnsEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xaml\DdeSecurityColumnsEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xaml\DdeColumnsPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xaml\DdeTableColumnsEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Xaml\DdeTableColumnsPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

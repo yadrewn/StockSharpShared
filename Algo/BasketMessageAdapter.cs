@@ -518,5 +518,15 @@ namespace StockSharp.Algo
 
 			base.Load(storage);
 		}
+
+		/// <summary>
+		/// Освободить занятые ресурсы. В частности, отключиться от торговой системы через <see cref="Disconnect"/>, а также закрыть поток Connector Out
+		/// </summary>
+		protected override void DisposeManaged()
+		{
+			this._hearbeatAdapters.Values.ForEach(a => a.Close());
+		}
+			
+
 	}
 }
